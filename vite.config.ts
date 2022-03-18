@@ -41,6 +41,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
+      include: [/\.[tj]sx?$/],
       dts: 'src/auto-imports.d.ts',
     }),
 

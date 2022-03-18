@@ -3,7 +3,7 @@ import generatedRoutes from 'virtual:generated-pages';
 import { setupLayouts } from 'virtual:generated-layouts';
 import App from './App';
 
-import './styles/main.css';
+import './styles/global.sass';
 
 const routes = setupLayouts(generatedRoutes);
 
