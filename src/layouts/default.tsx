@@ -8,7 +8,7 @@ export default defineComponent({
         <RouterView>
           {{
             default: ({ Component }: any) => (
-              <Transition name="fade">
+              <Transition name="fade" duration={600} mode="out-in">
                 <Component/>
               </Transition>
             ),

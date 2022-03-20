@@ -1,0 +1,82 @@
+.pgpContainer
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  width: 500px
+  @media (max-width: 500px)
+    width: 100vw
+
+  @media (min-width: 1000px)
+    width: 50vw
+
+  .id
+    background-color: rgba(255, 255, 255, 0.5)
+    border-color: #eaeaea
+    border-radius: 10px
+    border-width: 2px
+    border-style: solid
+    color: #303133
+    font-size: x-large
+    font-family: Monaco, "JetBrains Mono", Monospaced, monospace
+    position: absolute
+    top: 20vh
+    width: max-content
+    left: 0
+    right: 0
+    margin: auto
+    padding: 10px 15px
+
+    span
+      margin: 0 0.25em
+
+  .buttons
+    position: absolute
+    display: flex
+    flex-direction: column
+    width: 180px
+    bottom: 15vh
+    left: 0
+    right: 0
+    margin: auto
+
+    div
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 5px 10px
+      margin: 5px 0
+      height: 40px
+      background-color: rgba(255, 255, 255, 0.5)
+      border-color: rgba(234, 234, 234, 0.6)
+      backdrop-filter: blur(5px)
+      border-radius: 5px
+      border-width: 1px
+      border-style: solid
+      transition: all 0.5s
+      color: #303133
+      cursor: pointer
+
+      &:hover
+        background-color: rgba(255, 255, 255, 0.7)
+        border-color: rgba(234, 234, 234, 0.8)
+
+      .text
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-grow: 1
+        font-size: small
+
+.back
+  top: 0
+  height: 85px
+  display: flex
+  font-size: x-large
+  position: absolute
+  padding-left: 10px
+  align-items: center
+  z-index: 2
+
+  a
+    display: flex
