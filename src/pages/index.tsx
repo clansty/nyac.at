@@ -1,5 +1,6 @@
 import styles from './index.module.sass';
 import { RouterLink } from 'vue-router';
+import SocialNetworks from '~/components/SocialNetworks';
 
 export default defineComponent({
   setup() {
@@ -65,7 +66,7 @@ export default defineComponent({
         </RouterLink>
         <div class={styles.footer} onMouseenter={leave}>
           <div class={styles.space} onMouseenter={leave}/>
-          {/*{SocialNetworks(hoverHandler)}*/}
+          <SocialNetworks hoverHandler={hoverHandler}/>
           <div class={styles.space} onMouseenter={leave}/>
         </div>
       </div>

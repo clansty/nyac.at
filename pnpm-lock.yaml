@@ -1,7 +1,9 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@iconify-json/carbon': ^1.1.2
+  '@iconify-icons/akar-icons': ^1.2.3
+  '@iconify-icons/ant-design': ^1.2.2
+  '@iconify/vue': ^3.2.0
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
   '@vitejs/plugin-vue-jsx': ^1.3.8
@@ -19,7 +21,6 @@ specifiers:
   sass: ^1.49.9
   typescript: ^4.6.2
   unplugin-auto-import: ^0.6.6
-  unplugin-vue-components: ^0.18.0
   vite: ^2.8.6
   vite-plugin-inspect: ^0.4.3
   vite-plugin-md: ^0.11.9
@@ -44,7 +45,9 @@ dependencies:
   vue-router: 4.0.14_vue@3.2.31
 
 devDependencies:
-  '@iconify-json/carbon': 1.1.2
+  '@iconify-icons/akar-icons': 1.2.3
+  '@iconify-icons/ant-design': 1.2.2
+  '@iconify/vue': 3.2.0_vue@3.2.31
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue-jsx': 1.3.8
@@ -56,7 +59,6 @@ devDependencies:
   pnpm: 6.32.3
   typescript: 4.6.2
   unplugin-auto-import: 0.6.6_@vueuse+core@8.1.1+vite@2.8.6
-  unplugin-vue-components: 0.18.0_vite@2.8.6+vue@3.2.31
   vite: 2.8.6_sass@1.49.9
   vite-plugin-inspect: 0.4.3_vite@2.8.6
   vite-plugin-md: 0.11.9_vite@2.8.6
@@ -1258,14 +1260,28 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@iconify-json/carbon/1.1.2:
-    resolution: {integrity: sha512-kopcVYOmKM1e6u7B8XugmiNV+7lDcK5hJR2XLVpYPfwJSw5M6jGTFe4ZD+SbWfxavOt67ufQtczWKwd9o7gN9Q==}
+  /@iconify-icons/akar-icons/1.2.3:
+    resolution: {integrity: sha512-URK5PWh0OvXasrW3BiR6hw+JiVnNAzJTV/Ki31Rb28VYY1WA94vXkfmUQ1ahpE8qN1yI+e4XqHkQvWx2DQDFFw==}
+    dependencies:
+      '@iconify/types': 1.0.12
+    dev: true
+
+  /@iconify-icons/ant-design/1.2.2:
+    resolution: {integrity: sha512-wbstGaLVwMqX5tK1lzDz5VgpuGMP+HT8pw0MBsImbIIl1+elR/6zTSyPJsZoxet7AoCEbEmnOKPDABnoXi7oQg==}
     dependencies:
       '@iconify/types': 1.0.12
     dev: true
 
   /@iconify/types/1.0.12:
     resolution: {integrity: sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==}
+    dev: true
+
+  /@iconify/vue/3.2.0_vue@3.2.31:
+    resolution: {integrity: sha512-sBWkef1Pp3vjDfU92UjTnvN9BsJ5o4TVdIN8+Yx+TGEwLcujty7/vq1m9FhJ9D8/ZTAN2MttKojj80s6j4FqGg==}
+    peerDependencies:
+      vue: 3.x
+    dependencies:
+      vue: 3.2.31
     dev: true
 
   /@jridgewell/resolve-uri/3.0.5:
@@ -1755,12 +1771,6 @@ packages:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
-    dev: true
-
-  /brace-expansion/2.0.1:
-    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
-    dependencies:
-      balanced-match: 1.0.2
     dev: true
 
   /braces/3.0.2:
@@ -3111,13 +3121,6 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
-  /minimatch/5.0.1:
-    resolution: {integrity: sha512-nLDxIFRyhDblz3qMuq+SoRZED4+miJ/G+tdDrjkkkRnjAsBexeGpgjLEQ0blJy7rHhR2b93rhQY4SvyWu9v03g==}
-    engines: {node: '>=10'}
-    dependencies:
-      brace-expansion: 2.0.1
-    dev: true
-
   /minimist/1.2.5:
     resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
     dev: true
@@ -3813,38 +3816,6 @@ packages:
     transitivePeerDependencies:
       - esbuild
       - rollup
-      - vite
-      - webpack
-    dev: true
-
-  /unplugin-vue-components/0.18.0_vite@2.8.6+vue@3.2.31:
-    resolution: {integrity: sha512-qk4AgtsydOw1RoGjVlC9toBnq9U8UD8gORRbZjZoNV14c1n5+ZZXV1Hjf7ne6SCt/SROBxpK6Kh3iqL0d8ijpw==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      '@babel/parser': ^7.15.8
-      '@babel/traverse': ^7.15.4
-      vue: 2 || 3
-    peerDependenciesMeta:
-      '@babel/parser':
-        optional: true
-      '@babel/traverse':
-        optional: true
-    dependencies:
-      '@antfu/utils': 0.5.0
-      '@rollup/pluginutils': 4.2.0
-      chokidar: 3.5.3
-      debug: 4.3.3
-      fast-glob: 3.2.11
-      local-pkg: 0.4.1
-      magic-string: 0.26.1
-      minimatch: 5.0.1
-      resolve: 1.22.0
-      unplugin: 0.4.0_vite@2.8.6
-      vue: 3.2.31
-    transitivePeerDependencies:
-      - esbuild
-      - rollup
-      - supports-color
       - vite
       - webpack
     dev: true

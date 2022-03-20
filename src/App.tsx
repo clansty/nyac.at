@@ -10,7 +10,9 @@ export default defineComponent({
       title: '凌莞喵～',
     });
     const randomBackground = ref('');
-    randomBackground.value = random.choose(BACKGROUNDS);
+    if (!import.meta.env.SSR) {
+      randomBackground.value = random.choose(BACKGROUNDS);
+    }
     return () => (
       <div class={`${styles.container} ${randomBackground.value}`}>
         <RouterView/>

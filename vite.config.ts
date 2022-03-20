@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
 import generateSitemap from 'vite-ssg-sitemap'
 import Layouts from 'vite-plugin-vue-layouts'
-import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -43,15 +42,6 @@ export default defineConfig({
       ],
       include: [/\.[tj]sx?$/],
       dts: 'src/auto-imports.d.ts',
-    }),
-
-    // https://github.com/antfu/unplugin-vue-components
-    Components({
-      // allow auto load markdown components under `./src/components/`
-      extensions: ['tsx', 'md'],
-      // allow auto import and register components used in markdown
-      include: [/\.tsx$/, /\.vue\?vue/, /\.md$/],
-      dts: 'src/components.d.ts',
     }),
 
     // https://github.com/antfu/vite-plugin-md
