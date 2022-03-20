@@ -1,0 +1,95 @@
+- name: 倚窗，听雨
+  url: 'https://blog.coelacanthus.moe/'
+  desc: C10s 大佬！
+  color: '#F45A8D'
+  avatar: c10s
+- name: ssr's blog
+  url: 'https://leanhe.dev/'
+  desc: 静静强强！
+  color: '#36A8ED'
+  avatar: ssr
+- url: 'https://fangyuan-neko.github.io/'
+  name: 方圆喵
+  desc: 方圆猫！
+  avatar: fangyuan
+  color: '#D4D4E0'
+- name: 洛灵酱的小窝
+  desc: 洛灵酱可爱又强强！！
+  url: 'https://luoling8192.top/'
+  color: '#2E8B90'
+  avatar: luoling
+- name: Senioria的刺猬洞
+  desc: 是可爱刺猬 Senioria！
+  url: 'https://91khr.github.io'
+  color: '#7D5F54'
+  avatar: senioria
+- color: '#747CA3'
+  name: Candy Life
+  desc: 是 tommy 酱！
+  avatar: tommy
+  url: 'https://tommy0103.github.io'
+- color: '#B62512'
+  name: 黎想的博客 | 圣人不死，大盗不止
+  desc: 一只很喜欢 1145141919810 的大佬
+  avatar: lixiang
+  url: 'https://stblog.penclub.club'
+- color: '#9AC6C7'
+  name: LightQuantum 光量子
+  desc: 光量子！巨佬！敲可爱！
+  avatar: lightquantum
+  url: 'https://lightquantum.me/'
+- color: '#4CA9F5'
+  name: Winslow Eric
+  desc: 喵喵喵！
+  avatar: winslow
+  url: 'https://winsloweric.com/'
+- color: '#A4918A'
+  name: 三日月綾香
+  desc: 大佬喵喵喵！
+  avatar: ayaka
+  url: 'https://ayaka.shn.hk/'
+- color: '#9CB557'
+  name: 钱桑もぺもぺ～
+  desc: 钱桑小可爱，不是小笨蛋
+  avatar: ndoskrnl
+  url: 'https://blog.ndoskrnl.net/'
+- color: '#00A2E8'
+  name: xtl
+  desc: 天乐大佬
+  avatar: xtl
+  url: 'https://www.xtlsoft.top/'
+- color: '#8B816F'
+  name: Estela 山前
+  desc: 传说中的山前姐姐！
+  avatar: estela
+  url: 'https://estela.moe/'
+- color: '#FEECC7'
+  name: 静かな森 | 致虚极，守静笃。
+  desc: 超级强强的大佬，博客超可爱！
+  avatar: innei
+  url: 'https://innei.ren/'
+- color: '#AD7858'
+  name: Menci
+  desc: 微软大佬！
+  avatar: menci
+  url: 'https://blog.men.ci/'
+- color: '#8DC0B9'
+  name: Frea的博客
+  desc: 是个大佬
+  avatar: frea
+  url: 'https://imfrea.com'
+- color: '#5181B5'
+  name: 是沐子哩
+  desc: 沐子沐子嘤嘤嘤ww
+  avatar: moozae
+  url: 'https://moozae.cn'
+- color: '#E28F77'
+  name: Leohearts 的 Blog
+  desc: 超可爱超厉害的芋头姐姐
+  avatar: leohearts
+  url: 'https://leohearts.com'
+- name: 桜屋敷の小林日紗子
+  avatar: dkexluna
+  url: https://dkexluna.github.io/
+  color: '#B8A6BF'
+  desc: 好耶，是日纱纱ww

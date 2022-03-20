@@ -1,15 +1,16 @@
-import path from 'path'
-import { defineConfig } from 'vite'
-import Pages from 'vite-plugin-pages'
-import generateSitemap from 'vite-ssg-sitemap'
-import Layouts from 'vite-plugin-vue-layouts'
-import AutoImport from 'unplugin-auto-import/vite'
-import Markdown from 'vite-plugin-md'
-import { VitePWA } from 'vite-plugin-pwa'
-import Inspect from 'vite-plugin-inspect'
-import Prism from 'markdown-it-prism'
-import LinkAttributes from 'markdown-it-link-attributes'
+import path from 'path';
+import { defineConfig } from 'vite';
+import Pages from 'vite-plugin-pages';
+import generateSitemap from 'vite-ssg-sitemap';
+import Layouts from 'vite-plugin-vue-layouts';
+import AutoImport from 'unplugin-auto-import/vite';
+import Markdown from 'vite-plugin-md';
+import { VitePWA } from 'vite-plugin-pwa';
+import Inspect from 'vite-plugin-inspect';
+import Prism from 'markdown-it-prism';
+import LinkAttributes from 'markdown-it-link-attributes';
 import VueJsx from '@vitejs/plugin-vue-jsx';
+import Content from '@originjs/vite-plugin-content';
 
 export default defineConfig({
   resolve: {
@@ -51,14 +52,14 @@ export default defineConfig({
       headEnabled: true,
       markdownItSetup(md) {
         // https://prismjs.com/
-        md.use(Prism)
+        md.use(Prism);
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
             rel: 'noopener',
           },
-        })
+        });
       },
     }),
 
@@ -94,13 +95,17 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-inspect
     // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
+
+    Content(),
   ],
 
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
-    onFinished() { generateSitemap() },
+    onFinished() {
+      generateSitemap();
+    },
   },
 
   optimizeDeps: {
@@ -114,4 +119,4 @@ export default defineConfig({
       'vue-demi',
     ],
   },
-})
+});

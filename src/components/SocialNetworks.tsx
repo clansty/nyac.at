@@ -1,7 +1,7 @@
 import { PropType } from 'vue';
-import mailOutlined from '@iconify-icons/ant-design/mail-outlined';
-import githubFill from '@iconify-icons/akar-icons/github-fill';
-import telegramFill from '@iconify-icons/akar-icons/telegram-fill';
+import mailOutlined from '@iconify-icons/ant-design/mail-outlined.js';
+import githubFill from '@iconify-icons/akar-icons/github-fill.js';
+import telegramFill from '@iconify-icons/akar-icons/telegram-fill.js';
 import { RouterLink } from 'vue-router';
 import gpg from '~/icons/gpg';
 import Icon from '~/components/Icon';
