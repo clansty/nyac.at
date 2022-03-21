@@ -4,7 +4,6 @@ import { RouterLink } from 'vue-router';
 import copyOutlined from '@iconify-icons/ant-design/copy-outlined.js';
 import downloadOutlined from '@iconify-icons/ant-design/download-outlined.js';
 import Icon from '~/components/Icon';
-import { Ref } from 'vue-demi';
 
 export default defineComponent({
   setup() {
@@ -19,7 +18,7 @@ export default defineComponent({
       ],
     });
 
-    const copied = ref(false);
+    const { copy, copied } = useClipboard({ source: pubKey });
 
     return () => (
       <div class={styles.pgpContainer}>
@@ -35,7 +34,7 @@ export default defineComponent({
           <span>E134</span>
         </div>
         <div class={styles.buttons}>
-          <div onClick={() => copy(copied)} tabindex={0} role="button">
+          <div onClick={() => copy()} tabindex={0} role="button">
             <Icon icon={copyOutlined}/>
             <span class={styles.text}>
               {copied.value ? '已复制！' : '复制公钥到剪贴板'}
@@ -58,18 +57,6 @@ function download() {
   link.href = url;
   link.download = 'Clansty Rin (凌莞)_0x0BBCB8C1_public.asc';
   link.click();
-}
-
-function copy(copied: Ref<boolean>) {
-  navigator.clipboard.writeText(pubKey)
-    .then(() => {
-      copied.value = true;
-      setTimeout(() => copied.value = false, 1000);
-    })
-    .catch(e => {
-      console.error(e);
-      alert('复制失败');
-    });
 }
 
 const pubKey = `-----BEGIN PGP PUBLIC KEY BLOCK-----
