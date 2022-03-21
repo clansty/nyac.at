@@ -1,5 +1,5 @@
 export default {
-  'body': '    <g transform="translate(-258.09 -439.96)" fill="currentColor">' +
+  body: '    <g transform="translate(-258.09 -439.96)" fill="currentColor">' +
     '        <g transform="translate(2.264 1.8945)">' +
     '            <g transform="matrix(1.8553 0 0 1.8553 -191.29 -551.12)">' +
     '                <path' +
@@ -11,6 +11,6 @@ export default {
     '            </g>' +
     '        </g>' +
     '    </g>',
-  'width': 200,
-  'height': 200,
+  width: 200,
+  height: 200,
 };

@@ -4,8 +4,7 @@ import random from '~/utils/random';
 import FriendLink from '~/types/FriendLink';
 import styles from './friends.module.sass';
 import FriendLinkBox from '~/components/FriendLinkBox';
-import { RouterLink } from 'vue-router';
-import Left from '~/components/Left';
+import BackButton from '~/components/BackButton';
 
 export default defineComponent({
   setup() {
@@ -38,11 +37,7 @@ export default defineComponent({
           {/*  <MtfWikiLinkBox/>*/}
           {/*</div>*/}
         </div>
-        <div class={styles.back}>
-          <RouterLink to="/">
-            <Left/>
-          </RouterLink>
-        </div>
+        <BackButton to="/"/>
       </div>
     );
   },

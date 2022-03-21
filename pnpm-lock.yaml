@@ -3,6 +3,8 @@ lockfileVersion: 5.3
 specifiers:
   '@iconify-icons/akar-icons': ^1.2.3
   '@iconify-icons/ant-design': ^1.2.2
+  '@iconify-icons/cil': ^1.2.2
+  '@iconify-icons/logos': ^1.2.4
   '@iconify/vue': ^3.2.0
   '@originjs/vite-plugin-content': ^1.0.1
   '@types/markdown-it-link-attributes': ^3.0.1
@@ -48,6 +50,8 @@ dependencies:
 devDependencies:
   '@iconify-icons/akar-icons': 1.2.3
   '@iconify-icons/ant-design': 1.2.2
+  '@iconify-icons/cil': 1.2.2
+  '@iconify-icons/logos': 1.2.4
   '@iconify/vue': 3.2.0_vue@3.2.31
   '@originjs/vite-plugin-content': 1.0.1
   '@types/markdown-it-link-attributes': 3.0.1
@@ -1274,6 +1278,18 @@ packages:
 
   /@iconify-icons/ant-design/1.2.2:
     resolution: {integrity: sha512-wbstGaLVwMqX5tK1lzDz5VgpuGMP+HT8pw0MBsImbIIl1+elR/6zTSyPJsZoxet7AoCEbEmnOKPDABnoXi7oQg==}
+    dependencies:
+      '@iconify/types': 1.0.12
+    dev: true
+
+  /@iconify-icons/cil/1.2.2:
+    resolution: {integrity: sha512-l2msbHDIHmXGqPDpznJF08HuR3mKleAmld5G1KbxAp9ziIwQTr5705t9MZNWac9Q8F+U0Nm06vSZUdt6WD8p4w==}
+    dependencies:
+      '@iconify/types': 1.0.12
+    dev: true
+
+  /@iconify-icons/logos/1.2.4:
+    resolution: {integrity: sha512-+etkp+++IiW9ckmET6WaoxZ1rgZUlRhXbvw4+rWTLBBUUp4HjTc9+x2OjpJBCcR9sPMF7l9wFLUvCyGLsm4tKA==}
     dependencies:
       '@iconify/types': 1.0.12
     dev: true

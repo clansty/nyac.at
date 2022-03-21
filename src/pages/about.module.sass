@@ -1,0 +1,97 @@
+.aboutContainer
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+
+  .title
+    position: absolute
+    top: 0
+    height: 85px
+    z-index: 1
+    width: 100vw
+    backdrop-filter: blur(5px)
+    background-color: rgba(255, 255, 255, 0.6)
+    color: #303133
+    font-size: x-large
+    display: flex
+    justify-content: center
+    align-items: center
+    @media (min-width: 1000px)
+      display: none
+
+
+  .content
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    overflow-y: auto
+    display: flex
+    align-items: center
+    justify-content: left
+
+    @media (max-width: 600px)
+      top: 0
+      align-items: flex-start
+
+
+    > div
+      flex-shrink: 1
+      padding: 0 80px
+      max-height: 100%
+      overflow-y: auto
+      color: #303133
+      white-space: nowrap
+      @media (max-width: 1000px)
+        background-color: rgba(255, 255, 255, 0.4)
+        backdrop-filter: blur(5px)
+        width: 100%
+
+      @media (max-width: 950px)
+        width: 100%
+
+      @media (max-width: 600px)
+        white-space: unset
+        padding-top: 85px
+        max-height: 100vh
+
+      @media (max-width: 500px)
+        padding: 85px 40px
+
+      svg
+        vertical-align: text-bottom
+
+  .languageSwitch
+    position: absolute
+    top: 15px
+    right: 20px
+    display: flex
+
+    @media (max-width: 1000px)
+      display: none
+
+    > a
+      margin-left: 10px
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 30px
+      width: 60px
+      color: #606266
+
+  .languageSwitchMobile
+    top: 0
+    right: 0
+    height: 85px
+    display: flex
+    font-size: x-large
+    position: absolute
+    padding-right: 10px
+    align-items: center
+    z-index: 2
+
+    @media (min-width: 1000px)
+      display: none

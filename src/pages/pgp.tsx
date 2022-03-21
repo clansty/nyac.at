@@ -1,9 +1,8 @@
 import styles from './pgp.module.sass';
-import Left from '~/components/Left';
-import { RouterLink } from 'vue-router';
 import copyOutlined from '@iconify-icons/ant-design/copy-outlined.js';
 import downloadOutlined from '@iconify-icons/ant-design/download-outlined.js';
 import Icon from '~/components/Icon';
+import BackButton from '~/components/BackButton';
 
 export default defineComponent({
   setup() {
@@ -22,11 +21,7 @@ export default defineComponent({
 
     return () => (
       <div class={styles.pgpContainer}>
-        <div class={styles.back}>
-          <RouterLink to="/">
-            <Left/>
-          </RouterLink>
-        </div>
+        <BackButton to="/"/>
         <div class={styles.id} title="DFE7 C051 95DA 2F2B F144  81CF 3A6B E8BA F2ED E134">
           <span>3A6B</span>
           <span>E8BA</span>
