@@ -8,7 +8,6 @@ import { VitePWA } from 'vite-plugin-pwa';
 import Inspect from 'vite-plugin-inspect';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import Content from '@originjs/vite-plugin-content';
-import Xdm from 'xdm/rollup.js';
 import { XdmMod } from './rollup/xdm-mod';
 
 export default defineConfig({
@@ -104,7 +103,8 @@ export default defineConfig({
     script: 'async',
     formatting: 'minify',
     onFinished() {
-      generateSitemap();
+      // @ts-ignore
+      generateSitemap.default();
     },
   },
 
