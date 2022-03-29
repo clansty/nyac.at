@@ -1,4 +1,4 @@
-import styles from './posts.module.sass';
+import styles from './index.module.sass';
 import PostsIndexItem from '~/components/PostsIndexItem';
 import allPosts from '~/utils/allPosts';
 

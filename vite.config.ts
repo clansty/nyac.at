@@ -4,14 +4,12 @@ import Pages from 'vite-plugin-pages';
 import generateSitemap from 'vite-ssg-sitemap';
 import Layouts from 'vite-plugin-vue-layouts';
 import AutoImport from 'unplugin-auto-import/vite';
-import Markdown from 'vite-plugin-md';
 import { VitePWA } from 'vite-plugin-pwa';
 import Inspect from 'vite-plugin-inspect';
-import Prism from 'markdown-it-prism';
-import LinkAttributes from 'markdown-it-link-attributes';
 import VueJsx from '@vitejs/plugin-vue-jsx';
-import Vue from '@vitejs/plugin-vue';
 import Content from '@originjs/vite-plugin-content';
+import Xdm from 'xdm/rollup.js';
+import { XdmMod } from './rollup/xdm-mod';
 
 export default defineConfig({
   resolve: {
@@ -20,10 +18,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    Vue({
-      include: [/\.md$/],
-    }),
-
     VueJsx({
       include: [/\.tsx$/],
     }),
@@ -32,16 +26,16 @@ export default defineConfig({
     Pages({
       extensions: ['tsx', 'md'],
       caseSensitive: true,
-      extendRoute(route){
-        if(route.path.startsWith('/posts')){
+      extendRoute(route) {
+        if (route.path.startsWith('/posts')) {
           return {
             ...route,
-            meta:{
-              layout: 'blog'
-            }
-          }
+            meta: {
+              layout: 'blog',
+            },
+          };
         }
-      }
+      },
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -59,24 +53,6 @@ export default defineConfig({
       ],
       include: [/\.[tj]sx?$/],
       dts: 'src/auto-imports.d.ts',
-    }),
-
-    // https://github.com/antfu/vite-plugin-md
-    // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
-    Markdown({
-      wrapperClasses: '',
-      headEnabled: true,
-      markdownItSetup(md) {
-        // https://prismjs.com/
-        md.use(Prism);
-        md.use(LinkAttributes, {
-          matcher: (link: string) => /^https?:\/\//.test(link),
-          attrs: {
-            target: '_blank',
-            rel: 'noopener',
-          },
-        });
-      },
     }),
 
     // https://github.com/antfu/vite-plugin-pwa
@@ -112,7 +88,15 @@ export default defineConfig({
     // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
 
-    Content(),
+    Content.default(),
+
+    XdmMod({
+      jsxRuntime: 'classic',
+      pragma: 'Vue.h',
+      pragmaFrag: 'Vue.Fragment',
+      pragmaImportSource: 'vue',
+      useDynamicImport: true,
+    }),
   ],
 
   // https://github.com/antfu/vite-ssg
