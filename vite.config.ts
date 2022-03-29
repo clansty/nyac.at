@@ -9,6 +9,7 @@ import Inspect from 'vite-plugin-inspect';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import Content from '@originjs/vite-plugin-content';
 import { XdmMod } from './rollup/xdm-mod';
+import * as fs from 'fs';
 
 export default defineConfig({
   resolve: {
@@ -105,6 +106,15 @@ export default defineConfig({
     onFinished() {
       // @ts-ignore
       generateSitemap.default();
+    },
+    includedRoutes(paths, routes) {
+      // use original route records
+      const pathsRet = routes.flatMap((route) => {
+        return route.path === '/posts/:slug'
+          ? fs.readdirSync('./data/posts').filter(dir => !dir.startsWith('.')).map(slug => `/posts/${slug}`)
+          : route.path;
+      });
+      return pathsRet
     },
   },
 

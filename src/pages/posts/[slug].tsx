@@ -9,9 +9,9 @@ const Component = defineComponent({
     slug: { type: String, required: true },
   },
   async setup(props) {
+    console.log(props.slug);
     const { default: meta } = await postData[postMetaPath(props.slug)]();
     const { default: Content } = await postData[postContentPath(props.slug)]();
-    console.log(meta);
 
     return () => (
       <div class="postContent">
