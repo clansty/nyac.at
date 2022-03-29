@@ -1,0 +1,4 @@
+title: 安装 KVM 虚拟机的踩坑记
+date: 2021-07-15 23:39
+desc: 最近换了 openSUSE 嘛，就打算用 KVM 来换掉一直使用的 VMware。就在 KVM 里面装了一台 Win10 的虚拟机（咱喵没有 Windows 实体机），踩了无数的坑
+banner: https://cdn.lwqwq.com/pic/image-20210715234852596.png

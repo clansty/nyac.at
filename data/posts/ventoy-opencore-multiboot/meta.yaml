@@ -1,0 +1,4 @@
+title: 制作一个 Ventoy + OpenCore 多重启动 U 盘
+desc: 在一个 U 盘上实现 Ventoy 和 OpenCore 共存，用 Ventoy 启动 OpenCore，一个 U 盘启动 macOS, Linux, Windows 等各种系统
+banner: https://cdn.lwqwq.com/pic/202203261206355.png
+date: 2022-03-26

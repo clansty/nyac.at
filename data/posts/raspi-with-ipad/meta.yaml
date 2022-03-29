@@ -1,0 +1,4 @@
+title: 用树莓派做 iPad 的主机
+desc: 通过 USB-C 线把 iPad 和树莓皮连接，iPad 给树莓皮供电，并且建立一个 iPad 与树莓皮共同的子网使得 iPad 能通过 SSH 和 VNC 访问树莓皮的系统
+date: 2021-05-07
+banner: https://cdn.lwqwq.com/pic/IMG_20210507_193546.jpg

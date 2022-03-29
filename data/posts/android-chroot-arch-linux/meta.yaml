@@ -1,0 +1,4 @@
+title: 在手机上安装 Arch Linux 容器桌面环境
+desc: 窝前些日子就在想了，我是不是可以不带树莓派，在手机上通过 chroot 来运行一个 Linux 桌面来给 iPad 用，同时也可以在手机上干一些别的事情。这样手机只要开热点给 iPad，iPad 可以直接 vnc 得到手机上容器的桌面。
+banner: https://i.loli.net/2021/05/13/ZlUnjghy7rksPuD.png
+date: 2021-05-13 23:19

@@ -1,0 +1,4 @@
+title: 迁移 Cloudreve 的 SQLite 数据库到 PostgreSQL
+desc: 我的 Cloudreve 自建网盘刚开始搭建的时候使用的是 SQLite 数据库。随着数据增加，SQLite 据说性能不足，我觉得应该迁移到有服务器的数据库了。这里讲述正确的迁移方法
+banner: https://cdn.lwqwq.com/pic/image-20220114105211227.png
+date: 2022-01-14

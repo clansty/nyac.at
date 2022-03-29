@@ -10,6 +10,7 @@ import Inspect from 'vite-plugin-inspect';
 import Prism from 'markdown-it-prism';
 import LinkAttributes from 'markdown-it-link-attributes';
 import VueJsx from '@vitejs/plugin-vue-jsx';
+import Vue from '@vitejs/plugin-vue';
 import Content from '@originjs/vite-plugin-content';
 
 export default defineConfig({
@@ -19,13 +20,28 @@ export default defineConfig({
     },
   },
   plugins: [
+    Vue({
+      include: [/\.md$/],
+    }),
+
     VueJsx({
-      include: [/\.tsx$/, /\.md$/],
+      include: [/\.tsx$/],
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       extensions: ['tsx', 'md'],
+      caseSensitive: true,
+      extendRoute(route){
+        if(route.path.startsWith('/posts')){
+          return {
+            ...route,
+            meta:{
+              layout: 'blog'
+            }
+          }
+        }
+      }
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
