@@ -18,9 +18,13 @@
       background: #eeeeee;
       padding: 3px;
       border-radius: 3px;
-      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
       white-space: pre-wrap;
     }
+  }
+
+  pre, code {
+    font-size: 0.95em;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', "Fira Code", "Fira Mono", Menlo, Monospaced, monospace !important;
   }
 
   a {

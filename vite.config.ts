@@ -10,6 +10,8 @@ import VueJsx from '@vitejs/plugin-vue-jsx';
 import Content from '@originjs/vite-plugin-content';
 import { XdmMod } from './rollup/xdm-mod';
 import * as fs from 'fs';
+import remarkGfm from 'remark-gfm';
+import rehypePrism from '@mapbox/rehype-prism';
 
 export default defineConfig({
   resolve: {
@@ -95,7 +97,13 @@ export default defineConfig({
       pragma: 'Vue.h',
       pragmaFrag: 'Vue.Fragment',
       pragmaImportSource: 'vue',
-      useDynamicImport: true,
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [[rehypePrism, {
+        ignoreMissing: true, alias: {
+          cpp: 'c++',
+          csharp: 'c#',
+        },
+      }]],
     }),
   ],
 
@@ -114,7 +122,7 @@ export default defineConfig({
           ? fs.readdirSync('./data/posts').filter(dir => !dir.startsWith('.')).map(slug => `/posts/${slug}`)
           : route.path;
       });
-      return pathsRet
+      return pathsRet;
     },
   },
 

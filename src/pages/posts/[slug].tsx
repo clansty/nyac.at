@@ -1,6 +1,7 @@
 import { formatDate } from '@vueuse/core';
 import { Suspense } from 'vue';
 import '~/styles/blog.scss';
+import 'prism-themes/themes/prism-one-dark.min.css';
 
 const postData = import.meta.glob('../../../data/posts/*/*');
 
@@ -18,8 +19,11 @@ const Component = defineComponent({
         <div class="date">
           {formatDate(new Date(meta.date), 'YYYY/M/D')}
         </div>
-        <Content/>
-        {/*<ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>*/}
+        <Content
+          components={{
+            h1: 'h2',
+          }}
+        />
         {/*<RinMent slug={meta.slug}/>*/}
       </div>
     );
