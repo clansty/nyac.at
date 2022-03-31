@@ -17,6 +17,7 @@
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^3.4.0",
     "@iconify-icons/akar-icons": "^1.2.3",
     "@iconify-icons/ant-design": "^1.2.2",
     "@iconify-icons/cil": "^1.2.2",

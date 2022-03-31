@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@cloudflare/workers-types': ^3.4.0
   '@iconify-icons/akar-icons': ^1.2.3
   '@iconify-icons/ant-design': ^1.2.2
   '@iconify-icons/cil': ^1.2.2
@@ -47,6 +48,7 @@ dependencies:
   vue-router: 4.0.14_vue@3.2.31
 
 devDependencies:
+  '@cloudflare/workers-types': 3.4.0
   '@iconify-icons/akar-icons': 1.2.3
   '@iconify-icons/ant-design': 1.2.2
   '@iconify-icons/cil': 1.2.2
@@ -1266,6 +1268,10 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
+    dev: true
+
+  /@cloudflare/workers-types/3.4.0:
+    resolution: {integrity: sha512-i/3czUrt6YqbOWl44OtIqd0cSZvEVXp/1oD/DZylC4PHZL3q/BhbamdEVeVhc/HPk4iD/7MZ2HGaIMO4Z4b12A==}
     dev: true
 
   /@iarna/toml/2.2.5:
