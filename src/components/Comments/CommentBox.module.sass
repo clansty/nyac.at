@@ -1,0 +1,83 @@
+.commentBox
+  color: #606266
+  border-top: 1px solid rgba(128, 128, 128, .12)
+  padding-top: 18px
+
+  label, legend
+    display: none
+
+  fieldset
+    margin: 7px 0 0 0
+    margin-inline: 0
+    padding: 0
+    padding-inline: 0
+    padding-block: 0
+    border: none
+    min-inline-size: unset
+
+    &:disabled
+      cursor: progress
+
+  div:nth-child(2)
+    display: grid
+    grid-template-columns: 33.33% 33.33% 33.33%
+
+  input, textarea
+    background-color: rgba(237, 248, 246, 0.3)
+    padding: 0.3em
+    border: none
+    border-bottom: #ECFDF5 1px solid
+    font-family: inherit
+    font-size: 0.8em
+    transition: all 0.3s
+
+    &:focus, &:focus-visible
+      outline: none
+      border: none
+      background-color: rgba(237, 248, 246, 0.55)
+      border-bottom: #6EE7B7 1px solid
+
+    &:disabled
+      cursor: unset
+
+  input
+    margin: 5px
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+
+  textarea
+    width: 100%
+    height: 200px
+    resize: vertical
+
+  div:last-child
+    display: flex
+    justify-content: right
+
+    button
+      border-radius: 5px
+      border: rgba(110, 231, 183, 0.9) solid 1px
+      background-color: rgba(110, 231, 183, 0.1)
+      padding: 5px 10px
+      display: flex
+      justify-content: center
+      align-items: center
+      color: #303133
+      transition: all 0.3s
+      cursor: pointer
+
+      &:hover:not(:disabled)
+        border: rgb(110, 231, 183) solid 1px
+        background-color: rgba(110, 231, 183, 0.2)
+
+      &:active
+        background-color: rgba(110, 231, 183, 0.5)
+
+      &:disabled
+        border: rgba(110, 231, 183, 0.6) solid 1px
+        cursor: unset
+

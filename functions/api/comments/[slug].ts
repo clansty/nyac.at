@@ -40,7 +40,7 @@ export const onRequestPost: PagesFunction<{
 
   await env.DATA_STORE.put(params.slug as string, JSON.stringify(postComments, undefined, 0));
 
-  return new Response('succeed', {
+  return new Response(JSON.stringify(commentObj, undefined, 0), {
     status: 201,
   });
 };

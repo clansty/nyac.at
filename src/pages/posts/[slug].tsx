@@ -2,6 +2,7 @@ import { formatDate } from '@vueuse/core';
 import { Suspense } from 'vue';
 import '~/styles/blog.scss';
 import 'prism-themes/themes/prism-one-dark.min.css';
+import Comments from '~/components/Comments';
 
 const postData = import.meta.glob('../../../data/posts/*/*');
 
@@ -10,7 +11,6 @@ const Component = defineComponent({
     slug: { type: String, required: true },
   },
   async setup(props) {
-    console.log(props.slug);
     const { default: meta } = await postData[postMetaPath(props.slug)]();
     const { default: Content } = await postData[postContentPath(props.slug)]();
 
@@ -24,7 +24,7 @@ const Component = defineComponent({
             h1: 'h2',
           }}
         />
-        {/*<RinMent slug={meta.slug}/>*/}
+        <Comments slug={props.slug}/>
       </div>
     );
   },
