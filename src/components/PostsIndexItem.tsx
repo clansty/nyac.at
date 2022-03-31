@@ -2,7 +2,7 @@ import PostInfo from '~/types/PostInfo';
 import { PropType } from 'vue';
 import { RouterLink } from 'vue-router';
 import { formatDate } from '@vueuse/core';
-import styles from './PostIndexItem.module.sass';
+import styles from './PostsIndexItem.module.sass';
 
 export default defineComponent({
   props: {
