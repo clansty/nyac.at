@@ -20,9 +20,9 @@ export default defineComponent({
           <div class={styles.date}>
             {formatDate(new Date(comment.date), 'YYYY/M/D h:mm')}
           </div>
-          <pre>
+          <div class={styles.content}>
             {comment.content}
-          </pre>
+          </div>
         </div>
       </div>
     );
