@@ -1,6 +1,7 @@
 import type Comment from '~/types/Comment';
 import styles from './CommentBox.module.sass';
 import CommentBox from './CommentBox';
+import SingleComment from '~/components/Comments/SingleComment';
 
 export default defineComponent({
   props: {
@@ -26,7 +27,7 @@ export default defineComponent({
       }
       return <div>
         <CommentBox slug={props.slug} addComment={addComment}/>
-        {/*{comments.map(e => <SingleComment comment={e} key={e._id}/>)}*/}
+        {comments.value.map(e => <SingleComment comment={e} key={e.date}/>)}
       </div>;
     };
 

@@ -1,0 +1,45 @@
+.commentEntry
+  width: 100%
+  display: flex
+  padding: 10px
+
+  &:not(:last-child)
+    border-bottom: 1px solid rgba(128, 128, 128, .12)
+
+  img
+    height: 65px
+    width: 65px
+    min-width: 65px
+    border-radius: 50%
+    object-fit: cover
+    user-select: none
+
+  .commentBody
+    padding-left: 10px
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+
+    .username
+      margin: 5px
+      font-size: small
+      color: #606266
+      line-height: 1em
+
+      a
+        box-shadow: unset
+
+    pre
+      margin: 5px
+      font-size: smaller
+      font-family: inherit
+      color: #303133
+      line-height: 1.5em
+      word-wrap: break-word
+      white-space: pre-wrap
+
+    .date
+      margin: 5px
+      font-size: x-small
+      color: #909399
+      line-height: 1em
