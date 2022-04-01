@@ -43,7 +43,7 @@ export default defineComponent({
                    placeholder="网站（选填）"/>
           </div>
           {/* @ts-ignore */}
-          <textarea vModel={content.value}
+          <textarea vModel={content.value} onKeypress={handleKeyPress}
                     placeholder="正文！" required/>
           <div>
             <button aria-label="发布评论">发射～</button>
@@ -51,6 +51,13 @@ export default defineComponent({
         </fieldset>
       </form>
     );
+
+    async function handleKeyPress(e: KeyboardEvent) {
+      console.log(e);
+      if (e.key === 'Enter' && e.ctrlKey) {
+        await sendComment(e);
+      }
+    }
 
     async function sendComment(e: Event) {
       e.preventDefault();
@@ -69,7 +76,6 @@ export default defineComponent({
           'Content-Type': 'application/json',
         },
       });
-      console.log(await res.text());
       const resData = await res.json() as Comment;
       content.value = '';
       props.addComment(resData);

@@ -14,7 +14,6 @@ export default defineComponent({
       const res = await fetch('/api/comments/' + props.slug, {
         redirect: 'error',
       });
-      console.log(await res.text());
       comments.value = await res.json();
     }, { immediate: true });
 
