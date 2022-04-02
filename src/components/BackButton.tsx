@@ -6,7 +6,7 @@ import styles from './BackButton.module.sass';
 
 export default defineComponent({
   props: {
-    to: { type: Object as PropType<RouteLocationRaw>, required: true },
+    to: { type: String as PropType<RouteLocationRaw>, required: true },
   },
   setup(props) {
     return () => (

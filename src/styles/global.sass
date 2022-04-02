@@ -13,41 +13,39 @@ a
 *
   box-sizing: border-box
 
-.fade-enter-active, .fade-leave-active
-  transition: all .6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+.base
+  &.animation-enter-active, &.animation-leave-active
+    transition: all .6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
 
-  @media screen and (max-width: 500px)
-    transition: all .6s ease-in-out
+    @media screen and (max-width: 500px)
+      transition: all .6s ease-in-out
 
-.fade-enter-from, .fade-leave-to
-  opacity: 0
-  @media screen and (max-width: 500px)
-    transform: translateY(-100vh)
+  &.animation-enter-from, &.animation-leave-to
+    opacity: 0
+    @media screen and (max-width: 500px)
+      transform: translateY(-100vh)
 
-  @media screen and (min-width: 500.001px)
-    transform: translateX(-500px)
+    @media screen and (min-width: 500.001px)
+      transform: translateX(-500px)
 
-.enter,
-.exit-active,
-.exit-done
+.animation-enter-from, .animation-leave-to
   .blogHeader
     opacity: 0
     transform: translateY(-40px)
 
-  .blogBody
-    opacity: 0
-    transform: translateY(50vh)
-
-.enter
+.animation-enter-from
   .postItem
     opacity: 0
     transform: translateX(100%)
 
-.exit-active,
-.exit-done
+.animation-leave-to
   .postItem
     opacity: 0
     transform: translateX(-100%)
+
+  .blogBody
+    opacity: 0
+    transform: translateY(50vh)
 
 #nprogress
   pointer-events: none

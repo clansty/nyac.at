@@ -1,0 +1,44 @@
+.blogLayout
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+
+  &.postLayoutList
+    @media (min-width: 900px)
+      width: 900px
+      margin: 0 auto
+
+
+  &.postLayoutContent
+    @media (min-width: 1050px)
+      width: 1050px
+      margin: 0 auto
+
+    .blogHeader
+      @keyframes blogHeaderEnter
+        0%
+          opacity: 0
+          transform: translateY(-40px)
+        100%
+          opacity: 1
+          transform: translateY(0)
+      animation: blogHeaderEnter 0.3s
+
+    .body
+      @keyframes blogBodyEnter
+        0%
+          opacity: 0
+          transform: translateY(50vh)
+        100%
+          opacity: 1
+          transform: translateY(0)
+      animation: blogBodyEnter 0.5s
+
+  .body
+    height: 100vh
+    overflow: auto
+    transition: all 0.5s
+    scroll-behavior: smooth
+

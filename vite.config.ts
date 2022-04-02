@@ -2,7 +2,6 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import Pages from 'vite-plugin-pages';
 import generateSitemap from 'vite-ssg-sitemap';
-import Layouts from 'vite-plugin-vue-layouts';
 import AutoImport from 'unplugin-auto-import/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import Inspect from 'vite-plugin-inspect';
@@ -28,21 +27,6 @@ export default defineConfig({
     Pages({
       extensions: ['tsx', 'md'],
       caseSensitive: true,
-      extendRoute(route) {
-        if (route.path.startsWith('/posts')) {
-          return {
-            ...route,
-            meta: {
-              layout: 'blog',
-            },
-          };
-        }
-      },
-    }),
-
-    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    Layouts({
-      extensions: ['tsx'],
     }),
 
     // https://github.com/antfu/unplugin-auto-import

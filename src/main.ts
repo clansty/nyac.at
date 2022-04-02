@@ -1,11 +1,8 @@
 import { ViteSSG } from 'vite-ssg';
-import generatedRoutes from 'virtual:generated-pages';
-import { setupLayouts } from 'virtual:generated-layouts';
+import routes from 'virtual:generated-pages';
 import App from './App';
 
 import './styles/global.sass';
-
-const routes = setupLayouts(generatedRoutes);
 
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(
