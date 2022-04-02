@@ -5,14 +5,15 @@ import styles from './FriendLinkBox.module.sass';
 export default defineComponent({
   props: {
     item: { type: Object as PropType<FriendLink>, required: true },
+    avatar: { type: String, required: true },
   },
-  setup({ item }) {
+  setup({ item, avatar }) {
     return () => (
       <a href={item.url} target="_blank" style={{ ['--color' as any]: item.color }}>
         <div class={styles.friendLinkBox}>
           <div class={styles.avatar}>
             <img
-              src={`/friend-avatars/${item.avatar}.webp`}
+              src={avatar}
               height={80}
               width={80}
               alt=""

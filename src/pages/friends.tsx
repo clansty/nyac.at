@@ -6,6 +6,8 @@ import styles from './friends.module.sass';
 import FriendLinkBox from '~/components/FriendLinkBox';
 import BackButton from '~/components/BackButton';
 
+const avatars = import.meta.globEager('../../data/friend-avatars/*.webp');
+
 export default defineComponent({
   setup() {
     useHead({
@@ -28,7 +30,7 @@ export default defineComponent({
             <div class={styles.title}>
               好朋友们～
             </div>
-            {friends.value.map(f => <FriendLinkBox item={f} key={f.name}/>)}
+            {friends.value.map(f => <FriendLinkBox item={f} key={f.name} avatar={avatar(f.avatar)}/>)}
           </div>
           {/*<div class={styles.groupBox}>*/}
           {/*  <div class={styles.title}>*/}
@@ -42,3 +44,7 @@ export default defineComponent({
     );
   },
 });
+
+function avatar(name: string) {
+  return avatars[`../../data/friend-avatars/${name}.webp`].default;
+}
