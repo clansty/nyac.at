@@ -11,7 +11,7 @@ for (const oldComment of oldData) {
   out[oldComment.postId].push({
     avatar: oldComment.avatar,
     content: oldComment.content,
-    date: new Date(oldComment.date.$date).getTime(),
+    date: new Date(oldComment.date.$date).getTime() + 1000 * 60 * 60 * 8,
     email: oldComment.email,
     url: oldComment.url,
     username: oldComment.username,

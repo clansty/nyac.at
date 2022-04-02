@@ -18,7 +18,7 @@ export default defineComponent({
               comment.username}
           </div>
           <div class={styles.date}>
-            {formatDate(new Date(comment.date), 'YYYY/M/D h:mm')}
+            {formatDate(new Date(comment.date), 'YYYY/M/D H:mm')}
           </div>
           <div class={styles.content}>
             {comment.content}
