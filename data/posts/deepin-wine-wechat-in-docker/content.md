@@ -63,9 +63,9 @@ Exec=docker exec wechat runuser -u user /opt/apps/com.qq.weixin.deepin/files/run
 
 ## 参考资料
 
-- 在Archlinux及衍生发行版上运行微信(WeChat) <https://github.com/countstarlight/deepin-wine-wechat-arch>
-- Run deepin application(qq/TIM/WeChat) anywhere <https://github.com/ygcaicn/docker-deepin>
-- Docker 时区调整方案 <https://cloud.tencent.com/developer/article/1626811>
-- docker: 四种网络模式 <https://www.huaweicloud.com/articles/5bb8f4efe7aaca9d4332750d73876db8.html>
-- ubuntu21.04安装deepin版微信3.2.1方法 <https://forum.ubuntu.org.cn/viewtopic.php?f=73&t=492128>
+- [在Archlinux及衍生发行版上运行微信(WeChat)](https://github.com/countstarlight/deepin-wine-wechat-arch)
+- [Run deepin application(qq/TIM/WeChat) anywhere](https://github.com/ygcaicn/docker-deepin)
+- [Docker 时区调整方案](https://cloud.tencent.com/developer/article/1626811)
+- [docker: 四种网络模式](https://www.huaweicloud.com/articles/5bb8f4efe7aaca9d4332750d73876db8.html)
+- [ubuntu21.04安装deepin版微信3.2.1方法](https://forum.ubuntu.org.cn/viewtopic.php?f=73&t=492128)
 

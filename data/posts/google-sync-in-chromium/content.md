@@ -72,4 +72,4 @@ Chromium 的登录入口就回来啦，然后正常登录就可以了
 
 # 参考资料
 
-- API Keys - The Chromium Projects <https://www.chromium.org/developers/how-tos/api-keys>
+- [API Keys - The Chromium Projects](https://www.chromium.org/developers/how-tos/api-keys)

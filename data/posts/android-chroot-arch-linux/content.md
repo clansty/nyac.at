@@ -67,7 +67,7 @@ fakeroot: error while starting the `faked' daemon.
 
 网上的解决方案是安装 AUR 中的 `fakeroot-tcp` 包，它使用 TCP 来代替 SYSV 管道通信。然而，安装 AUR 包又需要依赖 fakeroot 的编译环境，所以....
 
-所以，~~解决方法是临时在本地编译一个启用 tcp 的 fakeroot 添加到 path 里，再制作安装 AUR 里的包。然后我倒腾了半天，1.25 和 1.24 的包愣是编译不起来，1.23 的能编译运行，但是每次运行都是一堆报错，不过这不影响我制作 AUR 里的 `fakeroot-tcp`。最后终于是做好包了。~~这里我发一下[我打包好的包](https://downloads.lwqwq.com/%E5%BA%94%E7%94%A8/%E7%B3%BB%E7%BB%9F/fakeroot-tcp-1.25.3-2-aarch64.pkg.tar.xz)，妳们直接把它下载到机器里 `sudo pacman -U` 安装一下就成
+所以，<del>解决方法是临时在本地编译一个启用 tcp 的 fakeroot 添加到 path 里，再制作安装 AUR 里的包。然后我倒腾了半天，1.25 和 1.24 的包愣是编译不起来，1.23 的能编译运行，但是每次运行都是一堆报错，不过这不影响我制作 AUR 里的 `fakeroot-tcp`。</del>最后终于是做好包了。这里我发一下[我打包好的包](https://downloads.lwqwq.com/%E5%BA%94%E7%94%A8/%E7%B3%BB%E7%BB%9F/fakeroot-tcp-1.25.3-2-aarch64.pkg.tar.xz)，妳们直接把它下载到机器里 `sudo pacman -U` 安装一下就成
 
 然后就可以正常的构建安装 AUR 包啦
 
@@ -106,4 +106,4 @@ screen vncserver :0
 
 # 参考资料
 
-- 解决chroot/proot/wsl容器安装archlinux不能使用fakeroot的问题 <https://zsxwz.com/2021/02/08/%E8%A7%A3%E5%86%B3chroot-proot-wsl%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85archlinux%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8fakeroot%E7%9A%84%E9%97%AE%E9%A2%98/>
+- [解决chroot/proot/wsl容器安装archlinux不能使用fakeroot的问题](https://zsxwz.com/2021/02/08/%E8%A7%A3%E5%86%B3chroot-proot-wsl%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85archlinux%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8fakeroot%E7%9A%84%E9%97%AE%E9%A2%98/)

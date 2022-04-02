@@ -12,7 +12,7 @@
 
 ## 第一次的错误尝试
 
-试了一下网络上的 dd 脚本（<https://hostzg.com/1965.html>）
+试了一下[网络上的 dd 脚本](https://hostzg.com/1965.html)
 
 ![image-20220106121228571](https://cdn.lwqwq.com/pic/image-20220106121228571.png)
 
@@ -86,7 +86,7 @@ terminal_input serial; terminal_output serial
 ```bash
 menuentry --hotkey=i 'Install' {
     set background_color=black
-    linux    /install.amd/vmlinuz vga=788 --- quiet 
+    linux    /install.amd/vmlinuz vga=788 --- quiet
     initrd   /install.amd/initrd.gz
 }
 ```
@@ -131,6 +131,6 @@ mount /dev/sdb1 /cdrom
 
 ## 参考资料
 
-Using GRUB via a serial line <https://www.gnu.org/software/grub/manual/grub/html_node/Serial-terminal.html>
+- [Using GRUB via a serial line](https://www.gnu.org/software/grub/manual/grub/html_node/Serial-terminal.html)
 
-Booting the Installer on 64-bit ARM <https://www.debian.org/releases/stretch/arm64/ch05s01.html.en>
+- [Booting the Installer on 64-bit ARM](https://www.debian.org/releases/stretch/arm64/ch05s01.html.en)

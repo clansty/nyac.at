@@ -66,6 +66,6 @@ ee 是 FreeBSD 中自带的文本编辑器，有点像 nano，总之上手就会
 
 ## 参考资料
 
-- 远程安装FreeBSD <https://www.tingtao.org/archives/1869.html>
-- 遠端安裝 FreeBSD 作業系統而不必接 Remote Console <https://docs.freebsd.org/zh-tw/articles/remote-install/#preparation>
-- mfsBSD and mfslinux <https://mfsbsd.vx.sk/>
+- [远程安装FreeBSD](https://www.tingtao.org/archives/1869.html)
+- [遠端安裝 FreeBSD 作業系統而不必接 Remote Console](https://docs.freebsd.org/zh-tw/articles/remote-install/#preparation)
+- [mfsBSD and mfslinux](https://mfsbsd.vx.sk/)

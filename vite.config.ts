@@ -25,7 +25,7 @@ export default defineConfig({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
-      extensions: ['tsx', 'md'],
+      extensions: ['tsx'],
       caseSensitive: true,
     }),
 
@@ -81,6 +81,8 @@ export default defineConfig({
       pragma: 'Vue.h',
       pragmaFrag: 'Vue.Fragment',
       pragmaImportSource: 'vue',
+      format: 'mdx',
+      mdxExtensions: ['.mdx', '.md'],
       remarkPlugins: [remarkGfm],
       rehypePlugins: [[rehypePrism, {
         ignoreMissing: true, alias: {

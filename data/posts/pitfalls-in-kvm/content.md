@@ -60,7 +60,7 @@ sudo 执行之后立马见效，是防火墙的问题（就算防火墙是关着
 
 ## 参考资料
 
-- How to Install and Configure KVM on OpenSUSE Leap 15 <https://www.linuxtechi.com/install-configure-kvm-opensuse-leap-15/>
-- 上手 Linux 原生的虚拟机工具 QEMU/KVM | 水景一页 <https://cnzhx.net/blog/try-to-use-qemu-kvm-on-opensuse-tumbleweed/>
-- ubuntu18安装kvm虚拟机-桥接模式 - 知乎 <https://zhuanlan.zhihu.com/p/54628342>
+- [How to Install and Configure KVM on OpenSUSE Leap 15](https://www.linuxtechi.com/install-configure-kvm-opensuse-leap-15/)
+- [上手 Linux 原生的虚拟机工具 QEMU/KVM | 水景一页](https://cnzhx.net/blog/try-to-use-qemu-kvm-on-opensuse-tumbleweed/)
+- [ubuntu18安装kvm虚拟机-桥接模式 - 知乎](https://zhuanlan.zhihu.com/p/54628342)
 
