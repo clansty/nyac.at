@@ -6,7 +6,15 @@ export const onRequestGet: PagesFunction<{
   const data = await env.DATA_STORE.get(params.slug as string);
 
   if (data) {
-    return new Response(data);
+    const comments = JSON.parse(data) as Comment[];
+    for (const comment of comments) {
+      delete comment.email;
+    }
+    return new Response(JSON.stringify(comments, undefined, 0), {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   }
   else {
     return new Response('[]');
@@ -42,6 +50,9 @@ export const onRequestPost: PagesFunction<{
 
   return new Response(JSON.stringify(commentObj, undefined, 0), {
     status: 201,
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
 };
 
