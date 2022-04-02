@@ -3,12 +3,11 @@ import { Suspense } from 'vue';
 import '~/styles/blog.scss';
 import 'prism-themes/themes/prism-one-dark.min.css';
 import Comments from '~/components/Comments';
-import PostInfo from '~/types/PostInfo';
 import BlogLayout from '~/layouts/BlogLayout';
 import { RouterLink } from 'vue-router';
 import allPosts from '~/utils/allPosts';
 
-const postData = import.meta.glob('../../../data/posts/*/*');
+const postData = import.meta.glob('../../../data/posts/*/*.md');
 const markdownComponents = {
   h1: 'h2',
   a({ href }, { slots }) {
@@ -32,8 +31,7 @@ const Component = defineComponent({
     slug: { type: String, required: true },
   },
   async setup({ slug }) {
-    const { default: meta } = await postData[postMetaPath(slug)]() as { default: PostInfo };
-    const { default: Content } = await postData[postContentPath(slug)]();
+    const meta = allPosts.find(e => e.slug === slug);
 
     useHead({
       title: `${meta.title} — 凌莞咕噜咕噜～`,
@@ -58,6 +56,8 @@ const Component = defineComponent({
         { property: 'twitter:url', content: `https://nyac.at/posts/${slug}` },
       ],
     });
+
+    const { default: Content } = await postData[postContentPath(slug)]();
 
     return () => (
       <BlogLayout postInfo={meta}>
