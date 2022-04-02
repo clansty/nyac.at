@@ -13,6 +13,12 @@ export default defineComponent({
       link: [
         { rel: 'icon', href: favicon, type: 'image/webp' },
       ],
+      meta: [
+        { name: 'author', content: 'Clansty' },
+        { property: 'og:site_name', content: '凌莞喵～' },
+        { property: 'og:type', content: 'website' },
+        { name: 'keywords', content: '凌莞,Clansty' },
+      ],
     });
 
     const route = useRoute();
