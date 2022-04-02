@@ -20,17 +20,21 @@ export default defineComponent({
 
     function hoverHandler(e: any) {
       timeOutId && clearTimeout(timeOutId);
-      highlightRef.value!.style.transform =
-        `translateX(${e.currentTarget.offsetLeft}px) translateY(${e.currentTarget.offsetTop}px)`;
-      highlightRef.value!.style.height = `${e.currentTarget.clientHeight}px`;
-      highlightRef.value!.style.width = `${e.currentTarget.clientWidth}px`;
-      highlightRef.value!.style.display = 'block';
+      if (highlightRef.value) {
+        highlightRef.value.style.transform =
+          `translateX(${e.currentTarget.offsetLeft}px) translateY(${e.currentTarget.offsetTop}px)`;
+        highlightRef.value.style.height = `${e.currentTarget.clientHeight}px`;
+        highlightRef.value.style.width = `${e.currentTarget.clientWidth}px`;
+        highlightRef.value.style.display = 'block';
+      }
       timeOutId = setTimeout(() => highlightRef.value!.style.opacity = '1', 0);
     }
 
     function leave() {
       timeOutId && clearTimeout(timeOutId);
-      highlightRef.value!.style.opacity = '0';
+      if (highlightRef.value) {
+        highlightRef.value.style.opacity = '0';
+      }
       timeOutId = setTimeout(() => highlightRef.value! && (highlightRef.value!.style.display = 'none'), 500);
     }
 
