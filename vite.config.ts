@@ -44,27 +44,38 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
-        theme_color: '#ffffff',
+        name: '凌莞的个人主页喵～',
+        short_name: '凌莞喵～',
+        theme_color: '#EDF8F6',
+        background_color: '#EDF8F6',
+        orientation: 'portrait-primary',
+        lang: 'zh',
         icons: [
           {
-            src: '/pwa-192x192.png',
+            src: '/pwa/favicon.webp',
+            sizes: '538x538',
+            type: 'image/webp',
+          },
+          {
+            src: '/pwa/icon512.webp',
+            sizes: '512x512',
+            type: 'image/webp',
+          },
+          {
+            src: '/pwa/icon512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa/icon192.webp',
+            sizes: '192x192',
+            type: 'image/webp',
+          },
+          {
+            src: '/pwa/icon192.png',
             sizes: '192x192',
             type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable',
           },
         ],
       },
@@ -99,7 +110,9 @@ export default defineConfig({
     formatting: 'minify',
     onFinished() {
       // @ts-ignore
-      generateSitemap.default();
+      (generateSitemap.default as typeof generateSitemap)({
+        hostname: 'https://nyac.at',
+      });
     },
     includedRoutes(paths, routes) {
       // use original route records
