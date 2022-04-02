@@ -11,7 +11,7 @@ for (const oldComment of oldData) {
   out[oldComment.postId].push({
     avatar: oldComment.avatar,
     content: oldComment.content,
-    date: new Date(oldComment.date.$date).getTime() + 1000 * 60 * 60 * 8,
+    date: new Date(oldComment.date.$date).getTime() - 1000 * 60 * 60 * 8,
     email: oldComment.email,
     url: oldComment.url,
     username: oldComment.username,
@@ -20,6 +20,6 @@ for (const oldComment of oldData) {
 
 fs.mkdirSync(path.join('dist', 'comments'), { recursive: true });
 for (const key of Object.keys(out)) {
-  fs.writeFile(path.join('dist', 'comments', `${key}.json`), JSON.stringify(out[key], undefined, 0), () => {
+  fs.writeFile(path.join('dist', 'comments', `${key}`), JSON.stringify(out[key], undefined, 0), () => {
   });
 }
