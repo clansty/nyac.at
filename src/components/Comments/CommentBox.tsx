@@ -26,6 +26,7 @@ export default defineComponent({
         }
       }
     }
+
     return () => (
       <form class={styles.commentBox} onSubmit={sendComment}>
         来评论叭～

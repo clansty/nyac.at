@@ -11,24 +11,34 @@ export default defineComponent({
     const comments = ref<Comment[]>([]);
     const error = ref('');
 
-    watch(() => props.slug, async () => {
-      const res = await fetch('/api/comments/' + props.slug, {
+    if (!import.meta.env.SSR) {
+      fetch('/api/comments/' + props.slug, {
         redirect: 'error',
-      });
-      comments.value = await res.json();
-    }, { immediate: true });
+      })
+        .then(res => res.json())
+        .then(data => {
+          comments.value = data as Comment[];
+        })
+        .catch(err => {
+          error.value = err.message;
+        });
+    }
 
     return () => {
       if (error.value) {
-        return <div class={styles.commentBox}>
-          评论系统暂时不可用⁄(⁄ ⁄•⁄-⁄•⁄ ⁄)⁄
-          <p>{error}</p>
-        </div>;
+        return (
+          <div class={styles.commentBox}>
+            评论系统暂时不可用⁄(⁄ ⁄•⁄-⁄•⁄ ⁄)⁄
+            <p>{error.value}</p>
+          </div>
+        );
       }
-      return <div>
-        <CommentBox slug={props.slug} addComment={addComment}/>
-        {comments.value.map(e => <SingleComment comment={e} key={e.date}/>)}
-      </div>;
+      return (
+        <div>
+          <CommentBox slug={props.slug} addComment={addComment}/>
+          {comments.value.map(e => <SingleComment comment={e} key={e.date}/>)}
+        </div>
+      );
     };
 
     function addComment(comment: Comment) {
