@@ -27,6 +27,22 @@ const Component = defineComponent({
         return () => <img src={img.default} alt={alt} title={title}/>;
       },
     });
+    const Image = defineComponent({
+      props: {
+        src: String,
+        alt: String,
+        title: String,
+      },
+      setup({ src, alt, title }) {
+        if (src.startsWith('https://'))
+          return () => <img src={src} alt={alt} title={title}/>;
+        return () => (
+          <Suspense>
+            <LocalImage src={src} alt={alt} title={title}/>
+          </Suspense>
+        );
+      },
+    });
     const markdownComponents = {
       h1: 'h2',
       a({ href }, { slots }) {
@@ -44,12 +60,11 @@ const Component = defineComponent({
         );
       },
       img({ src, alt, title }) {
-        if (src.startsWith('https://'))
-          return <img src={src} alt={alt} title={title}/>;
         return (
-          <Suspense>
-            <LocalImage src={src} alt={alt} title={title}/>
-          </Suspense>
+          <figure>
+            <Image src={src} alt={alt} title={title}/>
+            <figcaption>{alt}</figcaption>
+          </figure>
         );
       },
     };
