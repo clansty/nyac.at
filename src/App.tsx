@@ -24,7 +24,9 @@ export default defineComponent({
     const route = useRoute();
 
     const randomBackground = ref('');
+    const isBeianShown = ref(false);
     if (!import.meta.env.SSR) {
+      isBeianShown.value = location.host.includes('lwqwq.com');
       randomBackground.value = random.choose(BACKGROUNDS);
     }
     return () => (
@@ -41,6 +43,11 @@ export default defineComponent({
             ),
           }}
         </RouterView>
+        {isBeianShown.value && <footer class={styles.footer}>
+          <a href="https://beian.miit.gov.cn/" target="_blank" class={styles.beian}>
+            苏ICP备2020048816号-1
+          </a>
+        </footer>}
       </div>
     );
   },
