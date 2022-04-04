@@ -86,6 +86,7 @@ export default defineConfig({
         ],
         skipWaiting: true,
         clientsClaim: true,
+        navigateFallback: null,
       },
     }),
 
