@@ -14,15 +14,19 @@ export default defineComponent({
     return () => (
       <RouterLink to={`/posts/${post.slug}`}>
         <div class={`${styles.postItem} postItem`} style={{ transitionDelay: `${index * 0.1}s` }}>
-          <div class={styles.title}>
-            <span>{post.title}</span>
-          </div>
-          {banner && <img src={banner.default} alt={post.title} class={styles.banner}/>}
-          <div class={styles.date}>
-            {formatDate(new Date(post.date), 'YYYY/M/D')}
-          </div>
-          <div class={styles.desc}>
-            {post.desc}
+          <div class={styles.flexContainer}>
+            <div>
+              <div class={styles.title}>
+                <span>{post.title}</span>
+              </div>
+              <div class={styles.date}>
+                {formatDate(new Date(post.date), 'YYYY/M/D')}
+              </div>
+              <div class={styles.desc}>
+                {post.desc}
+              </div>
+            </div>
+            {banner && <img src={banner.default} alt={post.title} class={styles.banner}/>}
           </div>
           <div class={styles.hf}/>
         </div>

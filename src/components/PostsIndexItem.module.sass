@@ -26,13 +26,20 @@
   .desc
     color: #606266
 
-  .banner
-    width: 100%
-    max-height: 30vh
-    object-fit: cover
-    margin-top: 0.6em
-
   .hf
     margin: 15px 0 0 0
     height: 0
     border-bottom: 1px solid rgba(128, 128, 128, .12)
+
+.flexContainer
+  display: flex
+
+  > div
+    flex-grow: 1
+
+  .banner
+    min-width: 30%
+    max-width: 30%
+    max-height: 120px
+    object-fit: cover
+    margin-left: 15px
