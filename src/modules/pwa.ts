@@ -9,6 +9,9 @@ export const install: UserModule = ({ isClient, router }) => {
     const { registerSW } = await import('virtual:pwa-register');
     registerSW({
       immediate: true,
+      onNeedRefresh: () => {
+        console.log('[sw] reload');
+      },
     });
   });
 };
