@@ -16,6 +16,10 @@ export default defineComponent({
       meta: [
         { property: 'og:url', content: 'https://clansty.com/about' },
         { name: 'description', content: '这里可能有一些你想了解的信息' },
+        { property: 'og:title', content: '关于我' },
+        { property: 'og:description', content: '这里可能有一些你想了解的信息' },
+        { property: 'twitter:title', content: '关于我' },
+        { property: 'twitter:description', content: '这里可能有一些你想了解的信息' },
       ],
     });
 

@@ -9,6 +9,10 @@ export default defineComponent({
         { name: 'description', content: '这里是凌莞的主页喵' },
         { name: 'og:url', content: 'https://clansty.com/' },
         { name: 'og:type', content: 'website' },
+        { property: 'og:title', content: '凌莞喵～' },
+        { property: 'og:description', content: '这里是凌莞的主页喵' },
+        { property: 'twitter:title', content: '凌莞喵～' },
+        { property: 'twitter:description', content: '这里是凌莞的主页喵' },
       ],
       link: [
         { rel: 'canonical', href: 'https://clansty.com/' },

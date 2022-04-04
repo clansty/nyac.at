@@ -12,6 +12,11 @@ export default defineComponent({
       meta: [
         { property: 'og:url', content: 'https://clansty.com/shares' },
         { name: 'description', content: '凌莞的喵喵喵碎碎念和奇奇怪怪的分享' },
+        { property: 'og:title', content: '凌莞的喵喵喵碎碎念' },
+        { property: 'og:description', content: '凌莞的喵喵喵碎碎念和奇奇怪怪的分享' },
+        { property: 'twitter:title', content: '凌莞的喵喵喵碎碎念' },
+        { property: 'twitter:description', content: '凌莞的喵喵喵碎碎念和奇奇怪怪的分享' },
+        { name: 'robots', content: 'noindex' },
       ],
     });
 

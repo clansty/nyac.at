@@ -13,6 +13,10 @@ export default defineComponent({
       meta: [
         { property: 'og:url', content: 'https://clansty.com/posts' },
         { name: 'description', content: '一个奇奇怪怪的地方' },
+        { property: 'og:title', content: '凌莞咕噜咕噜～' },
+        { property: 'og:description', content: '一个奇奇怪怪的地方' },
+        { property: 'twitter:title', content: '凌莞咕噜咕噜～' },
+        { property: 'twitter:description', content: '一个奇奇怪怪的地方' },
       ],
     });
 

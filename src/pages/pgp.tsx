@@ -14,6 +14,10 @@ export default defineComponent({
       meta: [
         { property: 'og:url', content: 'https://clansty.com/pgp' },
         { name: 'description', content: '凌莞 GPG 公钥的复制与下载' },
+        { property: 'og:title', content: 'GPG 公钥' },
+        { property: 'og:description', content: '凌莞 GPG 公钥的复制与下载' },
+        { property: 'twitter:title', content: 'GPG 公钥' },
+        { property: 'twitter:description', content: '凌莞 GPG 公钥的复制与下载' },
       ],
     });
 
