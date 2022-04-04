@@ -1,4 +1,3 @@
 title: 将 Azure 上 Windows 的服务器重装为 Linux（Debian）
 desc: 微软 Azure 提供的学生免费套餐中有一台 1 核 1G 的 Windows 服务器。这个配置运行 Windows 显然不行。于是给它重装 Linux
-banner: https://cdn.lwqwq.com/pic/clipboard_20220106_020238.png
 date: 2022-01-06

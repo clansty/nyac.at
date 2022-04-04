@@ -1,4 +1,3 @@
 title: 在 32 位 UEFI 中启动 64 位系统
 desc: 收了一个 CPU 是 64 位但是 UEFI 固件是 32 位的小主机，这种情况下我们可以用 GRUB 来启动 64 位系统
-banner: https://cdn.lwqwq.com/pic/202202162110530.webp
 date: 2022-02-16

@@ -229,4 +229,4 @@ dd 执行完成之后，在桌面上先推出 U 盘的其他分区，然后重�
 
 最后做好的 USB 启动盘，进入 OpenCore 之后大概是这个样子
 
-![最后 OpenCore 的样子](最后_OpenCore_的样子.png)
+![最后 OpenCore 的样子](banner.webp)

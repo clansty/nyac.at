@@ -3,6 +3,8 @@ import PostsIndexItem from '~/components/PostsIndexItem';
 import allPosts from '~/utils/allPosts';
 import BlogLayout from '~/layouts/BlogLayout';
 
+const banners = import.meta.globEager('../../../data/posts/*/banner.webp');
+
 export default defineComponent({
   setup() {
     useHead({
@@ -20,7 +22,9 @@ export default defineComponent({
       <BlogLayout>
         <div class={styles.postList}>
           {allPosts.filter(post => !post.hidden)
-            .map((post, index) => <PostsIndexItem post={post} key={index} index={index}/>)}
+            .map((post, index) => <PostsIndexItem post={post} key={index} index={index}
+                                                  // @ts-ignore
+                                                  banner={banners[`../../../data/posts/${post.slug}/banner.webp`]}/>)}
         </div>
       </BlogLayout>
     );

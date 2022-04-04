@@ -1,4 +1,3 @@
 title: 在阿里云服务器上安装 Arch Linux
 desc: 通过现有的 Ubuntu 之类的系统，通过 chroot 进入一个 Arch 的临时环境，再删除原有的系统文件并安装 Arch Linux
 date: 2021-05-01
-banner: https://cdn.lwqwq.com/pic/IMG_0111.PNG

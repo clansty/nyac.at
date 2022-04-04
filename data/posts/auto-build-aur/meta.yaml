@@ -1,4 +1,3 @@
 title: 使用 GitHub Actions 自动构建 AUR 软件包并添加到自己的软件源
 desc: 做了一个自动从 AUR 构建指定的包并更新到软件源的 GitHub Action，集成上一篇文章中的软件源系统
-banner: https://cdn.lwqwq.com/pic/Screenshot 2021-11-28 at 17-32-16 2021年 11月 28日 星期日 14 29 22 CST · Clansty arch-build 632c033 .png
 date: 2021-11-28

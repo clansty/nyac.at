@@ -1,4 +1,3 @@
 title: 基于 Next.JS 自制博客系统
 date: 2021-11-2
-banner: https://cdn.lwqwq.com/pic/Screenshot 2021-11-02 at 22-32-04 凌莞咕噜咕噜～.png
 desc: 自从主站完善了之后咱一直想把博客系统整合到主站系统里面，并且感觉我好像用不到那些博客系统的高级功能，就在原先的 Next.JS 项目里面手搓了一个博客系统

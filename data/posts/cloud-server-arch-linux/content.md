@@ -1,6 +1,4 @@
-![](IMG_0111.PNG.jpg)
-
-[图片来源](https://b23.tv/iq3jy5)
+[封面来源](https://b23.tv/iq3jy5)
 
 众所周知，阿里云的镜像里面是没有 Arch Linux 这个选项的，并且阿里云也不支持在控制台里面上传 ISO 挂载到虚拟机上装系统，所以我们想要安装 Arch Linux，只能通过现有的 Ubuntu 之类的系统，通过 chroot 进入一个 Arch 的临时环境，再删除原有的系统文件并安装 Arch Linux。整个过程大概用了半个小时，非常顺利
 
