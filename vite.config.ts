@@ -83,6 +83,9 @@ export default defineConfig({
         globPatterns: [
           'assets/*.*.*',
         ],
+        globIgnores:[
+          '*.html'
+        ],
         cleanupOutdatedCaches: true,
         skipWaiting: true,
         clientsClaim: true,
