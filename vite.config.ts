@@ -79,6 +79,14 @@ export default defineConfig({
           },
         ],
       },
+      workbox: {
+        globPatterns: [
+          '**/*.{js,css,html}',
+          'assets/*.*.*',
+        ],
+        skipWaiting: true,
+        clientsClaim: true,
+      },
     }),
 
     // https://github.com/antfu/vite-plugin-inspect
