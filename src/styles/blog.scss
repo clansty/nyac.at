@@ -8,6 +8,10 @@
   line-height: 1.7em;
   backdrop-filter: blur(5px);
 
+  &.withBanner {
+    padding-top: 15px;
+  }
+
   .date {
     color: #606266;
     font-size: smaller;

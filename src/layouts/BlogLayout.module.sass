@@ -39,7 +39,19 @@
 
   .body
     height: 100vh
-    overflow: auto
+    overflow-y: auto
+    overflow-x: hidden
     transition: all 0.5s
     scroll-behavior: smooth
+    perspective: 1px
+
+.banner
+  transform-style: preserve-3d
+  margin-top: 50px
+
+  > img
+    object-fit: cover
+    height: 30vh
+    width: 100%
+    transform: translate3D(0, -30vh, -1px) scale(2)
 

@@ -82,7 +82,7 @@ const Component = defineComponent({
 
     return () => (
       <BlogLayout postInfo={meta}>
-        <div class="postContent">
+        <div class={`postContent ${postAsset(slug, 'banner.webp') && 'withBanner'}`}>
           <div class="date">
             {formatDate(new Date(meta.date), 'YYYY/M/D')}
           </div>
