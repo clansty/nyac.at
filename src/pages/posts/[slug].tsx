@@ -7,31 +7,52 @@ import BlogLayout from '~/layouts/BlogLayout';
 import { RouterLink } from 'vue-router';
 import allPosts from '~/utils/allPosts';
 
-const postData = import.meta.glob('../../../data/posts/*/*.md');
-const markdownComponents = {
-  h1: 'h2',
-  a({ href }, { slots }) {
-    if (/^https?:\/\//.test(href))
-      return (
-        <a href={href} target="_blank" style={{ ['--href' as any]: `'${href}'` }}>
-          {slots.default()}
-        </a>
-      );
-    return (
-      <RouterLink to={href} class="inSiteLink"
-                  style={{ ['--href' as any]: `'${href.includes('/') ? href : allPosts.find(e => e.slug === href).title}'` }}>
-        {slots.default()}
-      </RouterLink>
-    );
-  },
-};
-
+const postData = import.meta.glob('../../../data/posts/*/*.{md,webp,png,jpg,jpeg,gif}');
 const Component = defineComponent({
   props: {
     slug: { type: String, required: true },
   },
   async setup({ slug }) {
     const meta = allPosts.find(e => e.slug === slug);
+
+    const LocalImage = defineComponent({
+      props: {
+        src: String,
+        alt: String,
+        title: String,
+      },
+      async setup({ src, alt, title }) {
+        src = decodeURIComponent(src);
+        const img = await postData[`../../../data/posts/${slug}/${src}`]();
+        return () => <img src={img.default} alt={alt} title={title}/>;
+      },
+    });
+    const markdownComponents = {
+      h1: 'h2',
+      a({ href }, { slots }) {
+        if (/^https?:\/\//.test(href))
+          return (
+            <a href={href} target="_blank" style={{ ['--href' as any]: `'${href}'` }}>
+              {slots.default()}
+            </a>
+          );
+        return (
+          <RouterLink to={href} class="inSiteLink"
+                      style={{ ['--href' as any]: `'${href.includes('/') ? href : allPosts.find(e => e.slug === href).title}'` }}>
+            {slots.default()}
+          </RouterLink>
+        );
+      },
+      img({ src, alt, title }) {
+        if (src.startsWith('https://'))
+          return <img src={src} alt={alt} title={title}/>;
+        return (
+          <Suspense>
+            <LocalImage src={src} alt={alt} title={title}/>
+          </Suspense>
+        );
+      },
+    };
 
     useHead({
       title: `${meta.title} — 凌莞咕噜咕噜～`,
@@ -90,5 +111,4 @@ export default defineComponent({
   },
 });
 
-const postMetaPath = (slug: string) => `../../../data/posts/${slug}/meta.yaml`;
 const postContentPath = (slug: string) => `../../../data/posts/${slug}/content.md`;

@@ -1,4 +1,4 @@
-![](https://cdn.lwqwq.com/pic/IMG_0111.PNG#vwid=1205&vhei=1205)
+![](IMG_0111.PNG.jpg)
 
 [图片来源](https://b23.tv/iq3jy5)
 

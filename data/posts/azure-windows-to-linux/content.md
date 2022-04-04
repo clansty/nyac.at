@@ -4,7 +4,7 @@
 
 事情是这样的，微软 Azure 提供的学生[免费套餐](https://azure.microsoft.com/en-us/free/students/)中有免费的一台 Windows 虚拟机和一台 Linux 虚拟机，都是 1 核 1G 的。对于 Linux 来说，这差不多正好，但是对于 Windows，这怎么用啊QAQ
 
-![这怎么用呀](https://cdn.lwqwq.com/pic/image-20220106121037879.png)
+![这怎么用呀](这怎么用呀.png)
 
 所以，我要把它重装成 Linux。这样的话，名义上我是一台 Windows 一台 Linux，实际上是两台 Linux。嘻嘻嘻
 
@@ -14,27 +14,27 @@
 
 试了一下[网络上的 dd 脚本](https://hostzg.com/1965.html)
 
-![image-20220106121228571](https://cdn.lwqwq.com/pic/image-20220106121228571.png)
+![image-20220106121228571](image-20220106121228571.png)
 
 原来 Azure 的机器是 UEFI 启动的！诶 坏诶 那岂不是有安全启动QAQ
 
 去看一眼，好耶！那没事了（
 
-![image-20220106130710745](https://cdn.lwqwq.com/pic/image-20220106130710745.png)
+![image-20220106130710745](image-20220106130710745.png)
 
 ## 第二次失败的尝试
 
 [沐子](https://moozae.cn)跟我说，现在有人维护了一个[支持 UEFI 的 Wubi](https://github.com/hakuna-m/wubiuefi)（以前，大概一几年的时候在 Windows 里面直接安装 Ubuntu 的工具），于是我试了一下
 
-![image-20220106130957897](https://cdn.lwqwq.com/pic/image-20220106130957897.png)
+![image-20220106130957897](image-20220106130957897.png)
 
 倒是成功安装了 Xubuntu，不过启动的时候……
 
-![image-20220106131038166](https://cdn.lwqwq.com/pic/image-20220106131038166.png)
+![image-20220106131038166](image-20220106131038166.png)
 
 Two thousand years later……
 
-![image-20220106131101021](https://cdn.lwqwq.com/pic/image-20220106131101021.png)
+![image-20220106131101021](image-20220106131101021.png)
 
 ## 思路
 
@@ -50,7 +50,7 @@ Two thousand years later……
 
 > PS. 可能有页面文件在那个盘里面。我第一次写入的时候系统好像自己重启了，第二次再写入才成功。以及以下步骤如果有失败的也可以多试几次呢w
 
-![img](https://cdn.lwqwq.com/pic/refus-write-debian-image)
+![img](img.png)
 
 然后，由于我们需要让输出显示在串行控制台里面，我们需要修改一下 `grub.cfg`
 
@@ -99,11 +99,11 @@ menuentry --hotkey=i 'Install' {
 
 然后，我们需要使用 Diskgenius 自带的 UEFI 管理工具添加 `/EFI/boot/grubx64.efi` 这个文件为启动项，以及勾选下次从此项启动。
 
-![Diskgenius](https://cdn.lwqwq.com/pic/clipboard_20220106_014919.png)
+![Diskgenius](Diskgenius.png)
 
 然后我们就可以重启机器，然后就能在串行控制台里看到 GRUB 的界面了。选择 Install 那一项，Debian 的安装界面就能启动了。
 
-![Debian 安装界面](https://cdn.lwqwq.com/pic/clipboard_20220106_015359.png)
+![Debian 安装界面](Debian_安装界面.png)
 
 ## 安装时可能会遇到的问题
 
@@ -123,11 +123,11 @@ mount /dev/sdb1 /cdrom
 
 由于 Debian 装完是没有 sudo 的，需要先 su 到 root 账户来安装 sudo。然而 `su` 之后 `$PATH` 里面是没有 `/usr/sbin` 的（Debian 的 `bin` 和 `sbin` 不是软链接好像），没法运行管理需要的命令。于是我在网上查到有 `su -` 这个命令，它们的区别是 su 之后 `$PATH` 不一样！
 
-![image-20220106140038508](https://cdn.lwqwq.com/pic/image-20220106140038508.png)
+![image-20220106140038508](image-20220106140038508.png)
 
-![image-20220106140051560](https://cdn.lwqwq.com/pic/image-20220106140051560.png)
+![image-20220106140051560](image-20220106140051560.png)
 
-![image-20220106140107824](https://cdn.lwqwq.com/pic/image-20220106140107824.png)
+![image-20220106140107824](image-20220106140107824.png)
 
 ## 参考资料
 

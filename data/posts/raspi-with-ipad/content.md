@@ -4,7 +4,7 @@
 
 并且，随着 iPad 越来越强大，可以连接键盘鼠标，可以分屏，可以画画，为啥不能在我在外面的时候用它来代替笔记本呢。于是我用 iPad，树莓派与蓝牙键鼠组成了一台能让我在外面的时候开 IDEA 写代码的电脑
 
-![](https://cdn.lwqwq.com/pic/20210502/version1uuidCB9A87406C00412383BF21352E5D1788modeco.png#vwid=2732&vhei=2048)
+![](version1uuidCB9A87406C00412383BF21352E5D1788modeco.png)
 
 # 构想
 
@@ -114,7 +114,7 @@ service dnsmasq restart
 
 通过命令 `sudo raspi-config` 来开启配置实用程序
 
-![image-20210507145339145](https://i.loli.net/2021/05/07/BHJf9hMcyU8k1Fa.png#vwid=1568&vhei=1031)
+![image-20210507145339145](image-20210507145339145.png)
 
 ### 调整分辨率
 
@@ -122,13 +122,13 @@ service dnsmasq restart
 
 进入之后选择 `Resolution`，我选择的是和 iPad 匹配的 4:3 分辨率，`1600x1200`
 
-![image-20210507145616672](https://i.loli.net/2021/05/07/eVZtmKSkNB4wjR8.png#vwid=1730&vhei=1367)
+![image-20210507145616672](image-20210507145616672.png)
 
 ### 开启 vnc
 
 接着进入主菜单的 `Interface Options`，开启 vnc 远程桌面
 
-![image-20210507145755647](https://i.loli.net/2021/05/07/EwY4eFpqTA53SrX.png#vwid=1568&vhei=1031)
+![image-20210507145755647](image-20210507145755647.png)
 
 然后就可以退出工具了
 
@@ -142,15 +142,15 @@ service dnsmasq restart
 
 然后就可以用双头 Type-C 数据线把树莓派和 iPad 连起来了，树莓派会被 iPad 识别为一个以太网
 
-![iPad 中查看网络信息](https://cdn.lwqwq.com/pic/IMG_0121.PNG#vwid=2048&vhei=2732)
+![iPad 中查看网络信息](iPad_中查看网络信息.png)
 
 由于 RealVNC 家的 vnc viewer 不支持鼠标操作，我使用的是 Jump 这款 VNC 客户端。而 Jump 并不支持树莓派自带的 RealVNC 服务端的完全加密模式和帐号密码验证。我们首次通过 RealVNC viewer 连接进去之后需要修改加密方式和认证模式
 
-![image-20210507150822439](https://i.loli.net/2021/05/07/3aDHi5XSNPxBgwM.png#vwid=364&vhei=118)
+![image-20210507150822439](image-20210507150822439.png)
 
 然后进入第二个页面为 user 设置密码，就可以通过 Jump 来连接了
 
-![image-20210507150929560](https://i.loli.net/2021/05/07/zX75RbOMtvQhWql.png#vwid=683&vhei=255)
+![image-20210507150929560](image-20210507150929560.png)
 
 文件传输我使用的是 Termius 的 SFTP。在 iPadOS 上分享一个文件可以直接用 Termius 复制到 ssh 设备里
 
@@ -167,11 +167,11 @@ java -version
 
 进入[官网](https://www.jetbrains.com/idea/download/#section=linux)下载 Linux 的 `tar.gz` 包，解压到一个固定的地方，比如说我是在 `~/opt/` 里面
 
-![image-20210507151720281](https://i.loli.net/2021/05/07/Esj1uOlh35YK8Nr.png#vwid=1730&vhei=1367)
+![image-20210507151720281](image-20210507151720281.png)
 
 在终端里面运行 `bin` 里面那个 `idea.sh`，IDEA 的界面直接就能打开了
 
-![image-20210507152435103](https://i.loli.net/2021/05/07/ISY4VUQNGLze5yb.png#vwid=1730&vhei=1367)
+![image-20210507152435103](image-20210507152435103.png)
 
 为了更方便的启动 IDEA，我在桌面上创建一个应用程序启动器 `idea.desktop`
 

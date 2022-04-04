@@ -2,13 +2,13 @@
 >
 > BIOS 缺少 EMT64 微码的情况大概像这样子
 >
-> ![image-20220318193356672](https://cdn.lwqwq.com/pic/202203181933730.png)
+> ![image-20220318193356672](image-20220318193356672.png)
 
 ## 起因
 
 在某鱼上收了个 z3735f 灵车小主机，收到之后内置 32 位 Win10 系统，然后我是要装 Arch Linux 的。进 BIOS 发现只支持 UEFI，而我只做了 Arch 的安装 U 盘怎么也无法启动。于是进入了 UEFI Shell 手动引导启动 EFI 文件
 
-![Image type X64 is not supported by this IA32 shell](https://cdn.lwqwq.com/pic/202202161759125.png)
+![Image type X64 is not supported by this IA32 shell](Image_type_X64_is_not_supported_by_this_IA32_shell.png)
 
 啊这啊这，这个 UEFI 竟然是 32 位的。但是 CPU 是 64 位的。查了一下，还是有办法启动 64 位系统的。
 
@@ -48,7 +48,7 @@ grub-mkstandalone -d /usr/lib/grub/i386-efi/ -O i386-efi --modules="part_gpt par
 
 然后，我们用以下命令应该就可以启动 ArchISO 界面了
 
-![GRUB 控制台界面](https://cdn.lwqwq.com/pic/202202162110530.webp)
+![GRUB 控制台界面](GRUB_控制台界面.webp)
 
 你需要将 `(hd0, msdos2)` 替换为你刚才那个 EFI 分区的位置。可以用 `ls (hd0, msdos2)` 这样的命令来检查里面的文件。以及 `202112` 换成 ArchISO 的版本
 
@@ -75,9 +75,9 @@ ip addr
 ssh root@机器的 IP
 ```
 
-![ArchISO 开启 SSH](https://cdn.lwqwq.com/pic/202202162118673.webp)
+![ArchISO 开启 SSH](ArchISO_开启_SSH.webp)
 
-![SSH 连接 ArchISO](https://cdn.lwqwq.com/pic/202202162119553.webp)
+![SSH 连接 ArchISO](SSH_连接_ArchISO.webp)
 
 ## 安装系统的最后一步
 

@@ -27,11 +27,11 @@ Charset = utf8
 
 用 Navicat 的「工具 - 数据传输」导出原有的 SQLite 为 SQL 文件，然后，用文本编辑器打开它
 
-![image-20220114114251673](https://cdn.lwqwq.com/pic/image-20220114114251673.png)
+![image-20220114114251673](image-20220114114251673.png)
 
 将所有 Records of xxx表的内容复制下来，进入 PostgreSQL 的 SQL 界面执行。不过在执行之前，要把那些属于 boolean 字段的值从 0 和 1 改成 TRUE 和 FALSE！
 
-![image-20220114114457291](https://cdn.lwqwq.com/pic/image-20220114114457291.png)
+![image-20220114114457291](image-20220114114457291.png)
 
 至于哪些字段是 boolean 的话QAQ，可以根据字段名称判断，也可以打开 SQLite 的结构看看。
 

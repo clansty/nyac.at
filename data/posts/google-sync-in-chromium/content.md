@@ -2,7 +2,7 @@
 
 在 3 月份的某一次更新之后，[Google 限制了基于 Chromium 浏览器对 Chrome 私有 API 的访问](https://www.cnbeta.com/articles/tech/1078655.htm)，包括登录帐号及同步的一些功能。这意味着 Chrome 的开源版本 Chromium 已经没法正常登录 Google 帐号了，Arch 仓库中的 Chromium 更新后甚至连登录入口都关闭了。
 
-![image-20210512130829973](https://i.loli.net/2021/05/12/orSXeT5BEKxM7sL.png#vwid=349&vhei=391)
+![image-20210512130829973](image-20210512130829973.png)
 
 但 Google Chrome 只提供了 Linux 下 x86_64 架构的版本，基于 ARM 的架构现在只能用 Chromium。所以我还需要在 Chromium 上使用同步功能
 
@@ -21,7 +21,7 @@
 
 首先打开 [Google 开发者中心](https://cloud.google.com/console)，创建一个新的项目，然后选择它
 
-![image-20210512132417922](https://i.loli.net/2021/05/12/uH1FjUPAGw4pEV9.png#vwid=855&vhei=628)
+![image-20210512132417922](image-20210512132417922.png)
 
 进入左边的 API 和服务 > OAuth 同意屏幕先初始化配置自己的应用
 
@@ -66,7 +66,7 @@ export GOOGLE_DEFAULT_CLIENT_SECRET=客户端密钥
 
 Chromium 的登录入口就回来啦，然后正常登录就可以了
 
-![image-20210512134916640](https://i.loli.net/2021/05/12/gur7UcV5FLX6bqZ.png#vwid=441&vhei=655)
+![image-20210512134916640](image-20210512134916640.png)
 
 [前往 limelight 专栏](https://limelight.moe/t/topic/6533)
 

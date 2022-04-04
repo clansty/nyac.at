@@ -103,9 +103,9 @@ Arch 官方的 ISO 文件其实是一个双分区镜像，包含了 [ISO9660](ht
 
 首先确保 U 盘是有分区表的，而且是 MBR 分区表（因为有些操作系统会在创建 GPT 分区表时自动创建 ESP MSR 之类的分区），而不是裸盘格式化（`sdb1` 而不是 `sdb`）然后把 U 盘分成单个 Fat32 分区。一定要给分区设置卷标并记住它，最好是和 Arch ISO 一样的名称，也就是 `ARCH_YYYYMM` 比如说 `ARCH_202202`
 
-![在 macOS 上将 USB 设备格式化为 MBR 的 Fat32](https://cdn.lwqwq.com/pic/202203031059290.png)
+![在 macOS 上将 USB 设备格式化为 MBR 的 Fat32](在_macOS_上将_USB_设备格式化为_MBR_的_Fat32.png)
 
-![在 KDE 分区管理器中创建 MBR 分区表和 Fat32 分区](https://cdn.lwqwq.com/pic/202203031106587.png)
+![在 KDE 分区管理器中创建 MBR 分区表和 Fat32 分区](在_KDE_分区管理器中创建_MBR_分区表和_Fat32_分区.png)
 
 然后挂载该分区，并解压 Arch ISO 镜像到 U 盘
 
@@ -269,7 +269,7 @@ locale-gen
 export LANG=zh_CN.UTF-8
 ```
 
-![设置 LANG 变量的前后对比](https://cdn.lwqwq.com/pic/202202281510270.png)
+![设置 LANG 变量的前后对比](设置_LANG_变量的前后对比.png)
 
 ## 分区，创建子卷，或是清除现有的操作系统
 
@@ -925,11 +925,11 @@ sudo chsh $(whoami) -s $(which zsh)
 
 我使用 [oh-my-zsh](https://ohmyz.sh/) 来管理 zsh，使用 [powerlevel10k](https://github.com/romkatv/powerlevel10k) 主题。提示符看起来大概这个样子
 
-![zsh 提示符](https://cdn.lwqwq.com/pic/202202282317035.png)
+![zsh 提示符](zsh_提示符.png)
 
 连接 SSH 后会在右边显示被连接主机的信息
 
-![SSH 中的 zsh 提示符](https://cdn.lwqwq.com/pic/202202282317430.png)
+![SSH 中的 zsh 提示符](SSH_中的_zsh_提示符.png)
 
 你们可以[下载](https://wwa.lanzouw.com/iSbqB00szf2b)我的 zshrc 所依赖的 zshrc 以外的东西，解压到 `~`，然后可以根据下面的内容拼凑一个自己的 zshrc
 
@@ -946,7 +946,7 @@ fi
 
 当我在第一个 tty，也就是这里，输入用户名和密码之后会直接执行 startx 进入桌面，桌面注销的话就会退出登录
 
-![login on tty1](https://cdn.lwqwq.com/pic/202202282320495.png)
+![login on tty1](login_on_tty1.png)
 
 这需要安装 `xorg-xinit` 并配置好 `.xinitrc` 文件
 
@@ -1012,7 +1012,7 @@ export DOCKER_BUILDKIT=1
 
 启用了之后像这个样子
 
-![启用 DOCKER_BUILDKIT 的效果](https://cdn.lwqwq.com/pic/202203061135857.png)
+![启用 DOCKER_BUILDKIT 的效果](启用_DOCKER_BUILDKIT_的效果.png)
 
 当初用 Flatpak 的时候没法自动设置 XDG 数据目录，所以加这么一段。要是没有用 Flatpak 而取消注释这一段的话，会导致开机出各种奇怪问题
 
@@ -1059,7 +1059,7 @@ source $ZSH/oh-my-zsh.sh
 
 那个 [zsh-window-title](https://github.com/olets/zsh-window-title) 是我[魔改的版本](https://github.com/Clansty/zsh-window-title)，在检测到 SSH 连接的时候会在标题中显示被连接的主机名和 🔗 Emoji。这个插件与 oh-my-zsh 的自动标题冲突，所以要设置 `DISABLE_AUTO_TITLE`
 
-![SSH 连接后的窗口标题](https://cdn.lwqwq.com/pic/202202282348352.png)
+![SSH 连接后的窗口标题](SSH_连接后的窗口标题.png)
 
 ### PATH 和 alias
 

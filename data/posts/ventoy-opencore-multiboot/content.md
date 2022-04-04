@@ -8,11 +8,11 @@
 
 说起来我在 20 年发现 Ventoy 这样高级的东西的时候，就做了一个 Ventoy USB，里面放了很多镜像，塞满了 64GB 的 U 盘。现在 Ventoy 已经更新到 1.0.71 了，然而我手上的还是 1.0.26（（（
 
-![Ventoy2Disk 主界面显示的版本信息](https://cdn.lwqwq.com/pic/202203252152215.png)
+![Ventoy2Disk 主界面显示的版本信息](Ventoy2Disk_主界面显示的版本信息.png)
 
 并且，U 盘里的 Windows 镜像之类也很老了，LTSC 也更新 2021 了。干脆就备份一下有用的镜像和文件重新做 U 盘了
 
-![U盘里过期的 Windows 镜像](https://cdn.lwqwq.com/pic/202203252154493.webp)
+![U盘里过期的 Windows 镜像](U盘里过期的_Windows_镜像.webp)
 
 ## 思路
 
@@ -36,7 +36,7 @@
 
 当然要是你的 U 盘足够大，想放完整版安装镜像的话也可以，预留足够的空间就好
 
-![Ventoy 分区设置](https://cdn.lwqwq.com/pic/202203252215130.png)
+![Ventoy 分区设置](Ventoy_分区设置.png)
 
 ### 给剩余空间分区
 
@@ -46,7 +46,7 @@
 
 我准备放两个 macOS 版本的话，大概像这样：
 
-![U 盘的分区方式](https://cdn.lwqwq.com/pic/202203261123808.png)
+![U 盘的分区方式](U_盘的分区方式.png)
 
 分区创建好之后，要改一下它的标记，设置成 HFS+ 的标记，这样 macOS 和 OpenCore 可以正确识别它们
 
@@ -73,7 +73,7 @@
 
 在 Windows 中可以用 DiskGenius「更改分区参数（F11）」
 
-![DiskGenius 更改分区参数](https://cdn.lwqwq.com/pic/202203261157361.png)
+![DiskGenius 更改分区参数](DiskGenius_更改分区参数.png)
 
 ### 准备 OpenCore
 
@@ -130,7 +130,7 @@ d6j
 :wq
 ```
 
-![grub.cfg 中 gfxmode 的设置](https://cdn.lwqwq.com/pic/202203252254485.png)
+![grub.cfg 中 gfxmode 的设置](grub.cfg_中_gfxmode_的设置.png)
 
 现在分辨率的问题应该就解决了
 
@@ -219,7 +219,7 @@ sudo dd if=/dev/disk2s1 of=/dev/disk3s4 status=progress bs=4096
 
 dd 执行完成之后，在桌面上先推出 U 盘的其他分区，然后重新拔插 U 盘，新的分区就可以被识别了，然后可以给分区改个名字。
 
-![U 盘中改完名字的分区](https://cdn.lwqwq.com/pic/202203261120509.png)
+![U 盘中改完名字的分区](U_盘中改完名字的分区.png)
 
 现在，这个 U 盘就可以正常做各种系统的启动盘了
 
@@ -229,4 +229,4 @@ dd 执行完成之后，在桌面上先推出 U 盘的其他分区，然后重�
 
 最后做好的 USB 启动盘，进入 OpenCore 之后大概是这个样子
 
-![最后 OpenCore 的样子](https://cdn.lwqwq.com/pic/202203261206355.png)
+![最后 OpenCore 的样子](最后_OpenCore_的样子.png)
