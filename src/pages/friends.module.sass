@@ -20,6 +20,8 @@
   @media (max-width: 500px)
     width: 100vw
 
+  @media (min-width: 1500px)
+    width: 1000px
 
   .scrollBox
     overflow-x: hidden
@@ -34,12 +36,21 @@
         height: 10px
         min-height: 10px
 
+      .links
+        padding: 0 15px
+        display: grid
+        column-gap: 15px
+        grid-template-columns: 1fr
+
+        @media (min-width: 1500px)
+          grid-template-columns: 1fr 1fr
+
       .title
         position: sticky
         top: 0
         height: 85px
         z-index: 1
-        width: 500px
+        width: 100%
         backdrop-filter: blur(5px)
         background-color: rgba(255, 255, 255, 0.6)
         color: #303133

@@ -9,23 +9,21 @@ export default defineComponent({
   },
   setup({ item, avatar }) {
     return () => (
-      <a href={item.url} target="_blank" style={{ ['--color' as any]: item.color }}>
-        <div class={styles.friendLinkBox}>
-          <div class={styles.avatar}>
-            <img
-              src={avatar}
-              height={80}
-              width={80}
-              alt=""
-            />
+      <a href={item.url} target="_blank" style={{ ['--color' as any]: item.color }} class={styles.friendLinkBox}>
+        <div class={styles.avatar}>
+          <img
+            src={avatar}
+            height={80}
+            width={80}
+            alt=""
+          />
+        </div>
+        <div class={styles.text}>
+          <div class={styles.name}>
+            {item.name}
           </div>
-          <div class={styles.text}>
-            <div class={styles.name}>
-              {item.name}
-            </div>
-            <div class={styles.desc}>
-              {item.desc}
-            </div>
+          <div class={styles.desc}>
+            {item.desc}
           </div>
         </div>
       </a>

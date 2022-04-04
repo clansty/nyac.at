@@ -34,7 +34,9 @@ export default defineComponent({
             <div class={styles.title}>
               好朋友们～
             </div>
-            {friends.value.map(f => <FriendLinkBox item={f} key={f.name} avatar={avatar(f.avatar)}/>)}
+            <div class={styles.links}>
+              {friends.value.map(f => <FriendLinkBox item={f} key={f.name} avatar={avatar(f.avatar)}/>)}
+            </div>
           </div>
           {/*<div class={styles.groupBox}>*/}
           {/*  <div class={styles.title}>*/}
