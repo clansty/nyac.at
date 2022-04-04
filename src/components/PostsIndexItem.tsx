@@ -3,14 +3,15 @@ import { PropType } from 'vue';
 import { RouterLink } from 'vue-router';
 import { formatDate } from '@vueuse/core';
 import styles from './PostsIndexItem.module.sass';
+import postAsset from '~/utils/postAsset';
 
 export default defineComponent({
   props: {
     post: { type: Object as PropType<PostInfo>, required: true },
     index: { type: Number, required: true },
-    banner: Object as PropType<{ default: string }>,
   },
-  setup({ post, index, banner }) {
+  setup({ post, index }) {
+    const banner = postAsset(post.slug, 'banner.webp');
     return () => (
       <RouterLink to={`/posts/${post.slug}`}>
         <div class={`${styles.postItem} postItem`} style={{ transitionDelay: `${index * 0.1}s` }}>
@@ -26,7 +27,7 @@ export default defineComponent({
                 {post.desc}
               </div>
             </div>
-            {banner && <img src={banner.default} alt={post.title} class={styles.banner}/>}
+            {banner && <img src={banner} alt={post.title} class={styles.banner}/>}
           </div>
           <div class={styles.hf}/>
         </div>

@@ -6,8 +6,9 @@ import Comments from '~/components/Comments';
 import BlogLayout from '~/layouts/BlogLayout';
 import { RouterLink } from 'vue-router';
 import allPosts from '~/utils/allPosts';
+import postAsset from '~/utils/postAsset';
 
-const postData = import.meta.glob('../../../data/posts/*/*.{md,webp,png,jpg,jpeg,gif}');
+const postData = import.meta.glob('../../../data/posts/*/content.md');
 const Component = defineComponent({
   props: {
     slug: { type: String, required: true },
@@ -15,18 +16,6 @@ const Component = defineComponent({
   async setup({ slug }) {
     const meta = allPosts.find(e => e.slug === slug);
 
-    const LocalImage = defineComponent({
-      props: {
-        src: String,
-        alt: String,
-        title: String,
-      },
-      async setup({ src, alt, title }) {
-        src = decodeURIComponent(src);
-        const img = await postData[`../../../data/posts/${slug}/${src}`]();
-        return () => <img src={img.default} alt={alt} title={title}/>;
-      },
-    });
     const Image = defineComponent({
       props: {
         src: String,
@@ -36,11 +25,7 @@ const Component = defineComponent({
       setup({ src, alt, title }) {
         if (src.startsWith('https://'))
           return () => <img src={src} alt={alt} title={title}/>;
-        return () => (
-          <Suspense>
-            <LocalImage src={src} alt={alt} title={title}/>
-          </Suspense>
-        );
+        return () => <img src={postAsset(slug, src)} alt={alt} title={title}/>;
       },
     });
     const markdownComponents = {
@@ -79,7 +64,7 @@ const Component = defineComponent({
         { property: 'og:title', content: meta.title },
         { property: 'og:type', content: 'article' },
         { property: 'og:description', content: meta.desc },
-        { property: 'og:image', content: meta.banner },
+        { property: 'og:image', content: postAsset(slug, 'banner.webp') },
         { property: 'og:url', content: `https://nyac.at/posts/${slug}` },
         { name: 'created', content: new Date(meta.date).toISOString() },
         { name: 'modified', content: new Date(meta.date).toISOString() },
@@ -88,7 +73,7 @@ const Component = defineComponent({
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:title', content: meta.title },
         { property: 'twitter:description', content: meta.desc },
-        { property: 'twitter:image', content: meta.banner },
+        { property: 'twitter:image', content: postAsset(slug, 'banner.webp') },
         { property: 'twitter:url', content: `https://nyac.at/posts/${slug}` },
       ],
     });
