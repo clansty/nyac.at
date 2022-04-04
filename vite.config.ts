@@ -43,7 +43,7 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       manifest: {
         name: '凌莞的个人主页喵～',
         short_name: '凌莞喵～',
