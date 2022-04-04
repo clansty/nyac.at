@@ -1,5 +1,11 @@
 /*
   X-Frame-Options: DENY
 
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/assets/*
+  Cache-Control: max-age=31536000, public
+
 https://homepage-vue3.pages.dev/*
   X-Robots-Tag: noindex
