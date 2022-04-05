@@ -119,7 +119,7 @@ sudo mount /dev/sda2 /mnt
 然后编辑里面的 `grub.conf`
 
 ```bash
-sudo vim /mnt/grub/grub.efi
+sudo vim /mnt/grub/grub.conf
 ```
 
 找到 `gfxmode` 出现的位置，大概是在 2238 行左右，然后删掉那一段
