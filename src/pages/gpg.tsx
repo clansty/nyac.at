@@ -1,4 +1,4 @@
-import styles from './pgp.module.sass';
+import styles from './gpg.module.sass';
 import copyOutlined from '@iconify-icons/ant-design/copy-outlined.js';
 import downloadOutlined from '@iconify-icons/ant-design/download-outlined.js';
 import Icon from '~/components/Icon';
