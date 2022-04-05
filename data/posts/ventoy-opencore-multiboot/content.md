@@ -116,10 +116,10 @@ menuentry 'OpenCore' {
 sudo mount /dev/sda2 /mnt
 ```
 
-然后编辑里面的 `grub.conf`
+然后编辑里面的 `grub.cfg`
 
 ```bash
-sudo vim /mnt/grub/grub.conf
+sudo vim /mnt/grub/grub.cfg
 ```
 
 找到 `gfxmode` 出现的位置，大概是在 2238 行左右，然后删掉那一段
