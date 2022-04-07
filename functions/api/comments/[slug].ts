@@ -35,19 +35,18 @@ export const onRequestPost: PagesFunction<{
     });
   }
 
-  const postCommentsString = await env.DATA_STORE.get(params.slug as string);
-  let postComments: Comment[] = [];
-  if (postCommentsString) {
-    postComments = JSON.parse(postCommentsString);
-  }
-
   const avatar = await getAvatarUrl(email);
   const commentObj = {
     username, content, email, url, avatar,
     date: Date.now(),
   } as Comment;
-  postComments.push(commentObj);
 
+  const postCommentsString = await env.DATA_STORE.get(params.slug as string);
+  let postComments: Comment[] = [];
+  if (postCommentsString) {
+    postComments = JSON.parse(postCommentsString);
+  }
+  postComments.push(commentObj);
   await env.DATA_STORE.put(params.slug as string, JSON.stringify(postComments, undefined, 0));
 
   await sendTgMessage(351768429, `<b>有新评论</b>\n` +
