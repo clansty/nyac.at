@@ -4,7 +4,7 @@ const CLANSTIES = [351768429, 1783812610, 5053529413];
 const CHANNEL = -1001768973132;
 const GROUP = -1001691454442;
 const POST_SLUG_REGEX = /^[a-z0-9\-]+$/;
-const POST_URL_REGEX = /^\u200ehttps:\/\/nyac\.at\/posts\/([a-z0-9\-]+)$/;
+const POST_URL_REGEX = /https:\/\/nyac\.at\/posts\/([a-z0-9\-]+)/;
 
 export const onRequestPost: PagesFunction<{
   DATA_STORE: KVNamespace;
@@ -22,6 +22,7 @@ export const onRequestPost: PagesFunction<{
       await sendTgMessage(CHANNEL, `<a href="${instanceViewUrl}">\u200e</a>https://nyac.at/${slug}`, env.BOT_TOKEN);
     }
     else if (body.message.chat?.id === GROUP) {
+      await env.LINK_STORE.put('test', JSON.stringify(body));
       if (!body.message.text) return new Response();
       if (body.message.text.startsWith('\u200e') && body.message.sender_chat?.id === CHANNEL) {
         // 建立关联
