@@ -123,16 +123,4 @@ echo ::set-output name=pkgname::$(ls *-x86_64.pkg.*)
 
 ## 添加凌莞源
 
-最后给出这个源的添加方式吧
-
-特别简单，因为我还没有做 GPG 签名
-
-只要往 `/etc/pacman.conf` 添加以下内容就可以啦
-
-```ini
-[Clansty]
-SigLevel = Never
-Server = https://dl.lwqwq.com/repo/$arch
-```
-
-提供 x86_64，i686，aarch64 三个架构的包呢，`$arch` 就是自动选择架构的
+请根据 [pacman.ltd](https://pacman.ltd) 上面的提示来操作
