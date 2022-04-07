@@ -22,7 +22,6 @@ export const onRequestPost: PagesFunction<{
       await sendTgMessage(CHANNEL, `<a href="${instanceViewUrl}">\u200e</a>https://nyac.at/posts/${slug}`, env.BOT_TOKEN);
     }
     else if (body.message.chat?.id === GROUP) {
-      await env.LINK_STORE.put('test', JSON.stringify(body));
       if (!body.message.text) return new Response();
       if (body.message.text.startsWith('\u200e') && body.message.sender_chat?.id === CHANNEL) {
         // 建立关联
