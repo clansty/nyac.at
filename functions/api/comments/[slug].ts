@@ -1,4 +1,5 @@
 import Comment from '~/types/Comment';
+import { sendTgMessage } from '../telegram/webhookEndpoint';
 
 export const onRequestGet: PagesFunction<{
   DATA_STORE: KVNamespace;
@@ -49,14 +50,10 @@ export const onRequestPost: PagesFunction<{
 
   await env.DATA_STORE.put(params.slug as string, JSON.stringify(postComments, undefined, 0));
 
-  await callTgFunc('sendMessage', {
-    chat_id: 351768429,
-    text: `<b>有新评论</b>\n` +
-      `<a href="https://nyac.at/posts/${params.slug}">${params.slug}</a>\n` +
-      (url ? `<a href="${url}">${htmlEscape(`${username} <${email}>`)}</a>` : htmlEscape(`${username} <${email}>`)) +
-      `\n${content}`,
-    parse_mode: 'HTML',
-  }, env.BOT_TOKEN);
+  await sendTgMessage(351768429, `<b>有新评论</b>\n` +
+    `<a href="https://nyac.at/posts/${params.slug}">${params.slug}</a>\n` +
+    (url ? `<a href="${url}">${htmlEscape(`${username} <${email}>`)}</a>` : htmlEscape(`${username} <${email}>`)) +
+    `\n${content}`, env.BOT_TOKEN);
 
   return new Response(JSON.stringify(commentObj, undefined, 0), {
     status: 201,
@@ -81,24 +78,6 @@ const getAvatarUrl = async (email: string) => {
   const hash = await md5(email.trim().toLowerCase());
   return `https://cdn.v2ex.com/gravatar/${hash}?s=200&d=mp`;
 };
-
-async function callTgFunc(func: string, data: object, token: string) {
-  try {
-    const req = await fetch(`https://api.telegram.org/bot${token}/${func}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    const ret = await req.json();
-    console.log(ret);
-    return ret;
-  }
-  catch (e) {
-    console.log(e);
-  }
-}
 
 const htmlEscape = (text: string) =>
   text.replace(/&/g, '&amp;')
