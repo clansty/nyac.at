@@ -1,5 +1,5 @@
 import Comment from '~/types/Comment';
-import { sendTgMessage } from '../telegram/webhookEndpoint';
+import { GROUP, sendTgMessage } from '../telegram/webhookEndpoint';
 
 export const onRequestGet: PagesFunction<{
   DATA_STORE: KVNamespace;
@@ -24,6 +24,7 @@ export const onRequestGet: PagesFunction<{
 
 export const onRequestPost: PagesFunction<{
   DATA_STORE: KVNamespace;
+  LINK_STORE: KVNamespace;
   BOT_TOKEN: string;
 }, 'slug'> = async ({ request, env, params }) => {
   const data = await request.json() as Comment;
@@ -52,7 +53,15 @@ export const onRequestPost: PagesFunction<{
   await sendTgMessage(351768429, `<b>有新评论</b>\n` +
     `<a href="https://nyac.at/posts/${params.slug}">${params.slug}</a>\n` +
     (url ? `<a href="${url}">${htmlEscape(`${username} <${email}>`)}</a>` : htmlEscape(`${username} <${email}>`)) +
-    `\n${content}`, env.BOT_TOKEN);
+    `\n${htmlEscape(content)}`, env.BOT_TOKEN);
+
+  const tgMessageId = await env.LINK_STORE.get(params.slug as string);
+  if (tgMessageId) {
+    await sendTgMessage(GROUP,
+      (url ? `<a href="${url}">${htmlEscape(`${username}`)}</a>` : htmlEscape(`${username}`)) +
+      `:\n${htmlEscape(content)}`,
+      env.BOT_TOKEN, Number(tgMessageId), true);
+  }
 
   return new Response(JSON.stringify(commentObj, undefined, 0), {
     status: 201,
