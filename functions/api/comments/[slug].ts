@@ -58,7 +58,7 @@ export const onRequestPost: PagesFunction<{
   const tgMessageId = await env.LINK_STORE.get(params.slug as string);
   if (tgMessageId) {
     await sendTgMessage(GROUP,
-      (url ? `<a href="${url}">${htmlEscape(`${username}`)}</a>` : htmlEscape(`${username}`)) +
+      (url ? `<a href="${url}"><b>${htmlEscape(`${username}`)}</b></a>` : `<b>${htmlEscape(username)}</b>`) +
       `:\n${htmlEscape(content)}`,
       env.BOT_TOKEN, Number(tgMessageId), true);
   }
