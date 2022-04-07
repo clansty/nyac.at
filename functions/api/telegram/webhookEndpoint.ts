@@ -1,8 +1,8 @@
 import Comment from '~/types/Comment';
 
 export const CLANSTIES = [351768429, 1783812610, 5053529413];
-const CHANNEL = -1001768973132;
-export const GROUP = -1001691454442;
+const CHANNEL = -1001311872089;
+export const GROUP = -1001570232723;
 const POST_SLUG_REGEX = /^[a-z0-9\-]+$/;
 const POST_URL_REGEX = /https:\/\/nyac\.at\/posts\/([a-z0-9\-]+)$/;
 

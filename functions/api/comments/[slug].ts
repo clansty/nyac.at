@@ -1,5 +1,5 @@
 import Comment from '~/types/Comment';
-import { GROUP, sendTgMessage } from '../telegram/webhookEndpoint';
+import { CLANSTIES, GROUP, sendTgMessage } from '../telegram/webhookEndpoint';
 
 export const onRequestGet: PagesFunction<{
   DATA_STORE: KVNamespace;
@@ -50,7 +50,7 @@ export const onRequestPost: PagesFunction<{
   postComments.push(commentObj);
   await env.DATA_STORE.put(params.slug as string, JSON.stringify(postComments, undefined, 0));
 
-  await sendTgMessage(351768429, `<b>有新评论</b>\n` +
+  await sendTgMessage(CLANSTIES[0], `<b>有新评论</b>\n` +
     `<a href="https://nyac.at/posts/${params.slug}">${params.slug}</a>\n` +
     (url ? `<a href="${url}">${htmlEscape(`${username} <${email}>`)}</a>` : htmlEscape(`${username} <${email}>`)) +
     `\n${htmlEscape(content)}`, env.BOT_TOKEN);
