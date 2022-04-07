@@ -2,7 +2,7 @@ const CLANSTIES = [351768429, 1783812610, 5053529413];
 const CHANNEL = -1001768973132;
 const GROUP = -1001691454442;
 const POST_SLUG_REGEX = /^[a-z0-9\-]+$/;
-const POST_URL_REGEX = /https:\/\/nyac\.at\/posts\/([a-z0-9\-]+)/;
+const POST_URL_REGEX = /^\u200ehttps:\/\/nyac\.at\/posts\/([a-z0-9\-]+)$/;
 
 export const onRequestPost: PagesFunction<{
   DATA_STORE: KVNamespace;
@@ -20,7 +20,14 @@ export const onRequestPost: PagesFunction<{
         env.BOT_TOKEN);
     }
     else if (body.message.chat?.id === GROUP) {
-
+      if (!body.message.text) return new Response();
+      if (body.message.text.startsWith('\u200e')) {
+        // 建立关联
+        if (!POST_URL_REGEX.test(body.message.text)) return new Response(); // 应该不可能
+        const slug = POST_URL_REGEX.exec(body.message.text)[1];
+        await env.LINK_STORE.put(body.message.message_id.toString(), slug);
+        await env.LINK_STORE.put(slug, body.message.message_id.toString());
+      }
     }
   }
   return new Response();
