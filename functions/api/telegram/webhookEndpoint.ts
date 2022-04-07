@@ -1,10 +1,10 @@
 import Comment from '~/types/Comment';
 
-const CLANSTIES = [351768429, 1783812610, 5053529413];
+export const CLANSTIES = [351768429, 1783812610, 5053529413];
 const CHANNEL = -1001768973132;
-const GROUP = -1001691454442;
+export const GROUP = -1001691454442;
 const POST_SLUG_REGEX = /^[a-z0-9\-]+$/;
-const POST_URL_REGEX = /https:\/\/nyac\.at\/posts\/([a-z0-9\-]+)/;
+const POST_URL_REGEX = /https:\/\/nyac\.at\/posts\/([a-z0-9\-]+)$/;
 
 export const onRequestPost: PagesFunction<{
   DATA_STORE: KVNamespace;
@@ -19,7 +19,7 @@ export const onRequestPost: PagesFunction<{
       const instanceViewUrl = new URL('https://t.me/iv');
       instanceViewUrl.searchParams.set('url', `https://nyac.at/posts/${slug}`);
       instanceViewUrl.searchParams.set('rhash', '1d1387df1c4a21');
-      await sendTgMessage(CHANNEL, `<a href="${instanceViewUrl}">\u200e</a>https://nyac.at/${slug}`, env.BOT_TOKEN);
+      await sendTgMessage(CHANNEL, `<a href="${instanceViewUrl}">\u200e</a>https://nyac.at/posts/${slug}`, env.BOT_TOKEN);
     }
     else if (body.message.chat?.id === GROUP) {
       await env.LINK_STORE.put('test', JSON.stringify(body));
@@ -97,9 +97,9 @@ export async function callTgFunc(func: string, data: object, token: string) {
   }
 }
 
-export async function sendTgMessage(chat_id: number, text: string, token: string) {
+export async function sendTgMessage(chat_id: number, text: string, token: string, reply_to_message_id?: number, disable_web_page_preview = false) {
   return await callTgFunc('sendMessage', {
-    chat_id, text,
+    chat_id, text, reply_to_message_id, disable_web_page_preview,
     parse_mode: 'HTML',
   }, token);
 }
