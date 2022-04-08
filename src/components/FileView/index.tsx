@@ -38,14 +38,12 @@ const Component = defineComponent({
       meta = metas['../../../data/files/folder.yaml'].default;
     }
     // 请求 alist
-    console.log(meta, pathAfter);
     const alistData = await alist.getPath(meta.path + pathAfter, meta.server);
-    console.log(alistData);
 
     return () => (
-      <div>
+      <div class={styles.fileViewContainerInner}>
         {alistData.type === 'folder' ?
-          <FolderView files={alistData.files} extraFiles={pathAfter ? null : meta.files}/> :
+          <FolderView files={alistData.files} extraFiles={pathAfter ? null : meta.files} path={path}/> :
           <></> // TODO FileView
         }
       </div>

@@ -5,10 +5,11 @@ import FileEntry from '~/components/FileView/FileEntry';
 
 export default defineComponent({
   props: {
+    path: { type: String, required: true },
     files: { type: Array as PropType<AlistFile[]>, required: true },
     extraFiles: Array as PropType<CustomFileInfo[]>,
   },
-  setup({ files, extraFiles }) {
+  setup({ files, extraFiles, path }) {
     // 整合文件列表
     const finalFiles: [AlistFile?, CustomFileInfo?][] = [];
     for (const file of files) {
@@ -21,10 +22,10 @@ export default defineComponent({
       }
     }
 
-    console.log(finalFiles);
     return () => (
       <div>
-        {finalFiles.map(([file, extra]) => <FileEntry file={file} extra={extra}/>)}
+        {finalFiles.map(([file, extra]) =>
+          <FileEntry file={file} extra={extra} path={`${path}/${extra?.name || file?.name}`}/>)}
       </div>
     );
   },

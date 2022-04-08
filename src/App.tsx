@@ -35,7 +35,7 @@ export default defineComponent({
           {{
             default: ({ Component }: any) => (
               <Transition name="animation" duration={600} mode="out-in">
-                <div key={route.path}
+                <div key={route.path.startsWith('/files') ? 'fileBrowser' : route.path}
                      class={`${styles.container} ${route.path.startsWith('/posts') ? '' : 'base'}`}>
                   <Component/>
                 </div>
