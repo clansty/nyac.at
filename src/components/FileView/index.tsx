@@ -41,11 +41,13 @@ const Component = defineComponent({
     const alistData = await alist.getPath(meta.path + pathAfter, meta.server);
 
     return () => (
-      <div class={styles.fileViewContainerInner}>
-        {alistData.type === 'folder' ?
-          <FolderView files={alistData.files} extraFiles={pathAfter ? null : meta.files} path={path}/> :
-          <></> // TODO FileView
-        }
+      <div class={`${styles.fileViewContainerAfterLoad} fileView`}>
+        <div class={styles.fileViewContainerInner}>
+          {alistData.type === 'folder' ?
+            <FolderView files={alistData.files} extraFiles={pathAfter ? null : meta.files} path={path}/> :
+            <></> // TODO FileView
+          }
+        </div>
       </div>
     );
   },
@@ -58,7 +60,7 @@ export default defineComponent({
   },
   setup({ path }) {
     return () => (
-      <div class={styles.fileViewContainer}>
+      <div class={`${styles.fileViewContainer}`}>
         <Suspense>
           <Component path={path}/>
         </Suspense>

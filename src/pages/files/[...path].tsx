@@ -1,5 +1,6 @@
 import FileView from '~/components/FileView';
 import styles from './files.module.sass';
+import { Transition, KeepAlive } from 'vue';
 
 export default defineComponent({
   props: {
@@ -18,7 +19,13 @@ export default defineComponent({
     return () => (
       <div class={styles.filesContainer}>
         {paths.value.map(
-          path => <FileView path={path} key={path}/>,
+          path => (
+            <Transition name="animation" duration={300} mode="out-in">
+              <KeepAlive>
+                <FileView path={path} key={path}/>
+              </KeepAlive>
+            </Transition>
+          ),
         )}
       </div>
     );
