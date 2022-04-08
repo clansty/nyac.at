@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "vite-ssg build",
-    "dev": "vite --port 3333 --open",
+    "dev": "vite --port 3333 --open --host",
     "preview": "vite preview",
     "convert-images": "node tools/convert-images",
     "build:ci": "pnpm run build && pnpm run convert-images"
