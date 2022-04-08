@@ -1,0 +1,8 @@
+server: https://dl.lwqwq.com
+path: /
+
+files:
+  - name: fakeFile
+    title: 添加虚拟文件也实现了
+  - name: Images
+    title: 镜像
