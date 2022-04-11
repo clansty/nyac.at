@@ -19,8 +19,15 @@ export default defineComponent({
       }
       return out;
     });
+    const container = ref<HTMLDivElement>();
+    watch(() => props.path, () => {
+      setTimeout(() => {
+        if (!container.value) return;
+        container.value.scrollTo(container.value.scrollWidth, 0);
+      }, 300);
+    }, { immediate: true });
     return () => (
-      <div class={styles.filesContainer}>
+      <div class={styles.filesContainer} ref={container}>
         {paths.value.map(
           path => (
             <Transition name="animation" duration={300} mode="out-in">
