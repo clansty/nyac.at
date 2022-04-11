@@ -5,4 +5,5 @@ files:
   - name: Images
     title: 镜像
   - name: 各种视频
+    isFolder: true
     url: https://www.aliyundrive.com/s/p1Shg8Tz6aq/folder/6122fc65e44ec561ccfa43f886976b8893d3229d
