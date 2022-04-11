@@ -12,14 +12,24 @@ export default defineComponent({
     extra: Object as PropType<CustomFileInfo>,
   },
   setup({ file, extra, path }) {
+    const inner = <>
+      <div class={styles.icon}>
+        <FileIcon path={path} isFolder={file?.type === 1 || extra?.isFolder}/>
+      </div>
+      <div class={styles.title}>
+        {extra?.title || extra?.name || file?.name}
+      </div>
+    </>;
+    if (extra?.url) {
+      return () => (
+        <a href={extra.url} class={styles.fileEntry} target="_blank">
+          {inner}
+        </a>
+      );
+    }
     return () => (
       <RouterLink to={`/files${path}`} class={styles.fileEntry}>
-        <div class={styles.icon}>
-          <FileIcon path={path} isFolder={file?.type === 1 || extra?.isFolder}/>
-        </div>
-        <div class={styles.title}>
-          {extra?.title || extra?.name || file?.name}
-        </div>
+        {inner}
       </RouterLink>
     );
   },
