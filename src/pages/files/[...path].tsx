@@ -1,6 +1,7 @@
 import FileView from '~/components/FileView';
 import styles from './files.module.sass';
 import { KeepAlive, Transition } from 'vue';
+import BackButton from '~/components/BackButton';
 
 export default defineComponent({
   props: {
@@ -27,16 +28,21 @@ export default defineComponent({
       }, 300);
     }, { immediate: true });
     return () => (
-      <div class={styles.filesContainer} ref={container}>
-        {paths.value.map(
-          path => (
-            <Transition name="animation" duration={300} mode="out-in">
-              <KeepAlive>
-                <FileView path={path} key={path}/>
-              </KeepAlive>
-            </Transition>
-          ),
-        )}
+      <div class={styles.container}>
+        <div class={styles.topBar}>
+          <BackButton to="/" class={styles.back}/>
+        </div>
+        <div class={styles.filesContainer} ref={container}>
+          {paths.value.map(
+            path => (
+              <Transition name="animation" duration={300} mode="out-in">
+                <KeepAlive>
+                  <FileView path={path} key={path}/>
+                </KeepAlive>
+              </Transition>
+            ),
+          )}
+        </div>
       </div>
     );
   },
