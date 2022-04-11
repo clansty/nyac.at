@@ -4,7 +4,7 @@ import alist from '~/utils/alist';
 import { Suspense } from 'vue';
 import FolderView from '~/components/FileView/FolderView';
 
-const metas = import.meta.globEager('../../../data/files/**/*.yaml');
+const metas = import.meta.globEager('../../../data/files/**/folder.yaml');
 
 const Component = defineComponent({
   props: {
@@ -26,10 +26,9 @@ const Component = defineComponent({
     let meta: FolderInfo;
     let pathAfter = path;
     for (let i = paths.length - 1; i >= 0; i--) {
-      const metaPath = `../../../data/files/${paths[i]}/folder.yaml`;
+      const metaPath = `../../../data/files${paths[i]}/folder.yaml`;
       if (metas[metaPath]) {
         meta = metas[metaPath].default;
-        console.log(path, paths[i]);
         pathAfter = path.substring(paths[i].length + 1);
       }
     }

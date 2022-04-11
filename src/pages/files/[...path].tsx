@@ -10,7 +10,7 @@ export default defineComponent({
     const paths = computed(() => {
       const out = [''];
       for (const part of props.path.split('/')) {
-        if (out.length) {
+        if (part) {
           out.push(out[out.length - 1] + '/' + part);
         }
       }
