@@ -28,7 +28,7 @@ export default defineComponent({
       );
     }
     return () => (
-      <RouterLink to={`/files${path}`} class={styles.fileEntry}>
+      <RouterLink to={`/files${path.replace(/#/g, '%23')}`} class={styles.fileEntry}>
         {inner}
       </RouterLink>
     );

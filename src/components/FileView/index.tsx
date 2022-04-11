@@ -31,6 +31,7 @@ const Component = defineComponent({
       if (metas[metaPath]) {
         meta = metas[metaPath].default;
         pathAfter = path.substring(paths[i].length + 1);
+        break
       }
     }
     if (!meta) {
