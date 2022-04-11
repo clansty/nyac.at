@@ -12,4 +12,5 @@ export interface CustomFileInfo {
   title?: string;
   url?: string;
   isFolder?: boolean;
+  size?: number;
 }

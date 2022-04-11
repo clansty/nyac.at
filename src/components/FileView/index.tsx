@@ -2,7 +2,8 @@ import styles from './index.module.sass';
 import { FolderInfo } from '~/types/FolderInfo';
 import alist from '~/utils/alist';
 import { Suspense } from 'vue';
-import FolderView from '~/components/FileView/FolderView';
+import FolderView from './FolderView';
+import FileView from './FileView';
 
 const metas = import.meta.globEager('../../../data/files/**/folder.yaml');
 
@@ -44,7 +45,9 @@ const Component = defineComponent({
         <div class={styles.fileViewContainerInner}>
           {alistData.type === 'folder' ?
             <FolderView files={alistData.files} extraFiles={pathAfter ? null : meta.files} path={path}/> :
-            <></> // TODO FileView
+            <FileView file={alistData.files[0]}
+                      extra={pathAfter ? null : meta.files.find(it => it.name === alistData.files[0].name)}
+                      path={path}/>
           }
         </div>
       </div>
