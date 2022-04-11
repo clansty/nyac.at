@@ -4,7 +4,7 @@ import { CustomFileInfo } from '~/types/FolderInfo';
 import styles from './FileEntry.module.sass';
 import { RouterLink } from 'vue-router';
 import FileIcon from '~/components/FileView/FileIcon';
-import chevronRight from '@iconify-icons/akar-icons/chevron-right';
+import chevronRight from '@iconify-icons/akar-icons/chevron-right.js';
 import Icon from '~/components/Icon';
 
 export default defineComponent({

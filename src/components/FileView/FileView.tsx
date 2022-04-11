@@ -5,7 +5,7 @@ import styles from './FileView.module.sass';
 import FileIcon from '~/components/FileView/FileIcon';
 import hSize from '~/utils/hSize';
 import { formatDate } from '@vueuse/core';
-import downloadOutlined from '@iconify-icons/ant-design/download-outlined';
+import downloadOutlined from '@iconify-icons/ant-design/download-outlined.js';
 import copyOutlined from '@iconify-icons/ant-design/copy-outlined.js';
 import Icon from '~/components/Icon';
 
