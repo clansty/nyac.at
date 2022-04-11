@@ -53,10 +53,11 @@ export default defineComponent({
           博客
           <span>Blog</span>
         </RouterLink>
-        <a href="https://dl.lwqwq.com" onMouseenter={hoverHandler} onFocus={hoverHandler}>
+        {/* @ts-ignore */}
+        <RouterLink to="/files/" onMouseenter={hoverHandler} onFocus={hoverHandler}>
           资源
           <span>Downloads</span>
-        </a>
+        </RouterLink>
         {/* @ts-ignore */}
         <RouterLink to="/friends" onMouseenter={hoverHandler} onFocus={hoverHandler}>
           好朋友们
