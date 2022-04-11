@@ -11,11 +11,17 @@ import { XdmMod } from './rollup/xdm-mod';
 import * as fs from 'fs';
 import remarkGfm from 'remark-gfm';
 import rehypePrism from '@mapbox/rehype-prism';
+import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [autoprefixer()],
     },
   },
   plugins: [
@@ -83,8 +89,8 @@ export default defineConfig({
         globPatterns: [
           'assets/*.*.*',
         ],
-        globIgnores:[
-          '*.html'
+        globIgnores: [
+          '*.html',
         ],
         cleanupOutdatedCaches: true,
         skipWaiting: true,
@@ -133,7 +139,7 @@ export default defineConfig({
           ? fs.readdirSync('./data/posts').filter(dir => !dir.startsWith('.')).map(slug => `/posts/${slug}`)
           : route.path;
       });
-      return pathsRet;
+      return pathsRet.filter(path => !path.startsWith('/files'));
     },
   },
 
