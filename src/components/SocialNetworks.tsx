@@ -23,7 +23,7 @@ export default defineComponent({
           <Icon icon={telegramFill}/>
         </a>
         {/* @ts-ignore */}
-        <RouterLink to="/pgp" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
+        <RouterLink to="/gpg" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
           <Icon icon={gpg}/>
         </RouterLink>
       </>
