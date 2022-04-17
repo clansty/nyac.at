@@ -55,13 +55,13 @@ mount --bind /tmp/root.x86_64 /tmp/root.x86_64
 由于 rootfs 是没有设置好镜像源的，我们需要先手动设置一下镜像源（这个包是最小安装，并没有自带什么文本编辑器）
 
 ```bash
-echo 'Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch' > /tmp/root.x86_64/etc/pacman.d/mirrorlist
+echo 'Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 ```
 
 你可以修改为你喜欢的镜像站。对于海外的机器，可以使用 Cloudflare 镜像
 
 ```bash
-echo 'Server = https://cloudflaremirrors.com/archlinux/$repo/os/$arch' > /tmp/root.x86_64/etc/pacman.d/mirrorlist
+echo 'Server = https://cloudflaremirrors.com/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 ```
 
 然后初始化 pacman 到 pgp 密钥，就可以使用了
