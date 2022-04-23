@@ -1,0 +1,3 @@
+title: 在龙芯 3A5000 上启动 Arch Linux
+desc: 这篇文章是想讲我怎么在龙芯 3A5000 的板子上启动一个能正常使用的基于新 ABI 的 Arch Linux。
+date: 2022-04-23
