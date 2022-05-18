@@ -10,6 +10,8 @@
     "build:ci": "pnpm run build && pnpm run convert-images"
   },
   "dependencies": {
+    "@sentry/tracing": "^6.19.7",
+    "@sentry/vue": "^6.19.7",
     "@vueuse/core": "^8.1.1",
     "@vueuse/head": "^0.7.5",
     "nprogress": "^0.2.0",
