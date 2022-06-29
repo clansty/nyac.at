@@ -532,8 +532,8 @@ mkdir -p /mnt/{boot,home,root,srv,var/log,var/cache/pacman/pkg} # 创建所有�
 mount -o compress=zstd:3,subvol=@home /dev/$ROOT_PART /mnt/home
 mount -o compress=zstd:3,subvol=@root /dev/$ROOT_PART /mnt/root
 mount -o compress=zstd:3,subvol=@srv /dev/$ROOT_PART /mnt/srv
-mount -o compress=zstd:3,subvol=@logs /dev/$ROOT_PART /var/log
-mount -o compress=zstd:3,subvol=@pkgs /dev/$ROOT_PART /var/cache/pacman/pkg
+mount -o compress=zstd:3,subvol=@logs /dev/$ROOT_PART /mnt/var/log
+mount -o compress=zstd:3,subvol=@pkgs /dev/$ROOT_PART /mnt/var/cache/pacman/pkg
 ```
 
 然后挂载 Boot 分区
