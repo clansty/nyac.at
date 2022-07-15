@@ -563,7 +563,7 @@ pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware vim nan
 比如说如果需要 KDE 桌面环境的话，就把这些加在后面
 
 ```bash
-plasma konsole dolphin ark dolphin-plugins ffmpegthumbs filelight gwenview kate kcalc kdeconnect kdialog kio-extras kipi-plugins kolourpaint kompare okular svgpart spectacle
+plasma konsole dolphin ark dolphin-plugins ffmpegthumbs filelight gwenview kate kcalc kdeconnect kdialog kio-extras kolourpaint kompare okular svgpart spectacle
 ```
 
 这是我挑出来 KDE 全家桶里面有用的那些包。同时，还得装上中日韩字体来保证方块字都能正常显示
