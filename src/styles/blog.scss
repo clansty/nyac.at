@@ -36,6 +36,7 @@
     box-shadow: inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0 #bae6fd;
     color: rgba(2, 132, 199, 1);
     transition: all 0.3s;
+    cursor: pointer;
 
     &.inSiteLink {
       box-shadow: inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0 #A7F3D0;

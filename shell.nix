@@ -3,5 +3,6 @@
     buildInputs = with pkgs; [
       nodePackages.pnpm
       nodejs-16_x
+      libwebp
     ];
 }

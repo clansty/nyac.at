@@ -41,6 +41,22 @@ export const onRequestPost: PagesFunction<{
         // 创建回复
         // 用户可以是 user 也可以是 channel
         const sender = body.message.sender_chat || body.message.from;
+        // 处理头像
+        try {
+          const avatars = (await callTgFunc('getUserProfilePhotos', {
+            user_id: Number(sender.id),
+            limit: 1,
+          }, env.BOT_TOKEN) as any).result.photos;
+          const avatar = avatars[0][avatars[0].length - 1];
+          const download: any = await callTgFunc('getFile', {
+            file_id: avatar.file_id,
+          }, env.BOT_TOKEN);
+          const avatarReq = await fetch(`https://api.telegram.org/file/bot${env.BOT_TOKEN}/${download.result.file_path}`);
+          const avatarBuf = await avatarReq.arrayBuffer();
+          await env.LINK_STORE.put(`avatarBuf:${sender.id}`, avatarBuf);
+        }
+        catch (e) {
+        }
         const commentObj = {
           username: getUserDisplayName(sender),
           content: body.message.text,
