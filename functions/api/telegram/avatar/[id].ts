@@ -4,7 +4,7 @@ export const onRequestGet: PagesFunction<{
   LINK_STORE: KVNamespace;
   BOT_TOKEN: string;
 }, 'id'> = async ({ env, params }) => {
-  const cache = await env.LINK_STORE.get(`avatarBuf:${params.id}`);
+  const cache = await env.LINK_STORE.get(`avatarBuf:${params.id}`, { type: 'stream' });
   if (!cache) return Response.redirect('https://cdn.v2ex.com/gravatar/0?s=200&d=mp');
   return new Response(cache);
 };
