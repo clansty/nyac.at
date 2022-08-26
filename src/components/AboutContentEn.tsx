@@ -22,7 +22,7 @@ export default defineComponent({
           <Icon icon={twemoji.coder}/>
         </p>
         <p>
-          Normal girl
+          Nyan fish
           <Icon icon={twemoji.girl}/>
         </p>
         <p>

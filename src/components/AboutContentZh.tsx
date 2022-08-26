@@ -25,7 +25,7 @@ export default defineComponent({
           <Icon icon={twemoji.coder}/>
         </p>
         <p>
-          普通女孩子
+          苏州小娘鱼
           <Icon icon={twemoji.girl}/>
         </p>
         <p>
