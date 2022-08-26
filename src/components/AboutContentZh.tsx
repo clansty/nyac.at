@@ -3,8 +3,6 @@ import maimai from '~/icons/maimai';
 import node from '@iconify-icons/logos/nodejs-icon.js';
 import python from '@iconify-icons/logos/python.js';
 import vue from '@iconify-icons/logos/vue.js';
-import archLinux from '@iconify-icons/logos/archlinux.js';
-import appleFilled from '@iconify-icons/ant-design/apple-filled.js';
 import reactFill from '@iconify-icons/akar-icons/react-fill.js';
 import twemoji from '~/icons/twemoji';
 import nixos from '~/icons/nixos';

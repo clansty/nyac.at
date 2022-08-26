@@ -41,14 +41,16 @@ export default defineComponent({
     return () => {
       return (
         <div class={styles.aboutContainer}>
-          <div class={styles.title}>
-            {language.value === 'en' ? 'About' : '关于我'}
-          </div>
           <div class={styles.content}>
-            <div>
-              {language.value === 'en' ?
-                <AboutContentEn/> :
-                <AboutContentZh/>}
+            <div class={styles.title}>
+              {language.value === 'en' ? 'About' : '关于我'}
+            </div>
+            <div class={styles.subContainer}>
+              <div>
+                {language.value === 'en' ?
+                  <AboutContentEn/> :
+                  <AboutContentZh/>}
+              </div>
             </div>
           </div>
           <BackButton to="/"/>

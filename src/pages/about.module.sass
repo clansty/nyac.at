@@ -6,18 +6,21 @@
   right: 0
 
   .title
-    position: absolute
+    position: sticky
     top: 0
-    height: 85px
+    max-height: 85px
+    min-height: 85px
     z-index: 1
     width: 100vw
-    backdrop-filter: blur(5px)
-    background-color: rgba(255, 255, 255, 0.6)
+    background: radial-gradient(rgba(255, 255, 255, 0.2), #fff 2px)
+    background-size: 3px 3px
+    backdrop-filter: saturate(50%) blur(4px)
     color: #303133
     font-size: x-large
     display: flex
     justify-content: center
     align-items: center
+
     @media (min-width: 1000px)
       display: none
 
@@ -30,42 +33,46 @@
     right: 0
     overflow-y: auto
     display: flex
-    align-items: center
-    justify-content: left
+    flex-direction: column
+    align-items: flex-start
 
     @media (max-width: 600px)
       top: 0
       align-items: flex-start
 
+    .subContainer
+      flex-grow: 1
+      overflow-y: visible
+      width: 100%
+      display: flex
+      align-items: center
 
-    > div
-      flex-shrink: 1
-      padding: 0 80px
-      max-height: 100%
-      overflow-y: auto
-      color: #303133
-      white-space: nowrap
-      @media (max-width: 1000px)
-        background-color: rgba(255, 255, 255, 0.4)
-        backdrop-filter: blur(5px)
-        width: 100%
+      > div
+        padding: 10px 80px
+        overflow-y: visible
+        flex-shrink: 1
+        color: #303133
+        white-space: nowrap
+        @media (max-width: 1000px)
+          background-color: rgba(255, 255, 255, 0.4)
+          backdrop-filter: blur(5px)
+          width: 100%
 
-      @media (max-width: 950px)
-        width: 100%
+        @media (max-width: 950px)
+          width: 100%
 
-      @media (max-width: 600px)
-        white-space: unset
-        padding-top: 85px
-        max-height: 100vh
+        @media (max-width: 600px)
+          white-space: unset
+          max-height: 100vh
 
-      @media (max-width: 500px)
-        padding: 85px 40px
+        @media (max-width: 500px)
+          padding: 10px 40px
 
-      svg
-        vertical-align: text-top
-        margin-top: 1px
-        margin-left: 1px
-        margin-right: 1px
+        svg
+          vertical-align: text-top
+          margin-top: 1px
+          margin-left: 1px
+          margin-right: 1px
 
   .languageSwitch
     position: absolute
