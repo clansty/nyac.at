@@ -1,0 +1,3 @@
+title: 为 NanoPi R4SE 安装 Armbian
+desc: 因为 R4SE 比 R4S 多了 EMMC，安装 R4S 的系统会导致 EMMC 无法识别，所以这里用别的设备的 uBoot 解决
+date: 2022-08-26
