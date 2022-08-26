@@ -7,9 +7,11 @@ import archLinux from '@iconify-icons/logos/archlinux.js';
 import appleFilled from '@iconify-icons/ant-design/apple-filled.js';
 import reactFill from '@iconify-icons/akar-icons/react-fill.js';
 import twemoji from '~/icons/twemoji';
+import nixos from '~/icons/nixos';
+import nixosText from '~/icons/nixosText';
 
 export default defineComponent({
-  render(){
+  render() {
     return (
       <>
         <p>
@@ -70,12 +72,10 @@ export default defineComponent({
         <p>学过 C++，但是现在大概不会了</p>
         <p>
           目前使用的操作系统是
-          <Icon icon={archLinux}/>
-          Arch Linux 和
-          <Icon icon={appleFilled}/>
-          macOS
+          <Icon icon={nixos}/>
+          <Icon icon={nixosText}/>
         </p>
       </>
-    )
-  }
-})
+    );
+  },
+});

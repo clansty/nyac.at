@@ -7,6 +7,8 @@ import archLinux from '@iconify-icons/logos/archlinux.js';
 import appleFilled from '@iconify-icons/ant-design/apple-filled.js';
 import reactFill from '@iconify-icons/akar-icons/react-fill.js';
 import twemoji from '~/icons/twemoji';
+import nixos from '~/icons/nixos';
+import nixosText from '~/icons/nixosText';
 
 export default defineComponent({
   render(){
@@ -67,10 +69,8 @@ export default defineComponent({
         <p>Once learnt C++, but forgot now</p>
         <p>
           Now using&nbsp;
-          <Icon icon={archLinux}/>
-          Arch Linux and&nbsp;
-          <Icon icon={appleFilled}/>
-          macOS
+          <Icon icon={nixos}/>
+          <Icon icon={nixosText}/>
         </p>
       </>
     )
