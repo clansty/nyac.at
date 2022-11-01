@@ -1,4 +1,4 @@
-server: https://dl.lwqwq.com
+server: https://dl.lwqwq.com:6443
 path: /
 
 files:
