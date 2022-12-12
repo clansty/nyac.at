@@ -18,7 +18,7 @@ export default defineComponent({
           <b>Clansty</b> here!
         </p>
         <p>
-          Software Engineering Sophomore.&nbsp;
+          Software Engineering.&nbsp;
           <Icon icon={twemoji.coder}/>
         </p>
         <p>
