@@ -19,7 +19,7 @@ export default defineComponent({
           <b>凌莞 / Clansty</b>
         </p>
         <p>
-          目前上大二，专业是
+          目前上大学，专业是
           <del>软妹工程</del>
           软件工程
           <Icon icon={twemoji.coder}/>
