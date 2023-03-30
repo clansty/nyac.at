@@ -6,3 +6,15 @@ dist
 dist-ssr
 node_modules
 *.log
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.directory
+yarn-error.log
+result
+.direnv
+vite.config.ts.*.js

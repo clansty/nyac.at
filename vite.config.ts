@@ -49,7 +49,7 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
-      registerType: 'prompt',
+      registerType: 'autoUpdate',
       manifest: {
         name: '凌莞的个人主页喵～',
         short_name: '凌莞喵～',
@@ -128,7 +128,7 @@ export default defineConfig({
     formatting: 'minify',
     onFinished() {
       // @ts-ignore
-      (generateSitemap.default as typeof generateSitemap)({
+      generateSitemap({
         hostname: 'https://nyac.at',
       });
     },
