@@ -7,7 +7,7 @@
     "dev": "vite --port 3333 --open --host",
     "preview": "vite preview",
     "convert-images": "node tools/convert-images",
-    "build:ci": "pnpm run build && pnpm run convert-images"
+    "build:ci": "yarn build && yarn convert-images"
   },
   "dependencies": {
     "@sentry/tracing": "^7.46.0",
