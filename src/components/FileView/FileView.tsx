@@ -16,7 +16,7 @@ export default defineComponent({
     extra: Object as PropType<CustomFileInfo>,
   },
   setup({ file, extra, path }) {
-    const { copy, copied } = useClipboard({ source: file.url });
+    const { copy, copied } = useClipboard({ source: file.raw_url });
 
     return () => (
       <div>
@@ -29,7 +29,7 @@ export default defineComponent({
           </div>
         </div>
         <div class={styles.buttons}>
-          <a href={file.url} target="_blank">
+          <a href={file.raw_url} target="_blank">
             <Icon icon={downloadOutlined}/>
             下载
           </a>
@@ -46,7 +46,7 @@ export default defineComponent({
           </tr>
           <tr>
             <td>日期:</td>
-            <td>{formatDate(new Date(file.updated_at), 'YYYY/M/D H:mm:ss')}</td>
+            <td>{formatDate(new Date(file.modified), 'YYYY/M/D H:mm:ss')}</td>
           </tr>
           </tbody>
         </table>

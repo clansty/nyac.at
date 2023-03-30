@@ -1,6 +1,0 @@
-server: https://dl.lwqwq.com:6443
-path: /应用/
-
-files:
-  - name: Adobe
-    isFolder: true
