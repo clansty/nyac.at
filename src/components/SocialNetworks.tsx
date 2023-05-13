@@ -5,6 +5,7 @@ import telegramFill from '@iconify-icons/akar-icons/telegram-fill.js';
 import { RouterLink } from 'vue-router';
 import gpg from '~/icons/gpg';
 import Icon from '~/components/Icon';
+import brandMatrix from '@iconify-icons/tabler/brand-matrix.js';
 
 export default defineComponent({
   props: {
@@ -13,7 +14,7 @@ export default defineComponent({
   setup(props) {
     return () => (
       <>
-        <a onClick={sendMail} tabindex={0} onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
+        <a href="mailto:i@0w.al" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
           <Icon icon={mailOutlined}/>
         </a>
         <a href="https://github.com/Clansty" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
@@ -21,6 +22,9 @@ export default defineComponent({
         </a>
         <a href="https://t.me/Clansty" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
           <Icon icon={telegramFill}/>
+        </a>
+        <a href="https://matrix.to/#/@clansty:saezi.ae" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
+          <Icon icon={brandMatrix}/>
         </a>
         {/* @ts-ignore */}
         <RouterLink to="/gpg" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
@@ -30,16 +34,3 @@ export default defineComponent({
     );
   },
 });
-
-function sendMail() {
-  const emptyObj = {};
-  // @ts-ignore
-  const part1 = `${emptyObj.nonExist}`[5];
-  const part2 = String.fromCharCode(Math.pow(2, 6));
-  const part3 = atob('Z2FvNC5wdw==');
-  const proto = atob('bWFpbHRvOg==');
-  const adr = `${proto}${part1}${part2}${part3}`;
-  const link = document.createElement('a');
-  link.href = adr;
-  link.click();
-}

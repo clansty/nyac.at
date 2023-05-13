@@ -26,6 +26,7 @@
     "@iconify-icons/ant-design": "^1.2.5",
     "@iconify-icons/cil": "^1.2.4",
     "@iconify-icons/logos": "^1.2.24",
+    "@iconify-icons/tabler": "^1.2.75",
     "@iconify/vue": "^4.1.0",
     "@mapbox/rehype-prism": "^0.8.0",
     "@originjs/vite-plugin-content": "1.0.1",

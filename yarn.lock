@@ -1394,6 +1394,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify-icons/tabler@npm:^1.2.75":
+  version: 1.2.75
+  resolution: "@iconify-icons/tabler@npm:1.2.75"
+  dependencies:
+    "@iconify/types": "*"
+  checksum: ca823109ce1e54c1d5dcdf0e18f7910741cdeb91616580a3a415972926bfab7241ea2a734876672b40a3762c85191deae20f07bddce59ed13afb14955b53dd49
+  languageName: node
+  linkType: hard
+
 "@iconify/types@npm:*, @iconify/types@npm:^2.0.0":
   version: 2.0.0
   resolution: "@iconify/types@npm:2.0.0"
@@ -8396,6 +8405,7 @@ __metadata:
     "@iconify-icons/ant-design": ^1.2.5
     "@iconify-icons/cil": ^1.2.4
     "@iconify-icons/logos": ^1.2.24
+    "@iconify-icons/tabler": ^1.2.75
     "@iconify/vue": ^4.1.0
     "@mapbox/rehype-prism": ^0.8.0
     "@originjs/vite-plugin-content": 1.0.1

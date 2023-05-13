@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@iconify-icons/ant-design", "npm:1.2.5"],\
             ["@iconify-icons/cil", "npm:1.2.4"],\
             ["@iconify-icons/logos", "npm:1.2.24"],\
+            ["@iconify-icons/tabler", "npm:1.2.75"],\
             ["@iconify/vue", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:4.1.0"],\
             ["@mapbox/rehype-prism", "npm:0.8.0"],\
             ["@originjs/vite-plugin-content", "npm:1.0.1"],\
@@ -2425,6 +2426,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@iconify-icons-logos-npm-1.2.24-0dc0ed66ae-d6b618724a.zip/node_modules/@iconify-icons/logos/",\
           "packageDependencies": [\
             ["@iconify-icons/logos", "npm:1.2.24"],\
+            ["@iconify/types", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@iconify-icons/tabler", [\
+        ["npm:1.2.75", {\
+          "packageLocation": "./.yarn/cache/@iconify-icons-tabler-npm-1.2.75-9b1ac1b263-ca823109ce.zip/node_modules/@iconify-icons/tabler/",\
+          "packageDependencies": [\
+            ["@iconify-icons/tabler", "npm:1.2.75"],\
             ["@iconify/types", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -10370,6 +10381,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@iconify-icons/ant-design", "npm:1.2.5"],\
             ["@iconify-icons/cil", "npm:1.2.4"],\
             ["@iconify-icons/logos", "npm:1.2.24"],\
+            ["@iconify-icons/tabler", "npm:1.2.75"],\
             ["@iconify/vue", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:4.1.0"],\
             ["@mapbox/rehype-prism", "npm:0.8.0"],\
             ["@originjs/vite-plugin-content", "npm:1.0.1"],\

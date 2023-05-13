@@ -5,8 +5,7 @@ import python from '@iconify-icons/logos/python.js';
 import vue from '@iconify-icons/logos/vue.js';
 import reactFill from '@iconify-icons/akar-icons/react-fill.js';
 import twemoji from '~/icons/twemoji';
-import nixos from '~/icons/nixos';
-import nixosText from '~/icons/nixosText';
+import appleFilled from '@iconify-icons/ant-design/apple-filled.js';
 
 export default defineComponent({
   render() {
@@ -70,8 +69,8 @@ export default defineComponent({
         <p>学过 C++，但是现在大概不会了</p>
         <p>
           目前使用的操作系统是
-          <Icon icon={nixos}/>
-          <Icon icon={nixosText}/>
+          <Icon icon={appleFilled}/>
+          macOS
         </p>
       </>
     );
