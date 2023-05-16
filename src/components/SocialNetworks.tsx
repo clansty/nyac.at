@@ -7,6 +7,7 @@ import gpg from '~/icons/gpg';
 import Icon from '~/components/Icon';
 import brandMatrix from '@iconify-icons/tabler/brand-matrix.js';
 import MisskeyIcon from '../icons/misskey.svg';
+import steamIcon from '@iconify-icons/bi/steam.js';
 
 export default defineComponent({
   props: {
@@ -23,6 +24,10 @@ export default defineComponent({
         </a>
         <a href="https://nya.one/@Clansty" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <MisskeyIcon/>
+        </a>
+        <a href="https://steamcommunity.com/id/Clansty/" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}
+           target="_blank">
+          <Icon icon={steamIcon}/>
         </a>
         <a href="https://t.me/Clansty" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <Icon icon={telegramFill}/>
