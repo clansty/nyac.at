@@ -47,6 +47,7 @@
     "remark-gfm": "^3.0.1",
     "sharp": "^0.32.1",
     "source-map": "^0.7.4",
+    "tg-blog": "^1.1.5-alpha.1",
     "typescript": "^5.0.4",
     "unplugin-auto-import": "^0.15.3",
     "vfile": "^5.3.7",

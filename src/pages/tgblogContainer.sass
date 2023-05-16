@@ -1,0 +1,49 @@
+.tgblogContainer
+  .search,.tgb-card,.tg-blog
+    background-color: #f8f9fa
+    color: #303133
+
+  .info *, .post .reply .mtext
+    color: #909399
+
+  .post .reply:before
+    border-color: #10B981
+
+  .post .forward, .post .forward a, .post .reply-to
+    color: #10B981
+
+  .post .text a
+    position: relative
+    box-shadow: inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0 #bae6fd
+    color: rgba(2, 132, 199, 1)
+    transition: all 0.3s
+    cursor: pointer
+
+    &:hover
+      color: rgba(2, 132, 199, 0.8)
+      box-shadow: unset
+
+      &::after
+        transform: translateX(-50%) translateY(-100%)
+        opacity: 1
+
+    &::after
+      left: 50%
+      content: var(--href)
+      position: absolute
+      min-width: fit-content
+      width: 200px
+      max-width: max-content
+      border-radius: 15px
+      background-color: rgba(59, 130, 246, 0.85)
+      backdrop-filter: blur(5px)
+      padding: 2px 7px
+      transform: translateX(-50%) translateY(-50%)
+      opacity: 0
+      box-shadow: none
+      color: #edf8f6
+      font-size: smaller
+      line-height: 24px
+      word-break: break-all
+      pointer-events: none
+      transition: all 0.3s

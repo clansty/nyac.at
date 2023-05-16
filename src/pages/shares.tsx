@@ -1,6 +1,9 @@
 import styles from './shares.module.sass';
 import BackButton from '~/components/BackButton';
-import Loading from '~/components/Loading';
+import { TgBlog } from 'tg-blog';
+import tgExport from '~/../data/tg/posts.json?url';
+import 'tg-blog/dist/style.css';
+import './tgblogContainer.sass';
 
 export default defineComponent({
   setup() {
@@ -23,9 +26,9 @@ export default defineComponent({
     return () => (
       <div class={styles.sharesContainer}>
         <BackButton to="/" class={styles.back}/>
-        <iframe src="https://tg.0w0.wiki?emb" frameborder="0" allowtransparency/>
-        <div class={styles.loading}>
-          <Loading color="#60A5FA"/>
+        <div class={styles.main}>
+          {/* @ts-ignore */}
+          <TgBlog postsUrl={tgExport} class="tgblogContainer"/>
         </div>
       </div>
     );
