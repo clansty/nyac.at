@@ -55,6 +55,7 @@
     "vite-plugin-pwa": "^0.14.7",
     "vite-ssg": "^0.19.2",
     "vite-ssg-sitemap": "0.2.7",
+    "vite-svg-loader": "^4.0.0",
     "workbox-window": "^6.5.4",
     "xdm": "^3.4.0"
   }

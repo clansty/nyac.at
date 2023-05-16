@@ -12,6 +12,7 @@ import * as fs from 'fs';
 import remarkGfm from 'remark-gfm';
 import rehypePrism from '@mapbox/rehype-prism';
 import autoprefixer from 'autoprefixer';
+import SvgLoader from 'vite-svg-loader';
 
 export default defineConfig({
   resolve: {
@@ -28,6 +29,8 @@ export default defineConfig({
     VueJsx({
       include: [/\.tsx$/],
     }),
+
+    SvgLoader(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
