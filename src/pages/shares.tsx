@@ -23,7 +23,7 @@ export default defineComponent({
     });
 
     const files = Object.fromEntries(Object.entries(import.meta.globEager('~/../data/tg/**/*')).map(([k, v]: any) => [k, v.default]));
-    const postsData = files['/data/tg/posts.json'] as Post[];
+    const postsData = structuredClone(files['/data/tg/posts.json'] as Post[]);
     for (const post of postsData) {
       post.images?.forEach?.(img => img.url = files['/data/tg/' + img.url] as string);
       if (post.reply?.thumb) post.reply.thumb = files['/data/tg/' + post.reply.thumb] as string;
@@ -34,7 +34,7 @@ export default defineComponent({
       });
     }
 
-    console.log(postsData)
+    console.log(postsData);
 
     return () => (
       <div class={styles.sharesContainer}>
