@@ -47,7 +47,7 @@ export default defineComponent({
         <div class={styles.title} onMouseenter={leave}>
           你好，这里是凌莞
         </div>
-        <div class={stgit sdyles.highlight} aria-hidden={true} ref={highlightRef}/>
+        <div class={styles.highlight} aria-hidden={true} ref={highlightRef}/>
         {/* @ts-ignore */}
         <RouterLink to="/posts" onMouseenter={hoverHandler} onFocus={hoverHandler}>
           博客
