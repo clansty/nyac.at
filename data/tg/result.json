@@ -630,8 +630,8 @@
       "type": "message",
       "date": "2023-05-16T01:59:14",
       "date_unixtime": "1684173554",
-      "edited": "2023-05-16T01:59:17",
-      "edited_unixtime": "1684173557",
+      "edited": "2023-05-17T12:52:42",
+      "edited_unixtime": "1684299162",
       "from": "凌莞的喵喵喵碎碎念和奇奇怪怪的分享 | 欠上海沪籍",
       "from_id": "channel1311872089",
       "author": "Clansty ad Astra",
@@ -668,6 +668,40 @@
           "text": "公安局内保支队反诈温馨提示：请同学们尽快检查自己的手机，是否安装有“纸飞机”、“蝙蝠”、“事密达”、“海鸥”、“飞机加速器”、“连信”等软件，这是诈骗分子最近常用来联系在校学生帮助信息网络犯罪用的，若有尽快停止违法行为，主动到公安机关投案自首，不要成为电信网络诈骗的工具人和帮凶，一旦被公安机关处罚，违法犯罪记录伴随终生。"
         }
       ]
+    },
+    {
+      "id": 1353,
+      "type": "message",
+      "date": "2023-05-17T12:37:08",
+      "date_unixtime": "1684298228",
+      "edited": "2023-05-17T13:29:56",
+      "edited_unixtime": "1684301396",
+      "from": "凌莞的喵喵喵碎碎念和奇奇怪怪的分享 | 欠上海沪籍",
+      "from_id": "channel1311872089",
+      "author": "Clansty ad Astra",
+      "forwarded_from": "MtF.wiki 中文頻道",
+      "photo": "photos/photo_17@17-05-2023_12-37-08.jpg",
+      "width": 1280,
+      "height": 960,
+      "text": "Our existence is resistance\n阳光下，我们相遇",
+      "text_entities": [
+        {
+          "type": "plain",
+          "text": "Our existence is resistance\n阳光下，我们相遇"
+        }
+      ]
+    },
+    {
+      "id": 1354,
+      "type": "service",
+      "date": "2023-05-17T18:22:57",
+      "date_unixtime": "1684318977",
+      "actor": "凌莞的喵喵喵碎碎念和奇奇怪怪的分享 | 欠上海沪籍",
+      "actor_id": "channel1311872089",
+      "action": "set_messages_ttl",
+      "period": 0,
+      "text": "",
+      "text_entities": []
     }
   ],
   "processed": true
