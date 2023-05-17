@@ -18,3 +18,4 @@ yarn-error.log
 result
 .direnv
 vite.config.ts.*.js
+.history

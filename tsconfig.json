@@ -3,7 +3,10 @@
     "baseUrl": ".",
     "module": "ESNext",
     "target": "es2016",
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "esModuleInterop": true,
     "incremental": false,
     "skipLibCheck": true,
@@ -21,8 +24,17 @@
       "@cloudflare/workers-types"
     ],
     "paths": {
-      "~/*": ["src/*"]
-    }
+      "~/*": [
+        "src/*"
+      ]
+    },
   },
-  "exclude": ["dist", "node_modules", "cypress"]
+  "include": [
+    "./**/*",
+    "./functions/.well-known/**/*"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
