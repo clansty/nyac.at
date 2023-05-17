@@ -143,7 +143,7 @@ export default defineConfig({
           ? fs.readdirSync('./data/posts').filter(dir => !dir.startsWith('.')).map(slug => `/posts/${slug}`)
           : route.path;
       });
-      return pathsRet.filter(path => !path.startsWith('/files') && !path.startsWith('/shares'));
+      return pathsRet.filter(path => !path.startsWith('/files') && !path.startsWith('/channel'));
     },
   },
 
