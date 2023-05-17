@@ -1,7 +1,6 @@
 import styles from './shares.module.sass';
 import BackButton from '~/components/BackButton';
-import { TgBlog } from 'tg-blog';
-import tgExport from '~/../data/tg/posts.json?url';
+import { Post, TgBlog } from 'tg-blog';
 import 'tg-blog/dist/style.css';
 import './tgblogContainer.sass';
 
@@ -23,12 +22,26 @@ export default defineComponent({
       ],
     });
 
+    const files = Object.fromEntries(Object.entries(import.meta.globEager('~/../data/tg/**/*')).map(([k, v]: any) => [k, v.default]));
+    const postsData = files['/data/tg/posts.json'] as Post[];
+    for (const post of postsData) {
+      post.images?.forEach?.(img => img.url = files['/data/tg/' + img.url] as string);
+      if (post.reply?.thumb) post.reply.thumb = files['/data/tg/' + post.reply.thumb] as string;
+      if (post.reply?.thumb) post.reply.thumb = files['/data/tg/' + post.reply.thumb] as string;
+      post.files?.forEach(f => {
+        f.url = files['/data/tg/' + f.url] as string;
+        if (f.thumb) f.thumb = files['/data/tg/' + f.thumb] as string;
+      });
+    }
+
+    console.log(postsData)
+
     return () => (
       <div class={styles.sharesContainer}>
         <BackButton to="/" class={styles.back}/>
         <div class={styles.main}>
           {/* @ts-ignore */}
-          <TgBlog postsUrl={tgExport} class="tgblogContainer"/>
+          <TgBlog postsData={postsData} class="tgblogContainer"/>
         </div>
       </div>
     );
