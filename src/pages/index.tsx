@@ -69,9 +69,9 @@ export default defineComponent({
           <span>About</span>
         </RouterLink>
         {/* @ts-ignore */}
-        <RouterLink to="/shares" onMouseenter={hoverHandler} onFocus={hoverHandler}>
+        <RouterLink to="/channel" onMouseenter={hoverHandler} onFocus={hoverHandler}>
           碎碎念
-          <span>Shares</span>
+          <span>Channel</span>
         </RouterLink>
         <div class={styles.footer} onMouseenter={leave}>
           <div class={styles.space} onMouseenter={leave}/>
