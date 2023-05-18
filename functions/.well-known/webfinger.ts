@@ -11,7 +11,7 @@ const subjects = [
       {
         'rel': 'self',
         'type': 'application/activity+json',
-        'href': 'https://nyac.at/posts.json',
+        'href': 'https://nyac.at/blog.json',
       },
     ],
   },
