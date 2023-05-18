@@ -45,10 +45,10 @@
   "manuallyApprovesFollowers" : false,
   "discoverable" : true,
   "publicKey" : {
-    "id" : "https://nyac.at/activity-pub/public.pem",
+    "id" : "https://nyac.at/blog.json#pubkey",
     "type" : "Key",
     "owner" : "https://nyac.at/blog.json",
-    "publicKeyPem" : "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1bFyB1Njqgr/0aCXHMRe\nLJVsEJ/D9WQItcww9O8Q7CyK6TGSFSUfXUaEbY+FNpEghvBnCu6ef6tn9m/trATh\nkL6Uc27giURrBn8v35yUgw7df5awQpcbuGFIx65f12Yvm9emw58yIOTwpBW7NINK\nOszr0e5hlDqxchC1fey/AkDOo8ZebFZ+bEGlfZHQ5bGDiDcZPr1YyDuUGiPfX1lu\nF9JQuZppjQ6vNrhq75XmLBkmHfd6ojF8wRn39w8Sxk1BPByDEPA+pUH5YHjLRMCw\nXpY2dgrYbGoJ8xJYZFMTLHDlpOI6Lm6hcYh2DGluLvOc2u6DbzZbFeMSe/ZJP2NA\newIDAQAB\n-----END PUBLIC KEY-----\n"
+    "publicKeyPem" : "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqWl+ocYy6JBABta41qd/Nl4PtYLA1xQjPwvIW0k2wjKkqFIBLhK+SUhGhN5dcURZFKIJL6GxMmm8Pd4/VNkBnxH4WIugLyMGVPTLctmQLUu9Jumj9a8tKuZz0ljIzWGDD+4CBlyiagH/MCQkoVHiYm12sMc7DBJXUiPqlwQb40ZBNNMhpVYztFgopiD3iq9WGadiLcEdLk+59LiRPZbSBpEeBBEMbJJW5qjSDTemIhCyI27vBbpHJOOAyRgEFH6BLFjAwMSHDiRwMm10SgOjwBO9RvoiF9g1++BueVWTOoE9ReSrNb6HEFpX2F36YsksyzjDMHUNno+I1Xc3AxmqMQIDAQAB\n-----END PUBLIC KEY-----\n"
   },
   "isCat" : true,
   "attachment" : [],
