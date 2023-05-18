@@ -9,3 +9,21 @@
 
 https://homepage-vue3.pages.dev/*
   X-Robots-Tag: noindex
+
+/.well-known/host-meta
+  Content-Type: application/xrd+xml
+
+/.well-known/host-meta.json
+  Content-Type: application/jrd+json
+
+/.well-known/nodeinfo
+  Content-Type: application/json
+
+/posts.json
+  Content-Type: application/activity+json
+
+/blog.json
+  Content-Type: application/activity+json
+
+/posts/*.json
+  Content-Type: application/activity+json

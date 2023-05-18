@@ -55,8 +55,9 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
       registerType: 'autoUpdate',
+      manifestFilename: 'manifest.json',
       manifest: {
-        name: '凌莞的个人主页喵～',
+        name: '凌莞喵～',
         short_name: '凌莞喵～',
         theme_color: '#EDF8F6',
         background_color: '#EDF8F6',
@@ -124,10 +125,6 @@ export default defineConfig({
           csharp: 'c#',
         },
       }]],
-    }),
-
-    OutputManifest.default({
-      nameWithExt: false,
     }),
   ],
 

@@ -1,0 +1,8 @@
+{
+  "links": [
+    {
+      "rel": "http://nodeinfo.diaspora.software/ns/schema/2.0",
+      "href": "https://nyac.at/activity-pub/nodeinfo20"
+    }
+  ]
+}

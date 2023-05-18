@@ -1,0 +1,46 @@
+{
+  "version" : "2.0",
+  "software" : {
+    "name" : "ClansPub",
+    "version" : "1.0.0"
+  },
+  "protocols" : [
+    "activitypub"
+  ],
+  "services" : {
+    "inbound" : [],
+    "outbound" : []
+  },
+  "openRegistrations" : false,
+  "usage" : {
+    "users" : {
+      "total" : 2,
+      "activeHalfyear" : null,
+      "activeMonth" : null
+    },
+    "localPosts" : 0,
+    "localComments" : 0
+  },
+  "metadata" : {
+    "nodeName" : "凌莞喵～",
+    "nodeDescription" : "凌莞的 Blog",
+    "maintainer" : {
+      "name" : "Clansty",
+      "email" : "i@0w.al"
+    },
+    "langs" : [],
+    "repositoryUrl" : "https://github.com/clansty/nyac.at",
+    "feedbackUrl" : "mailto:support@nya.one",
+    "disableRegistration" : true,
+    "disableLocalTimeline" : false,
+    "disableGlobalTimeline" : false,
+    "emailRequiredForSignup" : true,
+    "enableHcaptcha" : false,
+    "enableRecaptcha" : false,
+    "maxNoteTextLength" : 3000,
+    "enableEmail" : true,
+    "enableServiceWorker" : true,
+    "proxyAccountName" : null,
+    "themeColor" : "#EDF8F6"
+  }
+}

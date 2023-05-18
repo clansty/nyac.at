@@ -1,0 +1,9 @@
+{
+  "links" : [
+    {
+      "rel" : "lrdd",
+      "type" : "application/jrd+json",
+      "template" : "https://nyac.at/.well-known/webfinger?resource={uri}"
+    }
+  ]
+}
