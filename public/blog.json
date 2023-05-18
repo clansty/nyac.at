@@ -24,12 +24,12 @@
   ],
   "type" : "Person",
   "id" : "https://nyac.at/blog.json",
-  "inbox" : "https://nyac.at/activity-pub/blog-inbox",
+  "inbox" : "https://nyac.at/api/activity-pub/blog-inbox",
   "outbox" : "https://nyac.at/posts.json",
-  "followers" : "https://nyac.at/activity-pub/blog-followers",
-  "sharedInbox" : "https://nyac.at/activity-pub/inbox",
+  "followers" : "https://nyac.at/api/activity-pub/blog-followers",
+  "sharedInbox" : "https://nyac.at/api/activity-pub/inbox",
   "endpoints" : {
-    "sharedInbox" : "https://nyac.at/activity-pub/inbox"
+    "sharedInbox" : "https://nyac.at/api/activity-pub/inbox"
   },
   "url" : "https://nyac.at/posts",
   "preferredUsername" : "blog",
