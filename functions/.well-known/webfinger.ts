@@ -35,7 +35,7 @@ const subjects = [
 
 export const onRequestGet: PagesFunction = async ({ request }) => {
   const url = new URL(request.url);
-  const resource = url.searchParams.get('resource');
+  const resource = decodeURIComponent(url.searchParams.get('resource'));
 
   const subject = subjects.find(them => them.subject === resource);
   if (!subject) {
