@@ -1,33 +1,9 @@
 import allPosts from '~/utils/allPosts';
 import type Fs from 'node:fs';
 import type Path from 'node:path';
+import context from '../apContext.json';
 
 const banners = import.meta.globEager('../data/posts/*/banner.webp') as any;
-
-const context = [
-  'https://www.w3.org/ns/activitystreams',
-  'https://w3id.org/security/v1',
-  {
-    'manuallyApprovesFollowers': 'as:manuallyApprovesFollowers',
-    'sensitive': 'as:sensitive',
-    'Hashtag': 'as:Hashtag',
-    'quoteUrl': 'as:quoteUrl',
-    'toot': 'http://joinmastodon.org/ns#',
-    'Emoji': 'toot:Emoji',
-    'featured': 'toot:featured',
-    'discoverable': 'toot:discoverable',
-    'schema': 'http://schema.org#',
-    'PropertyValue': 'schema:PropertyValue',
-    'value': 'schema:value',
-    'misskey': 'https://misskey-hub.net/ns#',
-    '_misskey_content': 'misskey:_misskey_content',
-    '_misskey_quote': 'misskey:_misskey_quote',
-    '_misskey_reaction': 'misskey:_misskey_reaction',
-    '_misskey_votes': 'misskey:_misskey_votes',
-    'isCat': 'misskey:isCat',
-    'vcard': 'http://www.w3.org/2006/vcard/ns#',
-  },
-];
 
 const blogNotesActivities = allPosts.filter(it => !it.hidden).map(post => {
   const banner = banners[`../data/posts/${post.slug}/banner.webp`]?.default as string;
