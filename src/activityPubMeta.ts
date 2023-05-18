@@ -59,6 +59,7 @@ const posts = {
   type: 'OrderedCollection',
   totalItems: blogNotesActivities.length,
   orderedItems: blogNotesActivities.map(it => it.activity),
+  actor: 'https://nyac.at/blog.json',
 };
 
 export default (fs: typeof Fs, path: typeof Path) => {
