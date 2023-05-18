@@ -25,10 +25,13 @@ export const onRequestPost: PagesFunction<{
         published: new Date().toISOString(),
         to: [data.actor],
       }, actor.inbox, env.PRIVATE_KEY);
-      break;
+      return new Response(null, {
+        status: 202,
+      });
     }
+    default:
+      return new Response(null, {
+        status: 501,
+      });
   }
-  return new Response(null, {
-    status: 202,
-  });
 };
