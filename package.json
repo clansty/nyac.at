@@ -5,7 +5,7 @@
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --host",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "convert-images": "node tools/convert-images",
     "gen-activitypub": "node tools/gen-activitypub.js",
     "build:ci": "yarn build && yarn gen-activitypub && yarn convert-images"

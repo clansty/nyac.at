@@ -46,7 +46,7 @@ const blogNotesActivities = allPosts.filter(it => !it.hidden).map(post => {
       ],
       object: {
         id: `https://nyac.at/posts/${post.slug}.json`,
-        type: 'note',
+        type: 'Note',
         attributedTo: 'https://nyac.at/blog.json',
         content: `<p><a href="https://nyac.at/posts/${post.slug}">${post.title}</a><br/><br/><span>${post.desc}</span></p>`,
         _misskey_content: `[${post.title}](https://nyac.at/posts/${post.slug})\n\n${post.desc}`,
