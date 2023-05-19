@@ -17,7 +17,7 @@ export const onRequestPost: PagesFunction<{
       await env.DATA_STORE.put('ap:blog-followers', JSON.stringify(followers));
       const actor = await fetchFediverse(data.actor);
       await sendSignedRequest({
-        ...context,
+        '@context': context,
         id: `https://nyac.at/followAccept/${data.id}`,
         type: 'Accept',
         object: data,
