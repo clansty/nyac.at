@@ -1,4 +1,4 @@
-本文由 [小草莓](https://rvo.li) 友情提供的 [Ubiquiti UISP Console EA Sample](https://eu.store.ui.com/products/uisp-console-ea) 支持
+本文由 [小~~草~~蓝莓](https://rvo.li) 友情提供的 [Ubiquiti UISP Console EA Sample](https://eu.store.ui.com/products/uisp-console-ea) 支持
 
 ## 介绍
 
@@ -6,7 +6,7 @@ UISP Console 有九个电口两个光口，是一台路由器。同时它还有 
 
 小草莓表示这个设备和 [Unifi Dream Machine Pro](https://store.ui.com/products/udm-pro) 硬件配置是一样的，可能可以刷 UDM Pro 的固件，但是自己没刷成功。
 
-UISP 和 Unifi 是不同的产品线，UISP 大概是给 ISP 用的，Unifi 是面向家用，功能不一样，管理系统也不互通。而且我尝试了 UISP 的管理界面挺难用的
+UISP 和 Unifi 是不同的产品线，UISP 大概是给 ISP 用的，Unifi 是面向家用，功能不一样，管理系统也不互通。而且我尝试了 UISP 的管理界面确实挺难用的
 
 ## 拆机
 
@@ -191,3 +191,30 @@ kexec -e
 ```
 
 算是能启动，但是 Arch 内核有点问题，不能读取到启动分区。但是现在算是可以 kexec 了
+
+_接下来的内容是 2023/5/27 续写的，因为我重新把这个项目捡回来了，可以看接下来的 [给 UISP Console 适配 OpenWRT](uisp-openwrt)_
+
+## 编译完整内核
+
+在 [fabianishere/udm-kernel](https://github.com/fabianishere/udm-kernel) 中有一份通过向 UBNT 发邮件获得的内核源码，编译出 Stock 内核之后可以正常驱动 UISP 的硬件，并且我可以正常的定制内核功能。
+
+```bash
+make ARCH=arm64 nconfig
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j40
+```
+
+也可以提取内核和主线之间的差异，并将补丁打到 Linux 4.19 的最新修订版本上。这可能会有一些冲突，但是基本都是 UBNT 和 Linux 主线做了相同的更改。可以通过查看 .rej 文件来检查那些内容没有成功合并并手动合并。
+
+```bash
+cd linux-4.19.269
+wget https://github.com/fabianishere/udm-kernel/compare/ad326970d25cc85128cd22d62398751ad072efff...261fc64a700803935326bad8301bdde3f62e4f05.patch -O ubnt.patch
+patch -p1 < ubnt.patch
+```
+
+合并完之后编译出来更新的内核，也可以正常启动并驱动硬件
+
+在这之后这台设备作为我自己网络的路由器工作了四个多月，4/13 的时候我把自己的路由器换成了闲置已久的[龙芯 3A5000](https://0w.al/cNGQ.png)
+
+最近小蓝莓搬到了苏州，想把之前 x86 的 OpenWRT 换掉，于是就有了下篇[给 UISP Console 适配 OpenWRT](uisp-openwrt)（WIP，敬请期待）
+
+为了能正常地写下篇，我必须先发布上篇，所以只能给去年年底写了一半的上篇匆匆结了个尾。毕竟在这之后我确实没再对这台设备继续研究什么。
