@@ -1,5 +1,9 @@
-import fun from '../dist/meow-activityPubMeta.js'
 import fs from 'fs'
 import path from 'path'
 
-fun(fs, path)
+const file = fs.readdirSync('./dist').find(it => it.startsWith('meow-activityPubMeta'));
+
+(async () => {
+  const { default: fun } = await import('../dist/' + file);
+  fun(fs, path);
+})();

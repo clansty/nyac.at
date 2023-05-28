@@ -13,7 +13,8 @@ import remarkGfm from 'remark-gfm';
 import rehypePrism from '@mapbox/rehype-prism';
 import autoprefixer from 'autoprefixer';
 import SvgLoader from 'vite-svg-loader';
-import OutputManifest from 'rollup-plugin-output-manifest';
+
+const now = new Date().getTime();
 
 export default defineConfig({
   resolve: {
@@ -135,9 +136,9 @@ export default defineConfig({
         activityPubMeta: 'src/activityPubMeta.ts',
       },
       output: {
-        entryFileNames: 'meow-[name].js'
+        entryFileNames: `meow-[name]-${now}.js`,
       },
-      preserveEntrySignatures: 'exports-only'
+      preserveEntrySignatures: 'exports-only',
     },
   },
   // https://github.com/antfu/vite-ssg
