@@ -1,4 +1,3 @@
 title: 给 UISP Console 适配 OpenWRT
-desc: 未完成
+desc: 这是第一次给没有支持的设备适配 OpenWRT，并且是 backport 了 OpenWRT 原本没有的内核版本的，也给 OpenWRT 制作了新的软件包。希望能给同样希望适配 OpenWRT 给未支持的设备的人一些参考
 date: 2023-05-27
-hidden: true
