@@ -68,11 +68,6 @@ export default defineComponent({
           关于我
           <span>About</span>
         </RouterLink>
-        {/* @ts-ignore */}
-        <RouterLink to="/channel" onMouseenter={hoverHandler} onFocus={hoverHandler}>
-          碎碎念
-          <span>Channel</span>
-        </RouterLink>
         <div class={styles.footer} onMouseenter={leave}>
           <div class={styles.space} onMouseenter={leave}/>
           <SocialNetworks hoverHandler={hoverHandler}/>
