@@ -78,11 +78,6 @@
   desc: 是个大佬
   avatar: frea
   url: 'https://imfrea.com'
-- color: '#5181B5'
-  name: 是沐子哩
-  desc: 沐子沐子嘤嘤嘤ww
-  avatar: moozae
-  url: 'https://moozae.cn'
 - color: '#E28F77'
   name: Leohearts 的 Blog
   desc: 超可爱超厉害的芋头姐姐
@@ -93,3 +88,8 @@
   url: https://dkexluna.github.io/
   color: '#B8A6BF'
   desc: 好耶，是日纱纱ww
+- name: Chiba
+  avatar: chiba
+  url: https://rvo.li/#/index
+  color: '#6B6B6B'
+  desc: 喵喵喵
