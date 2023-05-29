@@ -132,11 +132,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        app: 'index.html',
+        angelkawaii: 'index.html',
         activityPubMeta: 'src/activityPubMeta.ts',
       },
       output: {
-        entryFileNames: `meow-[name]-${now}.js`,
+        entryFileNames: `x_[name]${now}_x.js`,
       },
       preserveEntrySignatures: 'exports-only',
     },
