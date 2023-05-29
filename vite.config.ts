@@ -136,7 +136,14 @@ export default defineConfig({
         activityPubMeta: 'src/activityPubMeta.ts',
       },
       output: {
-        entryFileNames: `x_[name]${now}_x.js`,
+        entryFileNames: `x_[name][hash]_x.js`,
+        assetFileNames: 'x_assets_x/x_[hash:11]_x[extname]',
+        generatedCode: {
+          constBindings: true,
+          arrowFunctions: true,
+          objectShorthand: true,
+        },
+        compact: true,
       },
       preserveEntrySignatures: 'exports-only',
     },
