@@ -138,7 +138,7 @@ export default defineConfig({
       output: {
         entryFileNames: `x_[name][hash]_x.js`,
         assetFileNames: 'x_assets_x/x_[hash:11]_x[extname]',
-        chunkFileNames: "x_assets_x/x_[hash:11]_.js",
+        chunkFileNames: "x_assets_x/x_[hash:11]_x.js",
         generatedCode: {
           constBindings: true,
           arrowFunctions: true,
