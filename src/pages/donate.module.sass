@@ -1,0 +1,90 @@
+.container
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  color: #303133
+
+  .grid
+    display: flex
+    flex-direction: column
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    margin: auto
+    max-width: 750px
+    padding-top: 5em
+    padding-left: 5px
+    padding-right: 5px
+    gap: 50px
+    overflow-y: auto
+    animation: enter 1.3s
+
+    @keyframes enter
+      0%
+        gap: 180px
+      30%
+        gap: 180px
+      100%
+        gap: 50px
+
+    @media (max-width: 1520px)
+      background-color: rgba(255, 255, 255, 0.4)
+      backdrop-filter: blur(5px)
+
+    .pointer
+      cursor: pointer
+
+    .data
+      display: flex
+      flex-direction: column
+      gap: .4em
+      justify-content: center
+      align-items: center
+      font-size: 1.2em
+
+    > div
+      display: grid
+      height: 150px
+      grid-template-columns: minmax(0, 1fr) 150px
+
+      @media (max-width: 600px)
+        grid-template-columns: minmax(0, 1fr)
+
+      > svg
+        @media (max-width: 600px)
+          display: none
+
+    .icons
+      display: flex
+      gap: .5em
+      font-size: 1.9em
+      justify-content: center
+
+.copyBox
+  display: flex
+  align-items: center
+  background-color: rgba(250, 251, 253, .8)
+  cursor: pointer
+  max-width: 100%
+
+  > svg
+    // Fix 剧中
+    display: flex
+    padding: 3px 0
+    font-size: 1.25em
+
+  code
+    font-family: Monaco, "JetBrains Mono", Monospaced, monospace
+    background-color: rgba(237, 248, 246, .5)
+    padding: 5px 10px 5px 10px
+    overflow: hidden
+    text-overflow: ellipsis
+
+  span
+    padding: 5px 10px 5px 10px
+
+

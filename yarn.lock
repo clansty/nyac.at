@@ -1482,6 +1482,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@chenfengyuan/vue-qrcode@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@chenfengyuan/vue-qrcode@npm:2.0.0"
+  peerDependencies:
+    qrcode: ^1.5.0
+    vue: ^3.0.0
+  checksum: 45e021618d6ae4a5202a17321a998cbc20e4a550bdb1fa2573ff173bb7bc26ead0845e20336977be55e2cf656503ce0ccee0968e0fce8325d11d680365fe9f56
+  languageName: node
+  linkType: hard
+
 "@cloudflare/workers-types@npm:^4.20230511.0":
   version: 4.20230511.0
   resolution: "@cloudflare/workers-types@npm:4.20230511.0"
@@ -1725,12 +1735,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify-icons/cryptocurrency@npm:^1.2.5":
+  version: 1.2.5
+  resolution: "@iconify-icons/cryptocurrency@npm:1.2.5"
+  dependencies:
+    "@iconify/types": "*"
+  checksum: cba4b06d8cc7c8e1a23905433f9abde5c6c69806642df1ca91d4ac9eec53dc67100f86b1c6c7d4c0413b14dd038d572b184d14af4ed92278ab9e5d56c21cc27a
+  languageName: node
+  linkType: hard
+
 "@iconify-icons/logos@npm:^1.2.29":
   version: 1.2.29
   resolution: "@iconify-icons/logos@npm:1.2.29"
   dependencies:
     "@iconify/types": "*"
   checksum: cb75169e70958b152f2d3c423132ab2492156f7b5c443ba34f05de57669059cc7c7b24a7a07b95c31ac4d684a45097451ed640570782c63dd35b885682cc8c09
+  languageName: node
+  linkType: hard
+
+"@iconify-icons/mdi@npm:^1.2.46":
+  version: 1.2.46
+  resolution: "@iconify-icons/mdi@npm:1.2.46"
+  dependencies:
+    "@iconify/types": "*"
+  checksum: 69e42cbd17836506923b4c0e32725e86a7a91f359362c2961c13dd11d60e0855f0f7592e55308936a2d0644e7f0dfaf476a7189ada96e8e3361d290222acf34c
   languageName: node
   linkType: hard
 
@@ -2423,6 +2451,15 @@ __metadata:
   version: 0.2.0
   resolution: "@types/nprogress@npm:0.2.0"
   checksum: 561384775008ae58111f038f8f9468b3de8987cd753feef9bf6d07af0e1343390d492a078bb08a7b53ac7370208e31e06ac069cb852c435d49f5fe218e9769c4
+  languageName: node
+  linkType: hard
+
+"@types/qrcode@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@types/qrcode@npm:1.5.0"
+  dependencies:
+    "@types/node": "*"
+  checksum: b0ece3834ca5ba6171132928fd1ef764772dc619b45cb4123461ee05e377ad15553a330d234c69db0d0028c6639a99429e88d99192fbba9c5ee97c23f278c48b
   languageName: node
   linkType: hard
 
@@ -3652,6 +3689,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cliui@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "cliui@npm:6.0.0"
+  dependencies:
+    string-width: ^4.2.0
+    strip-ansi: ^6.0.0
+    wrap-ansi: ^6.2.0
+  checksum: 4fcfd26d292c9f00238117f39fc797608292ae36bac2168cfee4c85923817d0607fe21b3329a8621e01aedf512c99b7eaa60e363a671ffd378df6649fb48ae42
+  languageName: node
+  linkType: hard
+
 "cliui@npm:^8.0.1":
   version: 8.0.1
   resolution: "cliui@npm:8.0.1"
@@ -4262,6 +4310,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dijkstrajs@npm:^1.0.1":
+  version: 1.0.3
+  resolution: "dijkstrajs@npm:1.0.3"
+  checksum: 82ff2c6633f235dd5e6bed04ec62cdfb1f327b4d7534557bd52f18991313f864ee50654543072fff4384a92b643ada4d5452f006b7098dbdfad6c8744a8c9e08
+  languageName: node
+  linkType: hard
+
 "dom-serializer@npm:^1.0.1":
   version: 1.4.1
   resolution: "dom-serializer@npm:1.4.1"
@@ -4440,6 +4495,13 @@ __metadata:
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
   checksum: d4c5c39d5a9868b5fa152f00cada8a936868fd3367f33f71be515ecee4c803132d11b31a6222b2571b1e5f7e13890156a94880345594d0ce7e3c9895f560f192
+  languageName: node
+  linkType: hard
+
+"encode-utf8@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "encode-utf8@npm:1.0.3"
+  checksum: 550224bf2a104b1d355458c8a82e9b4ea07f9fc78387bc3a49c151b940ad26473de8dc9e121eefc4e84561cb0b46de1e4cd2bc766f72ee145e9ea9541482817f
   languageName: node
   linkType: hard
 
@@ -8426,6 +8488,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pngjs@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "pngjs@npm:5.0.0"
+  checksum: 04e912cc45fb9601564e2284efaf0c5d20d131d9b596244f8a6789fc6cdb6b18d2975a6bbf7a001858d7e159d5c5c5dd7b11592e97629b7137f7f5cef05904c8
+  languageName: node
+  linkType: hard
+
 "postcss-value-parser@npm:^4.2.0":
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
@@ -8639,6 +8708,20 @@ __metadata:
   dependencies:
     escape-goat: ^2.0.0
   checksum: 49529e50372ffdb0cccf0efa0f3b3cb0a2c77805d0d9cc2725bd2a0f6bb414631e61c93a38561b26be1259550b7bb6c2cb92315aa09c8bf93f3bdcb49f2b2fb7
+  languageName: node
+  linkType: hard
+
+"qrcode@npm:^1.5.3":
+  version: 1.5.3
+  resolution: "qrcode@npm:1.5.3"
+  dependencies:
+    dijkstrajs: ^1.0.1
+    encode-utf8: ^1.0.3
+    pngjs: ^5.0.0
+    yargs: ^15.3.1
+  bin:
+    qrcode: bin/qrcode
+  checksum: 9a8a20a0a9cb1d15de8e7b3ffa214e8b6d2a8b07655f25bd1b1d77f4681488f84d7bae569870c0652872d829d5f8ac4922c27a6bd14c13f0e197bf07b28dead7
   languageName: node
   linkType: hard
 
@@ -9068,12 +9151,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@chenfengyuan/vue-qrcode": ^2.0.0
     "@cloudflare/workers-types": ^4.20230511.0
     "@iconify-icons/akar-icons": ^1.2.17
     "@iconify-icons/ant-design": ^1.2.5
     "@iconify-icons/bi": ^1.2.16
     "@iconify-icons/cil": ^1.2.4
+    "@iconify-icons/cryptocurrency": ^1.2.5
     "@iconify-icons/logos": ^1.2.29
+    "@iconify-icons/mdi": ^1.2.46
     "@iconify-icons/tabler": ^1.2.75
     "@iconify/vue": ^4.1.1
     "@mapbox/rehype-prism": ^0.8.0
@@ -9085,6 +9171,7 @@ __metadata:
     "@types/markdown-it-link-attributes": ^3.0.1
     "@types/node": ^20.1.5
     "@types/nprogress": ^0.2.0
+    "@types/qrcode": ^1.5.0
     "@vitejs/plugin-vue-jsx": ^3.0.1
     "@vue/compiler-sfc": ^3.3.2
     "@vue/test-utils": ^2.3.2
@@ -9096,6 +9183,7 @@ __metadata:
     nprogress: ^0.2.0
     postcss: ^8.4.23
     prism-themes: ^1.9.0
+    qrcode: ^1.5.3
     remark-gfm: ^3.0.1
     rollup-plugin-output-manifest: ^2.0.0
     sass: ^1.62.1
@@ -11252,6 +11340,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"wrap-ansi@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "wrap-ansi@npm:6.2.0"
+  dependencies:
+    ansi-styles: ^4.0.0
+    string-width: ^4.1.0
+    strip-ansi: ^6.0.0
+  checksum: 6cd96a410161ff617b63581a08376f0cb9162375adeb7956e10c8cd397821f7eb2a6de24eb22a0b28401300bf228c86e50617cd568209b5f6775b93c97d2fe3a
+  languageName: node
+  linkType: hard
+
 "wrap-ansi@npm:^7.0.0":
   version: 7.0.0
   resolution: "wrap-ansi@npm:7.0.0"
@@ -11469,6 +11568,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yargs-parser@npm:^18.1.2":
+  version: 18.1.3
+  resolution: "yargs-parser@npm:18.1.3"
+  dependencies:
+    camelcase: ^5.0.0
+    decamelize: ^1.2.0
+  checksum: 60e8c7d1b85814594d3719300ecad4e6ae3796748b0926137bfec1f3042581b8646d67e83c6fc80a692ef08b8390f21ddcacb9464476c39bbdf52e34961dd4d9
+  languageName: node
+  linkType: hard
+
 "yargs-parser@npm:^21.1.1":
   version: 21.1.1
   resolution: "yargs-parser@npm:21.1.1"
@@ -11492,6 +11601,25 @@ __metadata:
     y18n: ^4.0.0
     yargs-parser: ^15.0.1
   checksum: 684fcb1896e6c873c31c09c5c16445d6253dfe505aa879cff56d49425f5bca44f2ab8d7a1c949f3b932ae8654128425e89770e5e2f2c3d816e5816b9eb6efb6f
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^15.3.1":
+  version: 15.4.1
+  resolution: "yargs@npm:15.4.1"
+  dependencies:
+    cliui: ^6.0.0
+    decamelize: ^1.2.0
+    find-up: ^4.1.0
+    get-caller-file: ^2.0.1
+    require-directory: ^2.1.1
+    require-main-filename: ^2.0.0
+    set-blocking: ^2.0.0
+    string-width: ^4.2.0
+    which-module: ^2.0.0
+    y18n: ^4.0.0
+    yargs-parser: ^18.1.2
+  checksum: 40b974f508d8aed28598087720e086ecd32a5fd3e945e95ea4457da04ee9bdb8bdd17fd91acff36dc5b7f0595a735929c514c40c402416bbb87c03f6fb782373
   languageName: node
   linkType: hard
 

@@ -42,32 +42,26 @@ export default defineComponent({
       timeOutId = setTimeout(() => highlightRef.value! && (highlightRef.value!.style.display = 'none'), 500);
     }
 
+    const links = [
+      ['博客', 'Blog', '/posts'],
+      ['资源', 'Downloads', '/files/'],
+      ['好朋友们', 'Friends', '/friends'],
+      ['投喂', 'Donate', '/donate'],
+      ['关于我', 'About', '/about'],
+    ];
+
     return () => (
       <div class={styles.linkContainer} onMouseleave={leave}>
         <div class={styles.title} onMouseenter={leave}>
           你好，这里是凌莞
         </div>
         <div class={styles.highlight} aria-hidden={true} ref={highlightRef}/>
-        {/* @ts-ignore */}
-        <RouterLink to="/posts" onMouseenter={hoverHandler} onFocus={hoverHandler}>
-          博客
-          <span>Blog</span>
-        </RouterLink>
-        {/* @ts-ignore */}
-        <RouterLink to="/files/" onMouseenter={hoverHandler} onFocus={hoverHandler}>
-          资源
-          <span>Downloads</span>
-        </RouterLink>
-        {/* @ts-ignore */}
-        <RouterLink to="/friends" onMouseenter={hoverHandler} onFocus={hoverHandler}>
-          好朋友们
-          <span>Links</span>
-        </RouterLink>
-        {/* @ts-ignore */}
-        <RouterLink to="/about" onMouseenter={hoverHandler} onFocus={hoverHandler}>
-          关于我
-          <span>About</span>
-        </RouterLink>
+        {links.map(([ch, en, href]) =>
+          // @ts-ignore
+          <RouterLink to={href} onMouseenter={hoverHandler} onFocus={hoverHandler}>
+            {ch}
+            <span aria-hidden={true}>{en}</span>
+          </RouterLink>)}
         <div class={styles.footer} onMouseenter={leave}>
           <div class={styles.space} onMouseenter={leave}/>
           <SocialNetworks hoverHandler={hoverHandler}/>
