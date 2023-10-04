@@ -4,7 +4,7 @@ import random from './utils/random';
 import favicon from './assets/favicon.webp';
 import { Transition } from 'vue';
 
-const BACKGROUNDS = [styles.background1, styles.background2, styles.background3, styles.background4, styles.background5];
+const BACKGROUNDS = [styles.background2, styles.background3, styles.background4, styles.background5, styles.background6, styles.background6];
 
 export default defineComponent({
   setup() {
