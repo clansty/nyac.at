@@ -32,7 +32,7 @@ export default defineComponent({
         <a href="https://t.me/Clansty" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <Icon icon={telegramFill}/>
         </a>
-        <a href="https://matrix.to/#/@clansty:saezi.ae" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
+        <a href="https://matrix.to/#/@clansty:0w.al" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <Icon icon={brandMatrix}/>
         </a>
         {/* @ts-ignore */}
