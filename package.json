@@ -1,6 +1,5 @@
 {
   "private": true,
-  "packageManager": "yarn@3.5.0",
   "type": "module",
   "scripts": {
     "build": "vite-ssg build",
