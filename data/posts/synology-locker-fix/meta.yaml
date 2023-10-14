@@ -1,0 +1,4 @@
+title: 修复黑群晖更换机型后出现 no locker support 无法挂载读写的问题
+desc: 给群晖更换机型后，部分 volume 可能会出现变为只读但是无法转换为读写，dmesg 提示「cannot mount read-write because of no locker support」的问题。于是我研究了一下这个 locker 到底是什么情况
+date: 2023-10-15
+
