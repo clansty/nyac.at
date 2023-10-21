@@ -78,7 +78,7 @@ const Component = defineComponent({
       ],
     });
 
-    const { default: Content } = await postData[postContentPath(slug)]();
+    const { default: Content } = await postData[postContentPath(slug)]() as any;
 
     return () => (
       <BlogLayout postInfo={meta}>

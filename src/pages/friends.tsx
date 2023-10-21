@@ -5,6 +5,7 @@ import FriendLink from '~/types/FriendLink';
 import styles from './friends.module.sass';
 import FriendLinkBox from '~/components/FriendLinkBox';
 import BackButton from '~/components/BackButton';
+import ScrollContainer from '~/components/ScrollContainer';
 
 export default defineComponent({
   setup() {
@@ -27,16 +28,18 @@ export default defineComponent({
     friends.value = [...random.shuffle(friends.value)];
     return () => (
       <div class={styles.friendContainer}>
-        <div class={styles.scrollBox}>
-          <div class={styles.groupBox}>
-            <div class={styles.title}>
-              好朋友们～
-            </div>
-            <div class={styles.links}>
-              {friends.value.map(f => <FriendLinkBox item={f} key={f.name}/>)}
+        <ScrollContainer>
+          <div class={styles.scrollBox}>
+            <div class={styles.groupBox}>
+              <div class={styles.title}>
+                好朋友们～
+              </div>
+              <div class={styles.links}>
+                {friends.value.map(f => <FriendLinkBox item={f} key={f.name}/>)}
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollContainer>
         <BackButton to="/"/>
       </div>
     );
