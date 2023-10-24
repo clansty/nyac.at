@@ -7,6 +7,9 @@ import BlogLayout from '~/layouts/BlogLayout';
 import { RouterLink } from 'vue-router';
 import allPosts from '~/utils/allPosts';
 import postAsset from '~/utils/postAsset';
+import { TrackedImage } from 'tg-blog/dist/types/views/ImageViewer.vue';
+import { ImageViewer } from 'tg-blog';
+import 'tg-blog/dist/style.css';
 
 const postData = import.meta.glob('../../../data/posts/*/content.md');
 const Component = defineComponent({
@@ -15,19 +18,14 @@ const Component = defineComponent({
   },
   async setup({ slug }) {
     const meta = allPosts.find(e => e.slug === slug);
+    const allImages = ref<TrackedImage[]>([]);
+    const imgIndex = ref(-1);
 
-    const Image = defineComponent({
-      props: {
-        src: String,
-        alt: String,
-        title: String,
-      },
-      setup({ src, alt, title }) {
-        if (src.startsWith('https://'))
-          return () => <img src={src} alt={alt} title={title}/>;
-        return () => <img src={postAsset(slug, src)} alt={alt} title={title}/>;
-      },
-    });
+    const imageSrc = (src: string) => {
+      if (src.startsWith('https://'))
+        return src;
+      return postAsset(slug, src);
+    };
     const markdownComponents = {
       h1: 'h2',
       a({ href }, { slots }) {
@@ -44,14 +42,27 @@ const Component = defineComponent({
           </RouterLink>
         );
       },
-      img({ src, alt, title }) {
-        return (
-          <figure>
-            <Image src={src} alt={alt} title={title}/>
-            <figcaption>{alt}</figcaption>
-          </figure>
-        );
-      },
+      img: defineComponent({
+        props: {
+          src: String,
+          alt: String,
+          title: String,
+        },
+        setup({ src, alt, title }) {
+          allImages.value.push({
+            url: imageSrc(src),
+            text: alt,
+            postIndex: 0,
+          });
+          const index = allImages.value.length - 1;
+          return () => (
+            <figure>
+              <img src={imageSrc(src)} alt={alt} title={title} onClick={() => imgIndex.value = index}/>
+              <figcaption>{alt}</figcaption>
+            </figure>
+          );
+        },
+      }),
     };
 
     useHead({
@@ -79,8 +90,9 @@ const Component = defineComponent({
     });
 
     const { default: Content } = await postData[postContentPath(slug)]() as any;
+    // console.log('qwq',Content)
 
-    return () => (
+    return () => <>
       <BlogLayout postInfo={meta}>
         <div class={`postContent ${postAsset(slug, 'banner.webp') && 'withBanner'}`}>
           <div class="date">
@@ -92,7 +104,8 @@ const Component = defineComponent({
           <Comments slug={slug}/>
         </div>
       </BlogLayout>
-    );
+      <ImageViewer imgs={allImages.value} v-model:index={imgIndex.value}/>
+    </>;
   },
 });
 

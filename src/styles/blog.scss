@@ -97,10 +97,11 @@
       color: #606266;
       text-align: center;
     }
-  }
 
-  img {
-    max-width: 100%;
-    object-fit: cover;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      cursor: zoom-in;
+    }
   }
 }
