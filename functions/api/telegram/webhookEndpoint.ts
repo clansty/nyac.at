@@ -10,7 +10,13 @@ export const onRequestPost: PagesFunction<{
   DATA_STORE: KVNamespace;
   LINK_STORE: KVNamespace;
   BOT_TOKEN: string;
+  BOT_SECRET: string;
 }> = async ({ request, env }) => {
+  const secret = request.headers.get('X-Telegram-Bot-Api-Secret-Token');
+  if (secret !== env.BOT_SECRET) {
+    console.log('secret not match', secret);
+    return new Response('secret not match ' + secret);
+  }
   const body: any = await request.json();
   if (body.message) {
     if (CLANSTIES.includes(body.message.chat?.id)) {

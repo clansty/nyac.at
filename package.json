@@ -7,7 +7,8 @@
     "preview": "vite preview --host",
     "convert-images": "node tools/convert-images",
     "gen-activitypub": "node tools/gen-activitypub.js",
-    "build:ci": "pnpm build && pnpm gen-activitypub && pnpm convert-images"
+    "build:ci": "pnpm build && pnpm gen-activitypub && pnpm convert-images",
+    "tail": "wrangler tail"
   },
   "dependencies": {
     "@sentry/tracing": "^7.52.1",
@@ -65,6 +66,7 @@
     "vite-ssg-sitemap": "0.5.1",
     "vite-svg-loader": "^4.0.0",
     "workbox-window": "^6.5.4",
+    "wrangler": "^3.14.0",
     "xdm": "^3.4.0"
   }
 }
