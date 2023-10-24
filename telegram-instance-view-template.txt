@@ -1,0 +1,23 @@
+~version: "2.0"
+?path: /posts/.+
+title: //h1[0]
+body: //div[has-class("postContent")]
+author: "Clansty"
+channel: "@clanstty"
+author_url: "https://t.me/clansty"
+
+# 替换 webp 图片
+$imgs: //img[ends-with(@src, ".webp")]
+@map($imgs){
+  @set_attr(src, $@/@src \.png): $@
+}
+
+
+<div>: //blockquote[.//img]
+<figure>: //div[has-class("blogBody")]/div[contains(@class, "_banner")]
+cover: //div[has-class("blogBody")]/figure
+image_url: $cover/self::img/@src
+
+@remove: $body//div[@class="date"]
+@remove: $body//div[form]
+@remove: $body//code//span[has-class("linenumber")]
