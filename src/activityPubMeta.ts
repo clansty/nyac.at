@@ -68,4 +68,5 @@ export default (fs: typeof Fs, path: typeof Path) => {
     fs.writeFileSync(path.join('dist', 'posts', `${post.slug}.json`), JSON.stringify({ '@context': context, ...activity.object }));
     fs.writeFileSync(path.join('dist', 'posts.json'), JSON.stringify(posts));
   }
+  return posts;
 }

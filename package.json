@@ -8,7 +8,7 @@
     "convert-images": "node tools/convert-images",
     "gen-activitypub": "node tools/gen-activitypub.js",
     "build:ci": "pnpm build && pnpm gen-activitypub && pnpm convert-images",
-    "tail": "wrangler tail"
+    "tail": "wrangler pages deployment tail --project-name nyac-at"
   },
   "dependencies": {
     "@sentry/tracing": "^7.52.1",
