@@ -7,12 +7,12 @@ import { VitePWA } from 'vite-plugin-pwa';
 import Inspect from 'vite-plugin-inspect';
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import Content from '@originjs/vite-plugin-content';
-import { XdmMod } from './rollup/xdm-mod';
 import * as fs from 'fs';
 import remarkGfm from 'remark-gfm';
 import rehypePrism from '@mapbox/rehype-prism';
 import autoprefixer from 'autoprefixer';
 import SvgLoader from 'vite-svg-loader';
+import { MdxMod } from './rollup/mdx-mod';
 
 const now = new Date().getTime();
 
@@ -112,7 +112,7 @@ export default defineConfig({
 
     Content.default(),
 
-    XdmMod({
+    MdxMod({
       jsxRuntime: 'classic',
       pragma: 'Vue.h',
       pragmaFrag: 'Vue.Fragment',
