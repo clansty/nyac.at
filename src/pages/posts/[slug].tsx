@@ -7,8 +7,7 @@ import BlogLayout from '~/layouts/BlogLayout';
 import { RouterLink } from 'vue-router';
 import allPosts from '~/utils/allPosts';
 import postAsset from '~/utils/postAsset';
-import { TrackedImage } from 'tg-blog/dist/types/views/ImageViewer.vue';
-import { ImageViewer } from 'tg-blog';
+import type { TrackedImage } from 'tg-blog/dist/types/views/ImageViewer.vue';
 import 'tg-blog/dist/style.css';
 
 const postData = import.meta.glob('../../../data/posts/*/content.md');
@@ -20,6 +19,12 @@ const Component = defineComponent({
     const meta = allPosts.find(e => e.slug === slug);
     const allImages = ref<TrackedImage[]>([]);
     const imgIndex = ref(-1);
+
+    let ImageViewer;
+
+    if (!import.meta.env.SSR) {
+      ImageViewer = (await import('tg-blog')).ImageViewer;
+    }
 
     const imageSrc = (src: string) => {
       if (src.startsWith('https://'))
@@ -104,7 +109,7 @@ const Component = defineComponent({
           <Comments slug={slug}/>
         </div>
       </BlogLayout>
-      <ImageViewer imgs={allImages.value} v-model:index={imgIndex.value}/>
+      {!import.meta.env.SSR && <ImageViewer imgs={allImages.value} v-model:index={imgIndex.value}/>}
     </>;
   },
 });
