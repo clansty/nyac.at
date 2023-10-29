@@ -13,9 +13,9 @@
   desc: 方圆猫！
   avatar: fangyuan
   color: '#D4D4E0'
-- name: 洛灵酱的小窝
+- name: RainbowBird's Blog
   desc: 洛灵酱可爱又强强！！
-  url: 'https://luoling8192.top/'
+  url: 'https://blog.luoling.moe/'
   color: '#F0E292'
   avatar: luoling
 - name: Senioria的刺猬洞
@@ -113,3 +113,8 @@
   url: https://nof.moe
   color: '#E4AACC'
   desc: Forever you will be in my heart.
+- name: Hykilpikonna's Road Less Traveled
+  desc: 小桂桂喵
+  color: '#EFE7D4'
+  avatar: hy
+  url: https://aza.moe
