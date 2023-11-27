@@ -21,7 +21,9 @@ export default defineComponent({
       },
     });
 
-    if (navigator.userAgent.toLowerCase().includes('mobile') && navigator.userAgent.toLowerCase().includes('safari')) {
+    if (import.meta.env.SSR ||
+        (navigator.userAgent.toLowerCase().includes('mobile') && navigator.userAgent.toLowerCase().includes('safari'))
+      ) {
       isMobileSafari.value = true;
       return () => <>
         {h(slots.default()[0], {
