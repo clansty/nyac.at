@@ -61,6 +61,9 @@ devDependencies:
   '@iconify-icons/mdi':
     specifier: ^1.2.46
     version: 1.2.47
+  '@iconify-icons/simple-icons':
+    specifier: ^1.2.74
+    version: 1.2.74
   '@iconify-icons/tabler':
     specifier: ^1.2.94
     version: 1.2.94
@@ -1847,6 +1850,12 @@ packages:
 
   /@iconify-icons/mdi@1.2.47:
     resolution: {integrity: sha512-XwrHxJb2GzToyyoI9gaVm6/yE3aRlxB2IolKXzTEf6qAtjv3S4xFAxYaOlm6iuylQv+WyquH9C4cBudNPRHApg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-icons/simple-icons@1.2.74:
+    resolution: {integrity: sha512-FWmuSbg+KDUreysuaE8DYu/jbv4+FtSY+ppAi8w8sgX9CKTP6watB+PLeMbklOL/G5PnBlHnvM/ihkZ+n96OZw==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
