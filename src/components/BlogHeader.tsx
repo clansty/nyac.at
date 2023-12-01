@@ -11,7 +11,7 @@ export default defineComponent({
     return () => (
       <div class={`${styles.blogHeader} blogHeader`}>
         <BackButton to={props.postTitle ? '/posts' : '/'} class={styles.back}/>
-        <h1 onClick={props.scrollUp}>{props.postTitle}&nbsp;</h1>
+        <h1 onClick={props.scrollUp} aria-label="返回顶部" tabindex={0}>{props.postTitle}&nbsp;</h1>
       </div>
     );
   },

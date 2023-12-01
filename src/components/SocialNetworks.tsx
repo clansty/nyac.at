@@ -17,30 +17,30 @@ export default defineComponent({
   setup(props) {
     return () => (
       <>
-        <a href="mailto:i@0w.al" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
+        <a href="mailto:i@0w.al" aria-label="电子邮件" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <Icon icon={mailOutlined}/>
         </a>
-        <a href="https://github.com/Clansty" rel="me" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
+        <a href="https://github.com/Clansty" rel="me" aria-label="GitHub" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <Icon icon={githubFill}/>
         </a>
-        <a href="https://nya.one/@Clansty" rel="me" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
+        <a href="https://nya.one/@Clansty" rel="me" aria-label="Misskey / Fediverse" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <MisskeyIcon/>
         </a>
-        <a href="https://steamcommunity.com/id/Clansty/" rel="me" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}
+        <a href="https://steamcommunity.com/id/Clansty/" rel="me" aria-label="Steam" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}
            target="_blank">
           <Icon icon={steamIcon}/>
         </a>
-        <a href="https://t.me/clanstty/6" rel="me" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
+        <a href="https://t.me/clanstty/6" rel="me" aria-label="Telegram" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <Icon icon={telegramFill}/>
         </a>
-        <a href="https://matrix.to/#/@clansty:0w.al" rel="me" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
+        <a href="https://matrix.to/#/@clansty:0w.al" rel="me" aria-label="Matrix" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <Icon icon={brandMatrix}/>
         </a>
-        <a href="https://gravatar.com/clansty" rel="me" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
+        <a href="https://gravatar.com/clansty" rel="me" aria-label="Gravatar" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler} target="_blank">
           <Icon icon={gravatarIcon}/>
         </a>
         {/* @ts-ignore */}
-        <RouterLink to="/gpg" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
+        <RouterLink to="/gpg" aria-label="GPG 公钥" onMouseenter={props.hoverHandler} onFocus={props.hoverHandler}>
           <Icon icon={gpg}/>
         </RouterLink>
       </>

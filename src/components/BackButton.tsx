@@ -11,7 +11,7 @@ export default defineComponent({
   setup(props) {
     return () => (
       <div class={styles.back}>
-        <RouterLink to={props.to}>
+        <RouterLink to={props.to} aria-label="返回">
           <Icon icon={chevronLeft}/>
         </RouterLink>
       </div>
