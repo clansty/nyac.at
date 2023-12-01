@@ -14,8 +14,6 @@ import autoprefixer from 'autoprefixer';
 import SvgLoader from 'vite-svg-loader';
 import { MdxMod } from './rollup/mdx-mod';
 
-const now = new Date().getTime();
-
 export default defineConfig({
   resolve: {
     alias: {
@@ -66,9 +64,14 @@ export default defineConfig({
         lang: 'zh',
         icons: [
           {
-            src: '/pwa/favicon.webp',
-            sizes: '538x538',
+            src: '/pwa/icon1500.webp',
+            sizes: '1500x1500',
             type: 'image/webp',
+          },
+          {
+            src: '/pwa/icon1500.png',
+            sizes: '1500x1500',
+            type: 'image/png',
           },
           {
             src: '/pwa/icon512.webp',

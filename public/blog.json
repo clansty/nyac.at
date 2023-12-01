@@ -37,7 +37,7 @@
   "summary" : "<p><span>凌莞的 Blog</span></p>",
   "icon" : {
     "type" : "Image",
-    "url" : "https://nyac.at/pwa/favicon.webp",
+    "url" : "https://nyac.at/pwa/icon1500.webp",
     "sensitive" : false,
     "name" : null
   },

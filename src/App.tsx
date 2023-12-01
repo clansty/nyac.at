@@ -1,10 +1,13 @@
 import { RouterView } from 'vue-router';
 import styles from './App.module.sass';
 import random from './utils/random';
-import favicon from './assets/favicon.webp';
+import favicon from './assets/clansty_profile_picture_clean_fix_fair.webp';
 import { Transition } from 'vue';
 
-const BACKGROUNDS = [styles.background2, styles.background3, styles.background4, styles.background5, styles.background6, styles.background6];
+const BACKGROUNDS = [
+  styles.background2, styles.background3, styles.background4, styles.background5, styles.background6,
+  styles.bgneo, styles.bgneoalt, styles.bgneo, styles.bgneoalt
+];
 
 export default defineComponent({
   setup() {
