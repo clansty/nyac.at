@@ -1,6 +1,6 @@
 ## 前情提要
 
-由于[小蓝莓](https://rvo.li)搬来了苏州，我们在装宽带的时候多次提到了那个 [UISP Console](uisp-console-chuang)，于是我从吃灰柜子里面把这个设备又拿了出来。去年年底的时候本来打算适配 OpenWRT 的，于是现在就来做
+由于[小蓝莓](friend:chiba)搬来了苏州，我们在装宽带的时候多次提到了那个 [UISP Console](uisp-console-chuang)，于是我从吃灰柜子里面把这个设备又拿了出来。去年年底的时候本来打算适配 OpenWRT 的，于是现在就来做
 
 我这次是第一次给没有支持的设备适配 OpenWRT，并且是 backport 了 OpenWRT 原本没有的内核版本的，也给 OpenWRT 制作了新的软件包。希望能给同样希望适配 OpenWRT 给未支持的设备的人一些参考
 
