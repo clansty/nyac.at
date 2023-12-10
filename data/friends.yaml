@@ -2,149 +2,149 @@
   url: 'https://blog.coelacanthus.moe/'
   desc: C10s 大佬！
   color: '#F45A8D'
-  avatar: c10s
+  id: c10s
 - name: ssr's blog
   url: 'https://leanhe.dev/'
   desc: 静静强强！
   color: '#36A8ED'
-  avatar: ssr
+  id: ssr
 - url: 'https://fangyuan-neko.github.io/'
   name: 方圆喵
   desc: 方圆猫！
-  avatar: fangyuan
+  id: fangyuan
   color: '#D4D4E0'
 - name: RainbowBird's Blog
   desc: 洛灵酱可爱又强强！！
   url: 'https://blog.luoling.moe/'
   color: '#F0E292'
-  avatar: luoling
+  id: luoling
 - name: Senioria的刺猬洞
   desc: 是可爱刺猬 Senioria！
   url: 'https://91khr.github.io'
   color: '#7D5F54'
-  avatar: senioria
+  id: senioria
 - color: '#747CA3'
   name: Candy Life
   desc: 是 tommy 酱！
-  avatar: tommy
+  id: tommy
   url: 'https://tommy0103.github.io'
 - color: '#474644'
   name: 北雁云依
   desc: 一只很喜欢 1145141919810 的大佬
-  avatar: lixiang
+  id: lixiang
   url: 'https://stblog.penclub.club'
 - color: '#9AC6C7'
   name: LightQuantum 光量子
   desc: 光量子！巨佬！敲可爱！
-  avatar: lightquantum
+  id: lightquantum
   url: 'https://lightquantum.me/'
 - color: '#4CA9F5'
   name: Winslow Eric
   desc: 喵喵喵！
-  avatar: winslow
+  id: winslow
   url: 'https://winsloweric.com/'
 - color: '#A4918A'
   name: 三日月綾香
   desc: 大佬喵喵喵！
-  avatar: ayaka
+  id: ayaka
   url: 'https://ayaka.shn.hk/'
 - color: '#9CB557'
   name: 钱桑もぺもぺ～
   desc: 钱桑小可爱，不是小笨蛋
-  avatar: ndoskrnl
+  id: ndoskrnl
   url: 'https://blog.ndoskrnl.net/'
 - color: '#00A2E8'
   name: xtl
   desc: 天乐大佬
-  avatar: xtl
+  id: xtl
   url: 'https://www.xtlsoft.top/'
 - color: '#8B816F'
   name: Estela 山前
   desc: 传说中的山前姐姐！
-  avatar: estela
+  id: estela
   url: 'https://estela.moe/'
 - color: '#B7D5E1'
   name: 静かな森 | 致虚极，守静笃。
   desc: 超级强强的大佬，博客超可爱！
-  avatar: innei
+  id: innei
   url: 'https://innei.ren/'
 - color: '#AD7858'
   name: Menci
   desc: 微软猫猫
-  avatar: menci
+  id: menci
   url: 'https://men.ci/'
 - color: '#8DC0B9'
   name: Frea的博客
   desc: 是个大佬
-  avatar: frea
+  id: frea
   url: 'https://imfrea.com'
 - color: '#E28F77'
   name: Leohearts 的 Blog
   desc: 超可爱超厉害的芋头姐姐
-  avatar: leohearts
+  id: leohearts
   url: 'https://leohearts.com'
 - name: 桜屋敷の小林日紗子
-  avatar: dkexluna
+  id: dkexluna
   url: https://dkexluna.github.io/
   color: '#B8A6BF'
   desc: 好耶，是日纱纱ww
 - name: 夢歌 小🫐莓
-  avatar: chiba
+  id: chiba
   url: https://qwwq.org
   color: '#6B6B6B'
   desc: 喵喵喵
 - name: ChaosAttractor
-  avatar: avatar-lostattractor
+  id: ca
   url: https://lostattractor.net/
   color: '#D58E5D'
   desc: 大佬一头QAQ
 - name: On The Luna
-  avatar: iks
+  id: iks
   url: https://blog.iks.moe/
   color: '#CDD5F8'
   desc: 可爱 iks
 - name: Lyc8503's blog
-  avatar: lyc8503
+  id: lyc8503
   url: https://blog.lyc8503.site/
   color: '#D2D9DD'
   desc: 逆向大佬
 - name: 谷風 天音 | Nofated
-  avatar: Nofated
+  id: nof
   url: https://nof.moe
   color: '#E4AACC'
   desc: Together we will create a world with sugar and kawaii!
 - name: Hykilpikonna's Road Less Traveled
   desc: 小桂桂喵
   color: '#EFE7D4'
-  avatar: hy
+  id: hy
   url: https://aza.moe
 - name: 晓雨杂记
   desc: 也许我们会分别，但我们将永远不会忘记彼此
   color: '#ffc804'
-  avatar: cake
+  id: cake
   url: https://lihaoyu.cn
 - name: 梓瑶233
   desc: 是梓瑶酱喵~
   color: '#e2d7dd'
-  avatar: ziyao
+  id: ziyao
   url: https://ziyao233.github.io/
 - name: 一叶知秋
   desc: 二分之一少女，日日夜夜努力学习。
   color: '#fec5d1'
-  avatar: qyl
+  id: qyl
   url: https://qy.al
 - name: Liet Blog
   desc: 是托尔喵
   color: '#c6dfe6'
-  avatar: liet
+  id: liet
   url: https://liet.moe/
 - name: Sunyz
   desc: 拉布拉多少女
   color: '#a3d7e8'
-  avatar: sunyz
+  id: sunyz
   url: https://sunyz.net/
 - name: 雪花的博客
   desc: 雪小花，白又白，两只耳朵竖起来
   color: '#8D85AF'
-  avatar: xuehua
+  id: xuehua
   url: https://xhblog.top/

@@ -9,6 +9,8 @@ import allPosts from '~/utils/allPosts';
 import postAsset from '~/utils/postAsset';
 import type { TrackedImage } from 'tg-blog/dist/types/views/ImageViewer.vue';
 import 'tg-blog/dist/style.css';
+import InlineFriendLink from '~/components/InlineFriendLink';
+import blogAncherStyle from '../../styles/blogAnchor.module.scss'
 
 const postData = import.meta.glob('../../../data/posts/*/content.md');
 const Component = defineComponent({
@@ -34,14 +36,19 @@ const Component = defineComponent({
     const markdownComponents = {
       h1: 'h2',
       a({ href }, { slots }) {
+        if(href.startsWith('friend:')){
+          return <InlineFriendLink friendId={href.substring('friend:'.length)}>
+            {slots.default()}
+          </InlineFriendLink>
+        }
         if (/^https?:\/\//.test(href))
           return (
-            <a href={href} target="_blank" style={{ ['--href' as any]: `'${href}'` }}>
+            <a href={href} target="_blank" class={blogAncherStyle.blogAncher} style={{ ['--href' as any]: `'${href}'` }}>
               {slots.default()}
             </a>
           );
         return (
-          <RouterLink to={href} class="inSiteLink"
+          <RouterLink to={href} class={`${blogAncherStyle.blogAncher} ${blogAncherStyle.inSiteLink}`}
                       style={{ ['--href' as any]: `'${href.includes('/') ? href : allPosts.find(e => e.slug === href).title}'` }}>
             {slots.default()}
           </RouterLink>

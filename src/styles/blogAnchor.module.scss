@@ -1,0 +1,49 @@
+a.blogAncher {
+  --linkColor: rgba(2, 132, 199, 1);
+  position: relative;
+  box-shadow: inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0
+    color-mix(in srgb, var(--linkColor) 30%, white);
+  color: var(--linkColor);
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &.inSiteLink {
+    --linkColor: #10B981;
+
+    &::after {
+      background-color: rgba(16, 185, 129, 0.85);
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+    box-shadow: unset;
+
+    &::after {
+      transform: translateX(-50%) translateY(-100%);
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    left: 50%;
+    content: var(--href);
+    position: absolute;
+    min-width: fit-content;
+    width: 200px;
+    max-width: max-content;
+    border-radius: 15px;
+    background-color: rgba(59, 130, 246, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 2px 7px;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    box-shadow: none;
+    color: #edf8f6;
+    font-size: smaller;
+    line-height: 24px;
+    word-break: break-all;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+}

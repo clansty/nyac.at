@@ -1,7 +1,7 @@
 export default interface FriendLink {
   name: string
   desc: string
-  avatar: string
+  id: string
   url: string
   color: string
 }

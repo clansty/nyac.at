@@ -4,6 +4,7 @@ import styles from './FriendLinkBox.module.sass';
 
 const avatars = import.meta.globEager('../../data/friend-avatars/*.webp');
 function avatar(name: string) {
+  // @ts-ignore
   return avatars[`../../data/friend-avatars/${name}.webp`].default;
 }
 
@@ -16,7 +17,7 @@ export default defineComponent({
       <a href={item.url} target="_blank" style={{ ['--color' as any]: item.color }} class={styles.friendLinkBox}>
         <div class={styles.avatar}>
           <img
-            src={avatar(item.avatar)}
+            src={avatar(item.id)}
             height={80}
             width={80}
             alt=""

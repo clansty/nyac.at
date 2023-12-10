@@ -1,4 +1,4 @@
-本文由 [小~~草~~蓝莓](https://rvo.li) 友情提供的 [Ubiquiti UISP Console EA Sample](https://eu.store.ui.com/products/uisp-console-ea) 支持
+本文由 [小~~草~~蓝莓](friend:chiba) 友情提供的 [Ubiquiti UISP Console EA Sample](https://eu.store.ui.com/products/uisp-console-ea) 支持
 
 ## 介绍
 

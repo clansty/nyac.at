@@ -1,0 +1,25 @@
+.container
+  position: relative
+
+  .friendBox
+    position: absolute
+    width: 400px
+    z-index: 5
+    top: -100px
+    left: var(--linkLeft)
+    transform: translateY(40px)
+    pointer-events: none
+    opacity: 0
+    transition: all 0.3s
+    line-height: normal
+
+    &.show
+      transform: unset
+      opacity: 1
+
+.tpFriendBox
+  position: absolute
+  left: max(10px, var(--linkLeft))
+  width: 500px
+  z-index: 5
+  // transform: translateY(40px)
