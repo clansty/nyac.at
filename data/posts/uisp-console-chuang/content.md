@@ -2,7 +2,7 @@
 
 ## 介绍
 
-UISP Console 有九个电口两个光口，是一台路由器。同时它还有 4 核 A57，4GB RAM，16G eMMC 和 128G SSD [Geekbench](https://browser.geekbench.com/v5/cpu/19248748)。刚拿到这个设备的时候我还不知道用来干什么，因为我的各个常居地都有了配好 [Menci](https://men.ci) 路由方案的路由器。于是就拿来折腾了。
+UISP Console 有九个电口两个光口，是一台路由器。同时它还有 4 核 A57，4GB RAM，16G eMMC 和 128G SSD [Geekbench](https://browser.geekbench.com/v5/cpu/19248748)。刚拿到这个设备的时候我还不知道用来干什么，因为我的各个常居地都有了配好 [Menci](friend:menci) 路由方案的路由器。于是就拿来折腾了。
 
 小草莓表示这个设备和 [Unifi Dream Machine Pro](https://store.ui.com/products/udm-pro) 硬件配置是一样的，可能可以刷 UDM Pro 的固件，但是自己没刷成功。
 

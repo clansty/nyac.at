@@ -27,10 +27,11 @@ export default defineComponent({
     // })
     const linkOffset = computed(() => {
       if (!linkRef.value) return 0;
-      const linkRect = linkRef.value.getBoundingClientRect()
-      const center = linkRect.left + linkRect.width / 2
+      // FIXIT https://t.me/c/1531134777/156021
+      // const linkRect = linkRef.value.getBoundingClientRect()
+      const center = linkRef.value.offsetLeft + linkRef.value.offsetWidth / 2
       if (center - 200 < 10)
-        return 10 - linkRect.left
+        return 10 - linkRef.value.offsetLeft
       return linkRef.value.offsetWidth / 2 - 200
     })
     const displayColor = computed(() => {
@@ -41,8 +42,8 @@ export default defineComponent({
     })
 
 
-    return () => <span class={styles.container}>
-      <a href={friend.value.url} target="_blank" ref={linkRef} class={blogAncherStyle.blogAncher}
+    return () => <span class={styles.container} ref={linkRef}>
+      <a href={friend.value.url} target="_blank" class={blogAncherStyle.blogAncher}
         style={{
           '--linkColor': displayColor.value,
         }}
