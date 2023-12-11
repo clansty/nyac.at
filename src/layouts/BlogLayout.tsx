@@ -15,7 +15,7 @@ export default defineComponent({
     const { height } = useWindowSize();
     const scrollComponent = ref<typeof ScrollContainer>();
 
-    const useDummyScroll = computed(() => postInfo && visualViewport.width > 1050)
+    const useDummyScroll = computed(() => !import.meta.env.SSR && postInfo && visualViewport.width > 1050)
 
     return () => (
       <div class={`${styles.blogLayout} ${postInfo ? styles.postLayoutContent : styles.postLayoutList}`}>
