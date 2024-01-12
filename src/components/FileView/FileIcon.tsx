@@ -9,7 +9,7 @@ import font from '~/assets/icons/font.webp';
 import Icon from '~/components/Icon';
 import mime from '~/icons/mime';
 
-const metas = import.meta.globEager('../../../data/files/**/*.{webp,svg}');
+const metas = import.meta.glob('../../../data/files/**/*.{webp,svg}', { eager: true });
 
 const exts: [string, () => JSX.Element][] = [
   ['.iso', () => <img src={diskImage} alt="光盘镜像"/>],

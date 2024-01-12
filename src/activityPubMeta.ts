@@ -3,7 +3,7 @@ import type Fs from 'node:fs';
 import type Path from 'node:path';
 import context from '../apContext.json';
 
-const banners = import.meta.globEager('../data/posts/*/banner.webp') as any;
+const banners = import.meta.glob('../data/posts/*/banner.webp', { eager: true }) as any;
 
 const blogNotesActivities = allPosts.filter(it => !it.hidden).map(post => {
   const banner = banners[`../data/posts/${post.slug}/banner.webp`]?.default as string;

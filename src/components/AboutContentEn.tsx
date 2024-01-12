@@ -8,6 +8,7 @@ import twemoji from '~/icons/twemoji';
 import nixos from '~/icons/nixos';
 import nixosText from '~/icons/nixosText';
 import appleFilled from '@iconify-icons/ant-design/apple-filled.js';
+import DxRating from '~/components/DxRating';
 
 export default defineComponent({
   render(){
@@ -19,7 +20,7 @@ export default defineComponent({
           <b>Clansty</b> here!
         </p>
         <p>
-          Software Engineering.&nbsp;
+          Software Engineering, Freelance&nbsp;
           <Icon icon={twemoji.coder}/>
         </p>
         <p>
@@ -35,7 +36,8 @@ export default defineComponent({
         </p>
         <p>
           Play Maimai！
-          <Icon icon={maimai}/>
+          <Icon icon={maimai}/>{' '}
+          <DxRating/>
         </p>
         <p>Tossing weird techniques</p>
         <p>

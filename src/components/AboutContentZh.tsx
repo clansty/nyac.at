@@ -6,6 +6,7 @@ import vue from '@iconify-icons/logos/vue.js';
 import reactFill from '@iconify-icons/akar-icons/react-fill.js';
 import twemoji from '~/icons/twemoji';
 import appleFilled from '@iconify-icons/ant-design/apple-filled.js';
+import DxRating from '~/components/DxRating';
 
 export default defineComponent({
   render() {
@@ -18,9 +19,7 @@ export default defineComponent({
           <b>凌莞 / Clansty</b>
         </p>
         <p>
-          目前上大学，专业是
-          <del>软妹工程</del>
-          软件工程
+          目前自由职业，欢迎找我干散活qwq
           <Icon icon={twemoji.coder}/>
         </p>
         <p>
@@ -38,7 +37,8 @@ export default defineComponent({
         </p>
         <p>
           打 Maimai！
-          <Icon icon={maimai}/>
+          <Icon icon={maimai}/>{' '}
+          <DxRating/>
         </p>
         <p>平时喜欢干的事情是折腾各种奇奇怪怪的技术</p>
         <p>

@@ -1,6 +1,6 @@
 import PostInfo from '~/types/PostInfo';
 
-export default Object.entries(import.meta.globEager('../../data/posts/*/meta.yaml'))
+export default Object.entries(import.meta.glob('../../data/posts/*/meta.yaml', { eager: true }))
   .map(([path, module]) => ({
     ...module.default,
     slug: /..\/..\/data\/posts\/([^\/]+)\/meta.yaml/.exec(path)[1],

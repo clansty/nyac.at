@@ -2,7 +2,7 @@ import FriendLink from '~/types/FriendLink';
 import { PropType } from 'vue';
 import styles from './FriendLinkBox.module.sass';
 
-const avatars = import.meta.globEager('../../data/friend-avatars/*.webp');
+const avatars = import.meta.glob('../../data/friend-avatars/*.webp', { eager: true });
 function avatar(name: string) {
   // @ts-ignore
   return avatars[`../../data/friend-avatars/${name}.webp`].default;

@@ -22,7 +22,7 @@ export default defineComponent({
       ],
     });
 
-    const files = Object.fromEntries(Object.entries(import.meta.globEager('~/../data/tg/**/*')).map(([k, v]: any) => [k, v.default]));
+    const files = Object.fromEntries(Object.entries(import.meta.glob('~/../data/tg/**/*', { eager: true })).map(([k, v]: any) => [k, v.default]));
     const postsData = structuredClone(files['/data/tg/posts.json'] as Post[]);
     for (const post of postsData) {
       post.images?.forEach?.(img => img.url = files['/data/tg/' + img.url] as string);

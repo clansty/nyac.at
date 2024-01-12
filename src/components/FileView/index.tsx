@@ -5,7 +5,7 @@ import { Suspense } from 'vue';
 import FolderView from './FolderView';
 import FileView from './FileView';
 
-const metas = import.meta.globEager('../../../data/files/**/folder.yaml');
+const metas = import.meta.glob('../../../data/files/**/folder.yaml', { eager: true });
 
 const Component = defineComponent({
   props: {
