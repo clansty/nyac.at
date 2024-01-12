@@ -15,21 +15,10 @@ export default defineComponent({
     const friend = computed(() => friends.find(them => them.id === props.friendId) as FriendLink);
     const linkRef = ref<HTMLAnchorElement>()
     const showBox = ref(false)
-    // const boxLeft = computed(() => {
-    //   if (!linkRef.value) return 0;
-    //   const box = linkRef.value.getBoundingClientRect()
-    //   return box.left + box.width / 2 - 250
-    // })
-    // const boxTop = computed(() => {
-    //   if (!linkRef.value) return 0;
-    //   const box = linkRef.value.getBoundingClientRect()
-    //   return box.top - box.height - 80
-    // })
     const linkOffset = computed(() => {
       if (!linkRef.value) return 0;
-      // FIXIT https://t.me/c/1531134777/156021
-      // const linkRect = linkRef.value.getBoundingClientRect()
-      const center = linkRef.value.offsetLeft + linkRef.value.offsetWidth / 2
+      const linkRect = linkRef.value.getBoundingClientRect()
+      const center = linkRect.left + linkRect.width / 2
       if (center - 200 < 10)
         return 10 - linkRef.value.offsetLeft
       return linkRef.value.offsetWidth / 2 - 200
@@ -59,15 +48,6 @@ export default defineComponent({
       >
         <FriendLinkBox item={friend.value} />
       </div>
-
-      {/* <Teleport to="body">
-        <div class={styles.tpFriendBox} style={{
-          '--linkLeft': boxLeft.value + "px",
-          top: boxTop.value + "px"
-        }}>
-          <FriendLinkBox item={friend.value} />
-        </div>
-      </Teleport> */}
     </span>
   }
 })

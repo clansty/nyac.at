@@ -2,6 +2,9 @@ import styles from './ScrollContainer.module.sass';
 import { Teleport } from 'vue';
 
 export default defineComponent({
+  props: {
+    showDummyScroll: Boolean
+  },
   setup(props, { slots, expose }) {
     const dummy = ref<HTMLDivElement>();
     const scroll = ref<HTMLDivElement>();
@@ -22,8 +25,8 @@ export default defineComponent({
     });
 
     if (import.meta.env.SSR ||
-        (navigator.userAgent.toLowerCase().includes('mobile') && navigator.userAgent.toLowerCase().includes('safari'))
-      ) {
+      (navigator.userAgent.toLowerCase().includes('mobile') && navigator.userAgent.toLowerCase().includes('safari'))
+    ) {
       isMobileSafari.value = true;
       return () => <>
         {h(slots.default()[0], {
@@ -39,11 +42,13 @@ export default defineComponent({
 
     return () => <>
       <Teleport to="body">
-        <div class={styles.scroll} ref={scroll} onScroll={() => {
-          if (inScrollTop.value) return;
-          content.value.scrollTop = scroll.value.scrollTop;
-        }}>
-          <div ref={dummy}/>
+        <div class={`${styles.scroll} ${props.showDummyScroll ? styles.dummyScroll : styles.scrollHidden}`} ref={scroll}
+          onScroll={() => {
+            if (inScrollTop.value) return;
+            content.value.scrollTop = scroll.value.scrollTop;
+          }}
+        >
+          <div ref={dummy} />
         </div>
       </Teleport>
       {h(slots.default()[0], {

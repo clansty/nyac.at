@@ -36,12 +36,20 @@
           opacity: 1
           transform: translateY(0)
       animation: blogBodyEnter 0.5s
+      position: fixed
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+
+      @media (min-width: 1050px)
+        padding: 0 calc( 50vw - 525px )
 
   .body
     height: 100vh
     overflow-y: auto
     overflow-x: hidden
-    transition: all 0.5s
+    transition: all 0.5s, padding 0s
     perspective: 1px
 
 .banner
@@ -54,3 +62,9 @@
     width: 100%
     transform: translate3D(0, -30vh, -1px) scale(2)
 
+.hideScrollBar
+  scrollbar-width: none
+  -ms-overflow-style: none
+
+  &::-webkit-scrollbar
+    display: none

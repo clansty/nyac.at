@@ -14,7 +14,6 @@ qwq
 淡色测试
 [Liet](friend:liet)
 [iks](friend:iks)
-qwqwqwqwqwqwqwqwqwqwqw
 [小桂桂](friend:hy)
 
 qwq

@@ -97,7 +97,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: [
-          'x_assets_x/*.*.*',
+          'x_assets_x/*.*',
         ],
         globIgnores: [
           '*.html',
