@@ -9,7 +9,7 @@ author_url: "https://t.me/clansty"
 # 替换 webp 图片
 $imgs: //img[ends-with(@src, ".webp")]
 @map($imgs){
-  @set_attr(src, $@/@src \.png): $@
+  @set_attr(src, $@/@src \.jpg): $@
 }
 
 
