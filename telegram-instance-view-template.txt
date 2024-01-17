@@ -14,10 +14,12 @@ $imgs: //img[ends-with(@src, ".webp")]
 
 
 <div>: //blockquote[.//img]
+<div>: //a[.//img]
 <figure>: //div[has-class("blogBody")]/div[contains(@class, "_banner")]
 cover: //div[has-class("blogBody")]/figure
 image_url: $cover/self::img/@src
 
 @remove: $body//div[@class="date"]
+@remove: $body//div[contains(@class, "_friendBox")]
 @remove: $body//div[form]
 @remove: $body//code//span[has-class("linenumber")]
