@@ -26,7 +26,7 @@
 
 ![车票](ticket.webp)
 
-过大年的时候像 2022 年一样，一家人在 M.E.C. Lab 煮了火锅。这次 M.E.C. Lab 增加了新的成员，[小 CA](friend:ca) 和莲子，于是大年夜吃火锅的阵容挺丰富的。
+过大年的时候像 2022 年一样，一家人在 M.E.C. Lab 煮了火锅。这次 M.E.C. Lab 增加了新的成员，[小 CA](friend:ca) 和[莲子](friend:qwq)，于是大年夜吃火锅的阵容挺丰富的。
 
 ![大年夜吃火锅](hotpot.webp)
 
@@ -96,7 +96,7 @@ M.E.C. Lab 也在这个月迎来了一周岁的生日
 
 到了之后是和 tjk 和小魏的面面。当时没有怎么说话但是也算是第一次见面了
 
-再过了两天就是我的生日。感谢[小洛灵](friend:luoling)、[小草莓](friend:strawberry)、双秀、Celia、[芋头](friend:leohearts)、莲子、[北雁云依](friend:lixiang)、Syama 和我一起吃海底捞！
+再过了两天就是我的生日。感谢[小洛灵](friend:luoling)、[小草莓](friend:strawberry)、双秀、Celia、[芋头](friend:leohearts)、[莲子](friend:qwq)、[北雁云依](friend:lixiang)、Syama 和我一起吃海底捞！
 
 再接下来就是与「大猫」的相遇。这是一直在我们楼道里喵喵叫要饭的猫。我给了她几次猫粮之后她就[固定来 M.E.C. Lab 要饭和喝水](https://nya.one/notes/9iixoanxrg)。还会[自己开门出去](https://nya.one/notes/9ik5tln3lj)
 
