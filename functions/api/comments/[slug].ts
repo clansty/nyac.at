@@ -30,7 +30,7 @@ export const onRequestPost: PagesFunction<{
   const data = await request.json() as Comment;
   const { username, email, url, content } = data;
 
-  if (!username || !content || !/\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/.test(email)) {
+  if (!username || !content || !/[-\w.+]*@([-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/.test(email)) {
     return new Response('', {
       status: 400,
     });
