@@ -3,9 +3,18 @@ import { PropType } from 'vue';
 import styles from './FriendLinkBox.module.sass';
 
 const avatars = import.meta.glob('../../data/friend-avatars/*.webp', { eager: true });
+const components = import.meta.glob('../../data/friend-desc/*.tsx', { eager: true });
+
 function avatar(name: string) {
   // @ts-ignore
   return avatars[`../../data/friend-avatars/${name}.webp`].default;
+}
+
+function desc(item: FriendLink) {
+  // @ts-ignore
+  const Component = components[`../../data/friend-desc/${item.id}.tsx`]?.default;
+  if (!Component) return item.desc;
+  return <Component/>;
 }
 
 export default defineComponent({
@@ -28,7 +37,7 @@ export default defineComponent({
             {item.name}
           </div>
           <div class={styles.desc}>
-            {item.desc}
+            {desc(item)}
           </div>
         </div>
       </a>
