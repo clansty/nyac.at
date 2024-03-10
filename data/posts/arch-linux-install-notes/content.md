@@ -1,3 +1,5 @@
+> 2024 年三月更新：由于本文章写于 2022 年三月，很多地方可能已经过时或者不准确了，比如说输入法的环境变量设置。如今 KDE Plasma 的版本已经到了 6，并且默认使用 Wayland 了，安装的过程中请同时参考 Arch Wiki
+
 我从第一次用上 Arch Linux 开始大概有一年多了，在这段时间里我大概也装了十几台 Arch Linux 的设备吧，台式机 笔记本 服务器 ChromeBook 都有。所以我今天想说一下我自己安装 Arch Linux 的方法。
 
 这篇文章可能会很长，但一定不是每一段内容都对你有意义。所以大概可以跳过不太相关的内容以节省时间。以及，我在编写这个的时候，大概参照的是大多数会想要试试 Arch Linux，并且已经有了一些 Linux 经验的人的水平。如果你不太清楚像 [SSH](https://wiki.archlinux.org/title/Secure_Shell_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)) [tty](https://en.wikipedia.org/wiki/Tty_(Unix)) [chroot](https://wiki.archlinux.org/title/Chroot_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)) 这些的概念的话，[维基百科](https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5)以及 [Arch Wiki](https://wiki.archlinux.org/title/Main_page_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)) 应该可以帮到你。对于 Arch Wiki，可能大部分条目默认会进入英文版本，对于大多数常用的条目，点击左上角的☰可以切换到中文版本。
@@ -874,7 +876,7 @@ vim /etc/pacman.d/hooks/liminedeploy.hook
 [Trigger]
 Operation = Upgrade
 Type = Package
-Target = limine              
+Target = limine
 
 [Action]
 Description = Deploying Limine after upgrade...
