@@ -1,0 +1,3 @@
+title: 在 Cloudflare Workers 中绘制图片
+desc: 由于 Cloudflare Workers 中没有 Canvas 支持，也无法使用 node-canvas，因此我们需要使用其他方法来绘制图片。本文介绍了如何在 Cloudflare Workers 中使用 Browser Rendering 绘制图片。
+date: 2024-05-19
