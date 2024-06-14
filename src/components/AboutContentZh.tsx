@@ -5,7 +5,6 @@ import python from '@iconify-icons/logos/python.js';
 import vue from '@iconify-icons/logos/vue.js';
 import reactFill from '@iconify-icons/akar-icons/react-fill.js';
 import twemoji from '~/icons/twemoji';
-import appleFilled from '@iconify-icons/ant-design/apple-filled.js';
 import DxRating from '~/components/DxRating';
 
 export default defineComponent({
@@ -67,11 +66,6 @@ export default defineComponent({
         </p>
         <p>大概是会一点 Python，也会一点 C# 和 Java</p>
         <p>学过 C++，但是现在大概不会了</p>
-        <p>
-          目前使用的操作系统是
-          <Icon icon={appleFilled}/>
-          macOS
-        </p>
       </>
     );
   },

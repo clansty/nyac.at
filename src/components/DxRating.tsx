@@ -1,8 +1,7 @@
 import { effect } from 'vue';
-import calculateB50 from '~/utils/calculateB50';
 import styles from './DxRating.module.sass';
 
-const plates = import.meta.glob('../assets/dxrating/*.png', { eager: true }) as any;
+const plates = import.meta.glob('../assets/dxrating/*.avif', { eager: true }) as any;
 
 const getPlateId = (rating: number) => {
   const levels = [1000, 2000, 4000, 7000, 10000, 12000, 13000, 14000, 14500, 15000];
@@ -13,7 +12,7 @@ const getPlateId = (rating: number) => {
   }
 };
 
-const getPlate = (rating: number) => plates[`../assets/dxrating/UI_CMN_DXRating_${getPlateId(rating)}.png`].default as string;
+const getPlate = (rating: number) => plates[`../assets/dxrating/UI_CMN_DXRating_${getPlateId(rating)}.avif`].default as string;
 
 const SeparateText = defineComponent({
   props: {
@@ -28,18 +27,9 @@ export default defineComponent({
   setup() {
     const dxRating = ref<number>();
     effect(async () => {
-      const dfReq = await fetch('https://www.diving-fish.com/api/maimaidxprober/query/player', {
-        method: 'POST',
-        body: JSON.stringify({
-          b50: true,
-          username: 'Clansty',
-        }),
-        headers: {
-          'content-type': 'application/json',
-        },
-      });
+      const dfReq = await fetch('https://aquadx.net/aqua/api/v2/game/mai2/user-summary?username=clansty');
       const data = await dfReq.json() as any;
-      dxRating.value = calculateB50(data);
+      dxRating.value = data.rating;
     });
 
     return () => dxRating.value && <div class={styles.container}>

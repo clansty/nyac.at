@@ -5,9 +5,6 @@ import python from '@iconify-icons/logos/python.js';
 import vue from '@iconify-icons/logos/vue.js';
 import reactFill from '@iconify-icons/akar-icons/react-fill.js';
 import twemoji from '~/icons/twemoji';
-import nixos from '~/icons/nixos';
-import nixosText from '~/icons/nixosText';
-import appleFilled from '@iconify-icons/ant-design/apple-filled.js';
 import DxRating from '~/components/DxRating';
 
 export default defineComponent({
@@ -68,11 +65,6 @@ export default defineComponent({
         </p>
         <p>Learnt some Python, C# and Java</p>
         <p>Once learnt C++, but forgot now</p>
-        <p>
-          Now using&nbsp;
-          <Icon icon={appleFilled}/>
-          macOS
-        </p>
       </>
     )
   }
