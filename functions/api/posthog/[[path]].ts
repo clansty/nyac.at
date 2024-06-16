@@ -3,7 +3,7 @@ const ASSET_HOST = 'eu-assets.i.posthog.com'; // Change to "eu-assets.i.posthog.
 
 export const onRequest: PagesFunction = async ({ request, waitUntil }) => {
   const url = new URL(request.url);
-  const pathname = url.pathname.replace(/^\/api\/ph\//, '/');
+  const pathname = url.pathname.replace(/^\/api\/posthog\//, '/');
   const search = url.search;
   const pathWithParams = pathname + search;
 
