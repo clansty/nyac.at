@@ -68,8 +68,6 @@ Chromium 的登录入口就回来啦，然后正常登录就可以了
 
 ![image-20210512134916640](image-20210512134916640.png)
 
-[前往 limelight 专栏](https://limelight.moe/t/topic/6533)
-
 # 参考资料
 
 - [API Keys - The Chromium Projects](https://www.chromium.org/developers/how-tos/api-keys)

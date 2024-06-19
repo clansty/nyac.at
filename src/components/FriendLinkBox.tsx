@@ -2,12 +2,12 @@ import FriendLink from '~/types/FriendLink';
 import { PropType } from 'vue';
 import styles from './FriendLinkBox.module.sass';
 
-const avatars = import.meta.glob('../../data/friend-avatars/*.webp', { eager: true });
+const avatars = import.meta.glob('../../data/friend-avatars/*.avif', { eager: true });
 const components = import.meta.glob('../../data/friend-desc/*.tsx', { eager: true });
 
 function avatar(name: string) {
   // @ts-ignore
-  return avatars[`../../data/friend-avatars/${name}.webp`].default;
+  return avatars[`../../data/friend-avatars/${name}.avif`].default;
 }
 
 function desc(item: FriendLink) {

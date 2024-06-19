@@ -102,8 +102,6 @@ screen vncserver :0
 
 通过 VNC 连接就可以看到桌面了
 
-[前往 limelight 专栏](https://limelight.moe/t/topic/6548)
-
 # 参考资料
 
 - [解决chroot/proot/wsl容器安装archlinux不能使用fakeroot的问题](https://zsxwz.com/2021/02/08/%E8%A7%A3%E5%86%B3chroot-proot-wsl%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85archlinux%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8fakeroot%E7%9A%84%E9%97%AE%E9%A2%98/)

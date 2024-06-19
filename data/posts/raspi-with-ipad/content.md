@@ -195,5 +195,3 @@ Type=Application
 
 - [树莓派，iPad最佳DevOps配件](https://yiwei.dev/raspberrypi-ipad/)
 - [基于树莓派的多功能USB实现--U盘模式和网卡模式](https://cloud.tencent.com/developer/article/1581569)
-
-[前往 limelight 专栏](https://limelight.moe/t/topic/6451)
