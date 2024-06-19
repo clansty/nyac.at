@@ -10,7 +10,8 @@ import postAsset from '~/utils/postAsset';
 import type { TrackedImage } from 'tg-blog/dist/types/views/ImageViewer.vue';
 import 'tg-blog/dist/style.css';
 import InlineFriendLink from '~/components/InlineFriendLink';
-import blogAncherStyle from '../../styles/blogAnchor.module.scss'
+import blogAncherStyle from '../../styles/blogAnchor.module.scss';
+import 'katex/dist/katex.css';
 
 const postData = import.meta.glob('../../../data/posts/*/content.md');
 const Component = defineComponent({
@@ -36,14 +37,15 @@ const Component = defineComponent({
     const markdownComponents = {
       h1: 'h2',
       a({ href }, { slots }) {
-        if(href.startsWith('friend:')){
+        if (href.startsWith('friend:')) {
           return <InlineFriendLink friendId={href.substring('friend:'.length)}>
             {slots.default()}
-          </InlineFriendLink>
+          </InlineFriendLink>;
         }
         if (/^https?:\/\//.test(href))
           return (
-            <a href={href} target="_blank" class={blogAncherStyle.blogAncher} style={{ ['--href' as any]: `'${href}'` }}>
+            <a href={href} target="_blank" class={blogAncherStyle.blogAncher}
+               style={{ ['--href' as any]: `'${href}'` }}>
               {slots.default()}
             </a>
           );

@@ -13,6 +13,8 @@ import rehypePrism from '@mapbox/rehype-prism';
 import autoprefixer from 'autoprefixer';
 import SvgLoader from 'vite-svg-loader';
 import { MdxMod } from './rollup/mdx-mod';
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
 
 export default defineConfig({
   resolve: {
@@ -122,13 +124,13 @@ export default defineConfig({
       pragmaImportSource: 'vue',
       format: 'mdx',
       mdxExtensions: ['.mdx', '.md'],
-      remarkPlugins: [remarkGfm],
+      remarkPlugins: [remarkGfm, remarkMath],
       rehypePlugins: [[rehypePrism, {
         ignoreMissing: true, alias: {
           cpp: 'c++',
           csharp: 'c#',
         },
-      }]],
+      }], rehypeKatex],
     }),
   ],
 
