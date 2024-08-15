@@ -11,11 +11,13 @@ import QrcodeInternal from '@chenfengyuan/vue-qrcode';
 import copyOutlined from '@iconify-icons/ant-design/copy-outlined';
 import ethIcon from '@iconify-icons/cryptocurrency/eth.js';
 import successIcon from '@iconify-icons/mdi/success.js';
+import githubIcon from '@iconify-icons/bi/github.js';
 import ScrollContainer from '~/components/ScrollContainer';
 
 const TRX_ADDR = 'TEnSLLsRmda44k8b1PF12Dj8yNRcCcJxYK';
 const ETH_ADDR = '0x3Aa7d1c5CE8C54320771cFEb5bC50B213Fdc943e';
-const AFDIAN = 'https://afdian.net/a/Clansty';
+const AFDIAN = 'https://afdian.com/a/Clansty';
+const GITHUB = 'https://github.com/sponsors/clansty';
 
 export default defineComponent({
   setup() {
@@ -38,6 +40,17 @@ export default defineComponent({
       <BackButton to="/"/>
       <ScrollContainer>
         <div class={styles.grid}>
+          <div class={styles.pointer} onClick={() => window.open(GITHUB)}>
+            <div class={styles.data}>
+              <div class={styles.icons}>
+                <span style={{ color: '#000' }}><Icon icon={githubIcon}/></span>
+              </div>
+              <div>
+                GitHub Sponsors
+              </div>
+            </div>
+            <Qrcode value={GITHUB}/>
+          </div>
           <div>
             <div class={styles.data}>
               <div class={styles.icons}>
