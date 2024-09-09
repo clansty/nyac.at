@@ -1,0 +1,3 @@
+title: 强制指定 Cloudflare Workers 出口 IP 地址的地区
+date: 2024-09-10
+desc: 在有些时候，我们需要指定 Cloudflare Workers 的出口 IP 地址的地区，以便访问某些特定服务。这需要一些骚操作
