@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "06e795c80c1b6b48",
+    "type": "split",
+    "children": [
+      {
+        "id": "093d343e502e1356",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5fb10b8ead50089d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "from-app-to-playable-game/content.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0128dc427e480a3d",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b211db25e7685f9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0d4047984251b8f4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0a452efea9f7149c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6aa6e35fa32dc2e5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9ec0e496fd58c940",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd5487e68855b485",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8e12be583c44f0cf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "from-app-to-playable-game/content.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c39362667df1faee",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "from-app-to-playable-game/content.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "73b3877d7d18f91a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cca6a7da15e04340",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "from-app-to-playable-game/content.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "5fb10b8ead50089d",
+  "lastOpenFiles": [
+    "from-app-to-playable-game/Pasted image 20241026205821.png",
+    "from-app-to-playable-game/Pasted image 20241026205351.png",
+    "from-app-to-playable-game/Pasted image 20241026205229.png",
+    "from-app-to-playable-game/Pasted image 20241026205143.png",
+    "from-app-to-playable-game/Pasted image 20241026201344.png",
+    "from-app-to-playable-game/Pasted image 20241026191928.png",
+    "from-app-to-playable-game/Pasted image 20241026190852.png",
+    "google-sync-in-chromium/content.md",
+    "from-app-to-playable-game/content.md",
+    "未命名.md",
+    "from-app-to-playable-game/meta.yaml",
+    "from-app-to-playable-game"
+  ]
+}
