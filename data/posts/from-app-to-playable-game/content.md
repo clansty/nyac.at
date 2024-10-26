@@ -272,3 +272,5 @@ Sinmai.exe 只是一个普通的 Unity Player，随便从什么游戏里面抠�
 `Cake.dll` 包含连接官方所需要的一些数据，我们完全不需要它。常见的做法是做一个空壳或者把相关引用从 `Assembly-CSharp.dll` 里全部剔除。空壳也是所有版本都通用的
 
 然而 `amdaemon_api.dll` 包含和 `amdaemon.exe` 通信的接口，并且 `amdaemon_api.dll` `AMDaemon.NET.dll` 和 `amdaemon.exe` 这三个文件的版本是绑定的。它的脱壳非常麻烦，很少有人愿意做，并且也不能简单替换成旧版本脱好壳的。现在常见的做法是把 `amdaemon_api.dll` 和`amdaemon.exe` 换成老版本脱好的，然后反编译 `AMDaemon.NET.dll` 把新增的方法补上
+
+如果有这个需求，可以尝试使用[这个](https://files.catbox.moe/yn20pq.7z)
