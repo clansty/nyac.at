@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "093d343e502e1356",
+        "id": "7f047997b2addca1",
         "type": "tabs",
         "children": [
           {
-            "id": "5fb10b8ead50089d",
+            "id": "e6cc8bc1eb19ea19",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,8 +162,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5fb10b8ead50089d",
+  "active": "e6cc8bc1eb19ea19",
   "lastOpenFiles": [
+    "未命名.canvas",
+    "from-app-to-playable-game/content.md",
     "from-app-to-playable-game/Pasted image 20241026205821.png",
     "from-app-to-playable-game/Pasted image 20241026205351.png",
     "from-app-to-playable-game/Pasted image 20241026205229.png",
@@ -172,7 +174,6 @@
     "from-app-to-playable-game/Pasted image 20241026191928.png",
     "from-app-to-playable-game/Pasted image 20241026190852.png",
     "google-sync-in-chromium/content.md",
-    "from-app-to-playable-game/content.md",
     "未命名.md",
     "from-app-to-playable-game/meta.yaml",
     "from-app-to-playable-game"
