@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7f047997b2addca1",
+        "id": "185ad28c86640ffe",
         "type": "tabs",
         "children": [
           {
-            "id": "e6cc8bc1eb19ea19",
+            "id": "390715a01a27e6fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "from-app-to-playable-game/content.md",
+                "file": "oculus-link-refs/content.md",
                 "mode": "source",
                 "source": false
               },
@@ -40,10 +40,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -154,25 +155,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "e6cc8bc1eb19ea19",
+  "active": "390715a01a27e6fb",
   "lastOpenFiles": [
-    "未命名.canvas",
+    "oculus-link-refs/Pasted image 20250223020205.png",
+    "oculus-link-refs/Pasted image 20250223020136.png",
+    "oculus-link-refs/Pasted image 20250223015733.png",
+    "oculus-link-refs/Pasted image 20250223015337.png",
+    "oculus-link-refs/Pasted image 20250223014442.png",
+    "oculus-link-refs/Pasted image 20250223014219.png",
+    "oculus-link-refs/Pasted image 20250223013416.png",
+    "oculus-link-refs/Pasted image 20250223012335.png",
+    "oculus-link-refs/Pasted image 20250223012219.png",
+    "oculus-link-refs/Pasted image 20250223011827.png",
+    "oculus-link-refs/Pasted image 20250223011324.png",
+    "friend-box-test/content.md",
     "from-app-to-playable-game/content.md",
-    "from-app-to-playable-game/Pasted image 20241026205821.png",
-    "from-app-to-playable-game/Pasted image 20241026205351.png",
-    "from-app-to-playable-game/Pasted image 20241026205229.png",
-    "from-app-to-playable-game/Pasted image 20241026205143.png",
-    "from-app-to-playable-game/Pasted image 20241026201344.png",
-    "from-app-to-playable-game/Pasted image 20241026191928.png",
-    "from-app-to-playable-game/Pasted image 20241026190852.png",
+    "未命名.canvas",
     "google-sync-in-chromium/content.md",
     "未命名.md",
     "from-app-to-playable-game/meta.yaml",
