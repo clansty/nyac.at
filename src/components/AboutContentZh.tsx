@@ -43,21 +43,13 @@ export default defineComponent({
         <p>
           比较喜欢用 JavaScript 写东西，后端和小工具一般用
           <Icon icon={node}/>
-          Node.JS
-        </p>
-        <p>
-          偶尔写写
-          <Icon icon={python}/>
-          Python
+          Node.JS 和 C#
         </p>
         <p>
           前端现在比较喜欢用
-          <Icon icon={reactFill} color="#3DD8FF"/>
-          React，现在在学
           <Icon icon={vue}/>
           Vue 3
         </p>
-        <p>Vue 3 似乎也很好用的样子</p>
         <p>
           这个主站是曾经是用 React (Next.JS) 写的，但是你现在看到的这个是用 Vue 3 重构的
         </p>

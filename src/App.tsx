@@ -6,7 +6,7 @@ import { Transition } from 'vue';
 
 const BACKGROUNDS = [
   styles.background2, styles.background3, styles.background4, styles.background5, styles.background6,
-  styles.bgneo, styles.bgneoalt, styles.bgneo, styles.bgneoalt
+  styles.bgneo, styles.bgneoalt
 ];
 
 export default defineComponent({

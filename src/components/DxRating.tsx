@@ -27,7 +27,7 @@ export default defineComponent({
   setup() {
     const dxRating = ref<number>();
     effect(async () => {
-      const dfReq = await fetch('https://aquadx.net/aqua/api/v2/game/mai2/user-summary?username=clansty');
+      const dfReq = await fetch('https://124.220.188.199/api/v2/game/mai2/user-summary?username=clansty');
       const data = await dfReq.json() as any;
       dxRating.value = data.rating;
     });

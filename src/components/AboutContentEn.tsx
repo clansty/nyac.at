@@ -40,22 +40,12 @@ export default defineComponent({
         <p>
           Usually use JavaScript,&nbsp;
           <Icon icon={node}/>
-          Node.JS for backend and utilities
-        </p>
-        <p>
-          Seldom use&nbsp;
-          <Icon icon={python}/>
-          Python
+          Node.JS and C# for backend and utilities
         </p>
         <p>
           Used&nbsp;
-          <Icon icon={reactFill} color="#3DD8FF"/>
-          React now and learning&nbsp;
           <Icon icon={vue}/>
           Vue 3
-        </p>
-        <p>
-          Vue 3 seems to be nice
         </p>
         <p>
           This site used to be written in React but now in Vue 3
