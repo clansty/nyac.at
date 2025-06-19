@@ -8,10 +8,10 @@ export default defineComponent({
     useHead({
       title: '凌莞咕噜咕噜～',
       link: [
-        { ref: 'canonical', href: 'https://clansty.com/posts' },
+        { ref: 'canonical', href: 'https://nyac.at/posts' },
       ],
       meta: [
-        { property: 'og:url', content: 'https://clansty.com/posts' },
+        { property: 'og:url', content: 'https://nyac.at/posts' },
         { name: 'description', content: '一个奇奇怪怪的地方' },
         { property: 'og:title', content: '凌莞咕噜咕噜～' },
         { property: 'og:description', content: '一个奇奇怪怪的地方' },

@@ -7,10 +7,10 @@ export default defineComponent({
     useHead({
       title: '凌莞的喵喵喵碎碎念',
       link: [
-        { rel: 'canonical', href: 'https://clansty.com/shares' },
+        { rel: 'canonical', href: 'https://nyac.at/shares' },
       ],
       meta: [
-        { property: 'og:url', content: 'https://clansty.com/shares' },
+        { property: 'og:url', content: 'https://nyac.at/shares' },
         { name: 'description', content: '凌莞的喵喵喵碎碎念和奇奇怪怪的分享' },
         { property: 'og:title', content: '凌莞的喵喵喵碎碎念' },
         { property: 'og:description', content: '凌莞的喵喵喵碎碎念和奇奇怪怪的分享' },

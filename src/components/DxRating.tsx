@@ -27,6 +27,7 @@ export default defineComponent({
   setup() {
     const dxRating = ref<number>();
     effect(async () => {
+      if (import.meta.env.SSR) return;
       const dfReq = await fetch('https://124.220.188.199/api/v2/game/mai2/user-summary?username=clansty');
       const data = await dfReq.json() as any;
       dxRating.value = data.rating;

@@ -12,10 +12,10 @@ export default defineComponent({
     useHead({
       title: '友情链接',
       link: [
-        { rel: 'canonical', href: 'https://clansty.com/friends' },
+        { rel: 'canonical', href: 'https://nyac.at/friends' },
       ],
       meta: [
-        { property: 'og:url', content: 'https://clansty.com/friends' },
+        { property: 'og:url', content: 'https://nyac.at/friends' },
         { name: 'description', content: '这里是凌莞的好朋友们' },
         { property: 'og:title', content: '友情链接' },
         { property: 'og:description', content: '这里是凌莞的好朋友们' },

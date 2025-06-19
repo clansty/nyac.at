@@ -9,10 +9,10 @@ export default defineComponent({
     useHead({
       title: 'GPG 公钥',
       link: [
-        { rel: 'canonical', href: 'https://clansty.com/pgp' },
+        { rel: 'canonical', href: 'https://nyac.at/pgp' },
       ],
       meta: [
-        { property: 'og:url', content: 'https://clansty.com/pgp' },
+        { property: 'og:url', content: 'https://nyac.at/pgp' },
         { name: 'description', content: '凌莞 GPG 公钥的复制与下载' },
         { property: 'og:title', content: 'GPG 公钥' },
         { property: 'og:description', content: '凌莞 GPG 公钥的复制与下载' },

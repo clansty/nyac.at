@@ -11,10 +11,10 @@ export default defineComponent({
     useHead({
       title: '关于我',
       link: [
-        { rel: 'canonical', href: 'https://clansty.com/about' },
+        { rel: 'canonical', href: 'https://nyac.at/about' },
       ],
       meta: [
-        { property: 'og:url', content: 'https://clansty.com/about' },
+        { property: 'og:url', content: 'https://nyac.at/about' },
         { name: 'description', content: '这里可能有一些你想了解的信息' },
         { property: 'og:title', content: '关于我' },
         { property: 'og:description', content: '这里可能有一些你想了解的信息' },

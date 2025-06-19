@@ -7,7 +7,7 @@ export default defineComponent({
     useHead({
       meta: [
         { name: 'description', content: '这里是凌莞的主页喵' },
-        { name: 'og:url', content: 'https://clansty.com/' },
+        { name: 'og:url', content: 'https://nyac.at/' },
         { name: 'og:type', content: 'website' },
         { property: 'og:title', content: '凌莞喵～' },
         { property: 'og:description', content: '这里是凌莞的主页喵' },
@@ -15,7 +15,7 @@ export default defineComponent({
         { property: 'twitter:description', content: '这里是凌莞的主页喵' },
       ],
       link: [
-        { rel: 'canonical', href: 'https://clansty.com/' },
+        { rel: 'canonical', href: 'https://nyac.at/' },
       ],
     });
     const highlightRef = ref<HTMLDivElement>();
